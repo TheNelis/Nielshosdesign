@@ -60,17 +60,23 @@
 .herocontainer {
   position: relative;
   width: 100%;
-  margin-top: 150px;
-  height: 44vw;
+  margin-top: 115px;
+  height: 60vh;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
 }
+@media only screen and (min-width: 992px) {
+  .herocontainer {
+    margin-top: 150px;
+    height: 44vw;
+  }
+}
 .herocontainer__text {
   position: absolute;
-  top: 0;
+  top: 40%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   text-align: center;
   white-space: nowrap;
   font-family: "Poppins-Black";
@@ -79,6 +85,12 @@
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+}
+@media only screen and (min-width: 992px) {
+  .herocontainer__text {
+    top: 0;
+    transform: translateX(-50%);
+  }
 }
 .herocontainer__text span {
   display: inline-block;
@@ -93,10 +105,15 @@
 .herocontainer__bottomcontainer {
   position: relative;
   width: 100%;
-  margin: 0 40px 45px 40px;
+  margin: 0 15px 30px 15px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+}
+@media only screen and (min-width: 992px) {
+  .herocontainer__bottomcontainer {
+    margin: 0 40px 45px 40px;
+  }
 }
 .herocontainer__bottomcontainer__socials {
   display: flex;
@@ -118,10 +135,15 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
   flex-direction: column;
   align-items: center;
   animation: float 3s ease-in-out infinite;
+  display: none;
+}
+@media only screen and (min-width: 992px) {
+  .herocontainer__bottomcontainer__scrolldown {
+    display: flex;
+  }
 }
 .herocontainer__bottomcontainer__scrolldown__text {
   font-family: "Poppins-Semibold";
@@ -134,19 +156,31 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 45vw;
-  margin: 14vw 0 0 -16vw;
+  width: 90vw;
+  margin: 72vw 0 0 -48vw;
   -webkit-transform: scaleX(-1) rotate(55deg);
   transform: scaleX(-1) rotate(55deg);
   z-index: 0;
+}
+@media only screen and (min-width: 992px) {
+  .herocontainer__flower {
+    width: 45vw;
+    margin: 14vw 0 0 -16vw;
+  }
 }
 .herocontainer__blaadje {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 22vw;
-  margin: 0 -6.5vw -2vw 0;
+  width: 55vw;
+  margin: 0 -15vw -5vw 0;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   z-index: 0;
+}
+@media only screen and (min-width: 992px) {
+  .herocontainer__blaadje {
+    width: 22vw;
+    margin: 0 -6.5vw -2vw 0;
+  }
 }

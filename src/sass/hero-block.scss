@@ -25,26 +25,37 @@
 .herocontainer {
     position: relative;
     width: 100%;
-    margin-top: 150px;
-    height: 44vw;
+    margin-top: 115px;
+    height: 60vh;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
 
+    @media only screen and (min-width: v.$lg) {
+        margin-top: 150px;
+        height: 44vw;
+    }
+
     &__text {
         position: absolute;
-        top: 0;
+        top: 40%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
         text-align: center;
         white-space: nowrap;
         font-family: 'Poppins-Black';
         margin: 0px;
         z-index: 10;
 
+        @media only screen and (min-width: v.$lg) {
+            top: 0;
+            transform: translateX(-50%);
+        }
+
         -webkit-user-select: none; /* Safari */
         -ms-user-select: none; /* IE 10 and IE 11 */
         user-select: none; /* Standard syntax */
+
 
         span {
             display: inline-block;
@@ -63,10 +74,14 @@
     &__bottomcontainer {
         position: relative;
         width: 100%;
-        margin: 0 v.$margin-desktop 45px v.$margin-desktop;
+        margin: 0 v.$margin-mobile 30px v.$margin-mobile;
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
+
+        @media only screen and (min-width: v.$lg) {
+            margin: 0 v.$margin-desktop 45px v.$margin-desktop;
+        }
 
         &__socials {
             display: flex;
@@ -91,10 +106,14 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            display: flex;
             flex-direction: column;
             align-items: center;
             animation: float 3s ease-in-out infinite;
+            display: none;
+
+            @media only screen and (min-width: v.$lg) {
+                display: flex;
+            }
 
             &__text {
                 font-family: 'Poppins-Semibold';
@@ -111,21 +130,31 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 45vw;
-        margin: 14vw 0 0 -16vw;
+        width: 90vw;
+        margin: 72vw 0 0 -48vw;
         -webkit-transform: scaleX(-1) rotate(55deg);
         transform: scaleX(-1) rotate(55deg);
         z-index: 0;
+
+        @media only screen and (min-width: v.$lg) {
+            width: 45vw;
+            margin: 14vw 0 0 -16vw;
+        }
     }
 
     &__blaadje {
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 22vw;
-        margin: 0 -6.5vw -2vw 0;
+        width: 55vw;
+        margin: 0 -15vw -5vw 0;
         -webkit-transform: scaleX(-1);
         transform: scaleX(-1);
         z-index: 0;
+
+        @media only screen and (min-width: v.$lg) {
+            width: 22vw;
+            margin: 0 -6.5vw -2vw 0;
+        }
     }
 }
