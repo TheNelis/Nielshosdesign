@@ -36,12 +36,23 @@
 }
 .diensten-block__title {
   font-family: "Lilita One";
-  font-size: 64px;
+  font-size: 44px;
   margin-bottom: 80px;
+}
+@media only screen and (min-width: 992px) {
+  .diensten-block__title {
+    font-size: 64px;
+  }
 }
 .diensten-block__container {
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+}
+@media only screen and (min-width: 992px) {
+  .diensten-block__container {
+    flex-direction: row;
+    gap: 40px;
+  }
 }
 .diensten-block__container__dienst {
   display: flex;
@@ -70,15 +81,26 @@
 }
 .diensten-block__container__dienst__title {
   font-family: "Lilita One";
-  font-size: 32px;
+  font-size: 28px;
   text-align: center;
   margin-top: 20px;
 }
+@media only screen and (min-width: 992px) {
+  .diensten-block__container__dienst__title {
+    font-size: 32px;
+  }
+}
 .diensten-block__blaadje {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 22vw;
   margin: 3.5vw 0 0 -8vw;
   z-index: 0;
+}
+@media only screen and (min-width: 992px) {
+  .diensten-block__blaadje {
+    display: block;
+  }
 }

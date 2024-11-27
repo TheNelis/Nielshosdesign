@@ -22,13 +22,8 @@
 
 //Curtain open animation
 @keyframes curtainOpen {
-    from {
-        margin-left: -60%;
-        width: 160%;
-    }
     to {
         margin-left: 100%;
-        width: 100%;
     }
 }
 
@@ -60,8 +55,8 @@ html {
         position: fixed;
         top: 0;
         left: 0;
-        width: 180%;
-        margin-left: -80%;
+        width: 300%;
+        margin-left: -200%;
         height: 100%;
         background-color: v.$yellow;
         z-index: 1000;
@@ -69,13 +64,29 @@ html {
         border-radius: 100vw 0 0 100vw;
         display: flex;
         align-items: center;
-        animation: 1.2s curtainOpen linear forwards;
+        animation: 1s curtainOpen linear forwards;
+
+        @media only screen and (min-width: v.$md) {
+            width: 240%;
+            margin-left: -140%;
+            animation: 1.2s curtainOpen linear forwards;
+        }
+
+        @media only screen and (min-width: v.$lg) {
+            width: 180%;
+            margin-left: -80%;
+            animation: 1.2s curtainOpen linear forwards;
+        }
         
 
         &__logo {
             height: 95vh;
             margin-left: 5vh;
-            animation: 1.2s rotate linear forwards;
+            animation: 1.6s rotate linear forwards;
+
+            @media only screen and (min-width: v.$lg) {
+                animation: 1.2s rotate linear forwards;
+            }
         }
     }
 }

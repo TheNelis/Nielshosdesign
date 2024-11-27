@@ -112,13 +112,8 @@ textarea:not([rows]) {
   }
 }
 @keyframes curtainOpen {
-  from {
-    margin-left: -60%;
-    width: 160%;
-  }
   to {
     margin-left: 100%;
-    width: 100%;
   }
 }
 html {
@@ -145,8 +140,8 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  width: 180%;
-  margin-left: -80%;
+  width: 300%;
+  margin-left: -200%;
   height: 100%;
   background-color: #FFD12D;
   z-index: 1000;
@@ -154,12 +149,31 @@ html {
   border-radius: 100vw 0 0 100vw;
   display: flex;
   align-items: center;
-  animation: 1.2s curtainOpen linear forwards;
+  animation: 1s curtainOpen linear forwards;
+}
+@media only screen and (min-width: 768px) {
+  .curtain__container {
+    width: 240%;
+    margin-left: -140%;
+    animation: 1.2s curtainOpen linear forwards;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .curtain__container {
+    width: 180%;
+    margin-left: -80%;
+    animation: 1.2s curtainOpen linear forwards;
+  }
 }
 .curtain__container__logo {
   height: 95vh;
   margin-left: 5vh;
-  animation: 1.2s rotate linear forwards;
+  animation: 1.6s rotate linear forwards;
+}
+@media only screen and (min-width: 992px) {
+  .curtain__container__logo {
+    animation: 1.2s rotate linear forwards;
+  }
 }
 
 .navbar__carousel {
@@ -580,7 +594,7 @@ html {
   top: 0;
   left: 0;
   width: 90vw;
-  margin: 72vw 0 0 -48vw;
+  margin: 32vh 0 0 -48vw;
   -webkit-transform: scaleX(-1) rotate(55deg);
   transform: scaleX(-1) rotate(55deg);
   z-index: 0;
@@ -694,7 +708,7 @@ html {
   font-size: 18px;
   color: black;
   text-decoration: none;
-  padding: 15px;
+  padding: 20px;
   border-radius: 8px;
   background-color: white;
   background-image: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50" fill="%2300BF72" /></svg>');
@@ -710,7 +724,6 @@ html {
 @media only screen and (min-width: 992px) {
   .button--green {
     font-size: 24px;
-    padding: 20px;
   }
 }
 
@@ -722,7 +735,7 @@ html {
   font-size: 18px;
   color: black;
   text-decoration: none;
-  padding: 15px;
+  padding: 20px;
   border-radius: 8px;
   background-color: white;
   background-image: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50" fill="%23FF445C" /></svg>');
@@ -738,7 +751,6 @@ html {
 @media only screen and (min-width: 992px) {
   .button--red {
     font-size: 24px;
-    padding: 20px;
   }
 }
 
@@ -750,7 +762,7 @@ html {
   font-size: 18px;
   color: black;
   text-decoration: none;
-  padding: 15px;
+  padding: 20px;
   border-radius: 8px;
   background-color: white;
   background-image: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50" fill="%230078D7" /></svg>');
@@ -766,7 +778,6 @@ html {
 @media only screen and (min-width: 992px) {
   .button--blue {
     font-size: 24px;
-    padding: 20px;
   }
 }
 
@@ -778,7 +789,7 @@ html {
   font-size: 18px;
   color: black;
   text-decoration: none;
-  padding: 15px;
+  padding: 20px;
   border: solid 2px black;
   border-radius: 8px;
   background-color: white;
@@ -796,7 +807,6 @@ html {
 @media only screen and (min-width: 992px) {
   .button--green--outline {
     font-size: 24px;
-    padding: 20px;
   }
 }
 
@@ -808,7 +818,7 @@ html {
   font-size: 18px;
   color: black;
   text-decoration: none;
-  padding: 15px;
+  padding: 20px;
   border: solid 2px black;
   border-radius: 8px;
   background-color: white;
@@ -826,7 +836,6 @@ html {
 @media only screen and (min-width: 992px) {
   .button--red--outline {
     font-size: 24px;
-    padding: 20px;
   }
 }
 
@@ -838,7 +847,7 @@ html {
   font-size: 18px;
   color: black;
   text-decoration: none;
-  padding: 15px;
+  padding: 20px;
   border: solid 2px black;
   border-radius: 8px;
   background-color: white;
@@ -856,7 +865,6 @@ html {
 @media only screen and (min-width: 992px) {
   .button--blue--outline {
     font-size: 24px;
-    padding: 20px;
   }
 }
 
@@ -962,12 +970,23 @@ html {
 }
 .diensten-block__title {
   font-family: "Lilita One";
-  font-size: 64px;
+  font-size: 44px;
   margin-bottom: 80px;
+}
+@media only screen and (min-width: 992px) {
+  .diensten-block__title {
+    font-size: 64px;
+  }
 }
 .diensten-block__container {
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+}
+@media only screen and (min-width: 992px) {
+  .diensten-block__container {
+    flex-direction: row;
+    gap: 40px;
+  }
 }
 .diensten-block__container__dienst {
   display: flex;
@@ -996,17 +1015,28 @@ html {
 }
 .diensten-block__container__dienst__title {
   font-family: "Lilita One";
-  font-size: 32px;
+  font-size: 28px;
   text-align: center;
   margin-top: 20px;
 }
+@media only screen and (min-width: 992px) {
+  .diensten-block__container__dienst__title {
+    font-size: 32px;
+  }
+}
 .diensten-block__blaadje {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 22vw;
   margin: 3.5vw 0 0 -8vw;
   z-index: 0;
+}
+@media only screen and (min-width: 992px) {
+  .diensten-block__blaadje {
+    display: block;
+  }
 }
 
 .bloem-block {
