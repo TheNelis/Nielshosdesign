@@ -108,6 +108,47 @@ html {
         }
     }
 
+    &__mobilemenu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: url('/assets/yellow_noise.jpg');
+        z-index: 50;
+        padding: 0px v.$margin-mobile 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        transform: translateX(100%);
+        transition: all 0.5s ease-in-out;
+
+        @media only screen and (min-width: v.$lg) {
+            display: none;
+        }
+
+        &__button {
+            display: block;
+            font-size: 32px;
+            text-decoration: none;
+            color: black;
+            font-family: 'Lilita One';
+        }
+
+        div {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+
+            a svg {
+                width: 34px;
+                height: 34px;
+            }
+        }
+    }
+
     &__container {
         position: fixed;
         top: 0;
@@ -119,13 +160,13 @@ html {
         align-items: center;
         z-index: 500;
         margin-top: 25px;
-        padding: 8px v.$margin-mobile 8px v.$margin-mobile;
+        padding: 8px v.$margin-mobile;
         transition: all .2s ease-in-out;
         box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 20%);
 
         @media only screen and (min-width: v.$lg) {
             margin-top: 25px;
-            padding: 8px v.$margin-desktop 8px v.$margin-desktop;
+            padding: 8px v.$margin-desktop;
         }
 
         &__logo {
@@ -160,13 +201,14 @@ html {
 
         &__button {
             display: none;
-            font-size: 32px;
+            font-size: 36px;
             text-decoration: none;
             color: black;
             font-family: 'Lilita One';
 
             @media only screen and (min-width: v.$lg) {
                 display: block;
+                font-size: 32px;
             }
     
             &--right:hover {
@@ -245,7 +287,7 @@ html {
 
 // Hamburgermenu toggle
 
-#nav-icon4 {
+.hamburger {
     width: 60px;
     height: 45px;
     position: relative;
@@ -259,14 +301,14 @@ html {
     transition: .5s ease-in-out;
     cursor: pointer;
     display: block;
-    transform: scale(0.7);
+    transform: scale(0.6);
 
     @media only screen and (min-width: v.$lg) {
         display: none;
     }
 }
   
-#nav-icon4 span {
+.hamburger span {
     display: block;
     position: absolute;
     height: 9px;
@@ -285,7 +327,7 @@ html {
     transition: .25s ease-in-out;
 }
 
-#nav-icon4 span:nth-child(1) {
+.hamburger span:nth-child(1) {
     top: 0px;
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
@@ -293,7 +335,7 @@ html {
     transform-origin: left center;
 }
   
-#nav-icon4 span:nth-child(2) {
+.hamburger span:nth-child(2) {
     top: 18px;
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
@@ -301,7 +343,7 @@ html {
     transform-origin: left center;
 }
   
-#nav-icon4 span:nth-child(3) {
+.hamburger span:nth-child(3) {
     top: 36px;
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
@@ -309,7 +351,7 @@ html {
     transform-origin: left center;
 }
   
-#nav-icon4.open span:nth-child(1) {
+.hamburger.open span:nth-child(1) {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
@@ -318,12 +360,12 @@ html {
     left: 8px;
 }
   
-#nav-icon4.open span:nth-child(2) {
+.hamburger.open span:nth-child(2) {
     width: 0%;
     opacity: 0;
 }
   
-#nav-icon4.open span:nth-child(3) {
+.hamburger.open span:nth-child(3) {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
