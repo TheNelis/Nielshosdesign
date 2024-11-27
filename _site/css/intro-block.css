@@ -28,15 +28,28 @@
   height: 22vw;
   margin-top: -7.4vw;
   margin-left: 15vw;
-  margin-bottom: -3.8vw;
+  margin-bottom: -5vw;
   z-index: -1;
+}
+@media only screen and (min-width: 992px) {
+  .intro-block svg {
+    margin-bottom: -3.8vw;
+  }
 }
 .intro-block__container {
   position: relative;
   display: flex;
-  gap: 100px;
-  padding: 60px 40px 60px 40px;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 15px;
   background-image: url("/assets/yellow_noise.jpg");
+}
+@media only screen and (min-width: 992px) {
+  .intro-block__container {
+    flex-direction: row;
+    gap: 100px;
+    padding: 60px 40px;
+  }
 }
 .intro-block__imagecontainer {
   flex: 1;
@@ -53,7 +66,7 @@
 .intro-block__textcontainer__title {
   white-space: nowrap;
   font-family: "Lilita One";
-  font-size: 160px;
+  font-size: 84px;
   margin: 0px;
   z-index: 10;
   -webkit-user-select: none; /* Safari */
@@ -62,7 +75,7 @@
 }
 .intro-block__textcontainer__title span {
   display: inline-block;
-  margin: 0 -15px;
+  margin: 0 -7px;
 }
 .intro-block__textcontainer__title span:hover {
   animation: bounceOn 0.5s forwards;
@@ -70,8 +83,21 @@
 .intro-block__textcontainer__title span:not(:hover) {
   animation: bounceOff 0.5s forwards;
 }
+@media only screen and (min-width: 992px) {
+  .intro-block__textcontainer__title {
+    font-size: 160px;
+  }
+  .intro-block__textcontainer__title span {
+    margin: 0 -15px;
+  }
+}
 .intro-block__textcontainer__text {
   font-family: "Poppins-Semibold";
-  font-size: 24px;
+  font-size: 18px;
   margin-bottom: 40px;
+}
+@media only screen and (min-width: 992px) {
+  .intro-block__textcontainer__text {
+    font-size: 24px;
+  }
 }

@@ -5,10 +5,10 @@
     width: fit-content;
     position: relative;
     font-family: 'Poppins-Semibold';
-    font-size: 24px;
+    font-size: 18px;
     color: black;
     text-decoration: none;
-    padding: 20px;
+    padding: 15px;
     border-radius: 8px;
     background-color: white;
     background-image: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50" fill="%2300BF72" /></svg>');
@@ -21,6 +21,11 @@
         background-size: 120%;
         color: white;
     }
+
+    @media only screen and (min-width: v.$lg) {
+        font-size: 24px;
+        padding: 20px;
+    }
 }
 
 .button--red {
@@ -28,10 +33,10 @@
     width: fit-content;
     position: relative;
     font-family: 'Poppins-Semibold';
-    font-size: 24px;
+    font-size: 18px;
     color: black;
     text-decoration: none;
-    padding: 20px;
+    padding: 15px;
     border-radius: 8px;
     background-color: white;
     background-image: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50" fill="%23FF445C" /></svg>');
@@ -44,6 +49,11 @@
         background-size: 120%;
         color: white;
     }
+
+    @media only screen and (min-width: v.$lg) {
+        font-size: 24px;
+        padding: 20px;
+    }
 }
 
 .button--blue {
@@ -51,10 +61,10 @@
     width: fit-content;
     position: relative;
     font-family: 'Poppins-Semibold';
-    font-size: 24px;
+    font-size: 18px;
     color: black;
     text-decoration: none;
-    padding: 20px;
+    padding: 15px;
     border-radius: 8px;
     background-color: white;
     background-image: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50" fill="%230078D7" /></svg>');
@@ -67,6 +77,11 @@
         background-size: 120%;
         color: white;
     }
+
+    @media only screen and (min-width: v.$lg) {
+        font-size: 24px;
+        padding: 20px;
+    }
 }
 
 .button--green--outline {
@@ -74,10 +89,10 @@
     width: fit-content;
     position: relative;
     font-family: 'Poppins-Semibold';
-    font-size: 24px;
+    font-size: 18px;
     color: black;
     text-decoration: none;
-    padding: 20px;
+    padding: 15px;
     border: solid 2px black;
     border-radius: 8px;
     background-color: white;
@@ -92,6 +107,11 @@
         color: white;
         border: solid 2px v.$green;
     }
+
+    @media only screen and (min-width: v.$lg) {
+        font-size: 24px;
+        padding: 20px;
+    }
 }
 
 .button--red--outline {
@@ -99,10 +119,10 @@
     width: fit-content;
     position: relative;
     font-family: 'Poppins-Semibold';
-    font-size: 24px;
+    font-size: 18px;
     color: black;
     text-decoration: none;
-    padding: 20px;
+    padding: 15px;
     border: solid 2px black;
     border-radius: 8px;
     background-color: white;
@@ -117,6 +137,11 @@
         color: white;
         border: solid 2px v.$red;
     }
+
+    @media only screen and (min-width: v.$lg) {
+        font-size: 24px;
+        padding: 20px;
+    }
 }
 
 .button--blue--outline {
@@ -124,10 +149,10 @@
     width: fit-content;
     position: relative;
     font-family: 'Poppins-Semibold';
-    font-size: 24px;
+    font-size: 18px;
     color: black;
     text-decoration: none;
-    padding: 20px;
+    padding: 15px;
     border: solid 2px black;
     border-radius: 8px;
     background-color: white;
@@ -141,5 +166,10 @@
         background-size: 120%;
         color: white;
         border: solid 2px v.$blue;
+    }
+
+    @media only screen and (min-width: v.$lg) {
+        font-size: 24px;
+        padding: 20px;
     }
 }

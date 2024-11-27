@@ -23,10 +23,10 @@
   width: fit-content;
   position: relative;
   font-family: "Poppins-Semibold";
-  font-size: 24px;
+  font-size: 18px;
   color: black;
   text-decoration: none;
-  padding: 20px;
+  padding: 15px;
   border-radius: 8px;
   background-color: white;
   background-image: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50" fill="%2300BF72" /></svg>');
@@ -39,16 +39,22 @@
   background-size: 120%;
   color: white;
 }
+@media only screen and (min-width: 992px) {
+  .button--green {
+    font-size: 24px;
+    padding: 20px;
+  }
+}
 
 .button--red {
   display: block;
   width: fit-content;
   position: relative;
   font-family: "Poppins-Semibold";
-  font-size: 24px;
+  font-size: 18px;
   color: black;
   text-decoration: none;
-  padding: 20px;
+  padding: 15px;
   border-radius: 8px;
   background-color: white;
   background-image: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50" fill="%23FF445C" /></svg>');
@@ -61,16 +67,22 @@
   background-size: 120%;
   color: white;
 }
+@media only screen and (min-width: 992px) {
+  .button--red {
+    font-size: 24px;
+    padding: 20px;
+  }
+}
 
 .button--blue {
   display: block;
   width: fit-content;
   position: relative;
   font-family: "Poppins-Semibold";
-  font-size: 24px;
+  font-size: 18px;
   color: black;
   text-decoration: none;
-  padding: 20px;
+  padding: 15px;
   border-radius: 8px;
   background-color: white;
   background-image: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50" fill="%230078D7" /></svg>');
@@ -83,16 +95,22 @@
   background-size: 120%;
   color: white;
 }
+@media only screen and (min-width: 992px) {
+  .button--blue {
+    font-size: 24px;
+    padding: 20px;
+  }
+}
 
 .button--green--outline {
   display: block;
   width: fit-content;
   position: relative;
   font-family: "Poppins-Semibold";
-  font-size: 24px;
+  font-size: 18px;
   color: black;
   text-decoration: none;
-  padding: 20px;
+  padding: 15px;
   border: solid 2px black;
   border-radius: 8px;
   background-color: white;
@@ -107,16 +125,22 @@
   color: white;
   border: solid 2px #00BF72;
 }
+@media only screen and (min-width: 992px) {
+  .button--green--outline {
+    font-size: 24px;
+    padding: 20px;
+  }
+}
 
 .button--red--outline {
   display: block;
   width: fit-content;
   position: relative;
   font-family: "Poppins-Semibold";
-  font-size: 24px;
+  font-size: 18px;
   color: black;
   text-decoration: none;
-  padding: 20px;
+  padding: 15px;
   border: solid 2px black;
   border-radius: 8px;
   background-color: white;
@@ -131,16 +155,22 @@
   color: white;
   border: solid 2px #FF445C;
 }
+@media only screen and (min-width: 992px) {
+  .button--red--outline {
+    font-size: 24px;
+    padding: 20px;
+  }
+}
 
 .button--blue--outline {
   display: block;
   width: fit-content;
   position: relative;
   font-family: "Poppins-Semibold";
-  font-size: 24px;
+  font-size: 18px;
   color: black;
   text-decoration: none;
-  padding: 20px;
+  padding: 15px;
   border: solid 2px black;
   border-radius: 8px;
   background-color: white;
@@ -154,4 +184,10 @@
   background-size: 120%;
   color: white;
   border: solid 2px #0078D7;
+}
+@media only screen and (min-width: 992px) {
+  .button--blue--outline {
+    font-size: 24px;
+    padding: 20px;
+  }
 }

@@ -10,16 +10,27 @@
         height: 22vw;
         margin-top: -7.4vw;
         margin-left: 15vw;
-        margin-bottom: -3.8vw;
+        margin-bottom: -5vw;
         z-index: -1;
+
+        @media only screen and (min-width: v.$lg) {
+            margin-bottom: -3.8vw;
+        }
     }
 
     &__container {
         position: relative;
         display: flex;
-        gap: 100px;
-        padding: 60px v.$margin-desktop 60px v.$margin-desktop;
+        flex-direction: column;
+        gap: 40px;
+        padding: 60px v.$margin-mobile;
         background-image: url('/assets/yellow_noise.jpg');
+
+        @media only screen and (min-width: v.$lg) {
+            flex-direction: row;
+            gap: 100px;
+            padding: 60px v.$margin-desktop;
+        }
     }
 
     &__imagecontainer {
@@ -39,7 +50,7 @@
         &__title {
             white-space: nowrap;
             font-family: 'Lilita One';
-            font-size: 160px;
+            font-size: 84px;
             margin: 0px;
             z-index: 10;
 
@@ -49,7 +60,7 @@
 
             span {
                 display: inline-block;
-                margin: 0 -15px;
+                margin: 0 -7px;
 
                 &:hover {
                     animation: bounceOn 0.5s forwards;
@@ -59,12 +70,24 @@
                     animation: bounceOff 0.5s forwards;
                 }
             }
+
+            @media only screen and (min-width: v.$lg) {
+                font-size: 160px;
+
+                span {
+                    margin: 0 -15px;
+                }
+            }
         }
 
         &__text {
             font-family: 'Poppins-Semibold';
-            font-size: 24px;
+            font-size: 18px;
             margin-bottom: 40px;
+
+            @media only screen and (min-width: v.$lg) {
+                font-size: 24px;
+            }
         }
     }
 }

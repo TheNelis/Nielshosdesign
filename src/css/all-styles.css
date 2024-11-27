@@ -691,10 +691,10 @@ html {
   width: fit-content;
   position: relative;
   font-family: "Poppins-Semibold";
-  font-size: 24px;
+  font-size: 18px;
   color: black;
   text-decoration: none;
-  padding: 20px;
+  padding: 15px;
   border-radius: 8px;
   background-color: white;
   background-image: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50" fill="%2300BF72" /></svg>');
@@ -707,16 +707,22 @@ html {
   background-size: 120%;
   color: white;
 }
+@media only screen and (min-width: 992px) {
+  .button--green {
+    font-size: 24px;
+    padding: 20px;
+  }
+}
 
 .button--red {
   display: block;
   width: fit-content;
   position: relative;
   font-family: "Poppins-Semibold";
-  font-size: 24px;
+  font-size: 18px;
   color: black;
   text-decoration: none;
-  padding: 20px;
+  padding: 15px;
   border-radius: 8px;
   background-color: white;
   background-image: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50" fill="%23FF445C" /></svg>');
@@ -729,16 +735,22 @@ html {
   background-size: 120%;
   color: white;
 }
+@media only screen and (min-width: 992px) {
+  .button--red {
+    font-size: 24px;
+    padding: 20px;
+  }
+}
 
 .button--blue {
   display: block;
   width: fit-content;
   position: relative;
   font-family: "Poppins-Semibold";
-  font-size: 24px;
+  font-size: 18px;
   color: black;
   text-decoration: none;
-  padding: 20px;
+  padding: 15px;
   border-radius: 8px;
   background-color: white;
   background-image: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50" fill="%230078D7" /></svg>');
@@ -751,16 +763,22 @@ html {
   background-size: 120%;
   color: white;
 }
+@media only screen and (min-width: 992px) {
+  .button--blue {
+    font-size: 24px;
+    padding: 20px;
+  }
+}
 
 .button--green--outline {
   display: block;
   width: fit-content;
   position: relative;
   font-family: "Poppins-Semibold";
-  font-size: 24px;
+  font-size: 18px;
   color: black;
   text-decoration: none;
-  padding: 20px;
+  padding: 15px;
   border: solid 2px black;
   border-radius: 8px;
   background-color: white;
@@ -775,16 +793,22 @@ html {
   color: white;
   border: solid 2px #00BF72;
 }
+@media only screen and (min-width: 992px) {
+  .button--green--outline {
+    font-size: 24px;
+    padding: 20px;
+  }
+}
 
 .button--red--outline {
   display: block;
   width: fit-content;
   position: relative;
   font-family: "Poppins-Semibold";
-  font-size: 24px;
+  font-size: 18px;
   color: black;
   text-decoration: none;
-  padding: 20px;
+  padding: 15px;
   border: solid 2px black;
   border-radius: 8px;
   background-color: white;
@@ -799,16 +823,22 @@ html {
   color: white;
   border: solid 2px #FF445C;
 }
+@media only screen and (min-width: 992px) {
+  .button--red--outline {
+    font-size: 24px;
+    padding: 20px;
+  }
+}
 
 .button--blue--outline {
   display: block;
   width: fit-content;
   position: relative;
   font-family: "Poppins-Semibold";
-  font-size: 24px;
+  font-size: 18px;
   color: black;
   text-decoration: none;
-  padding: 20px;
+  padding: 15px;
   border: solid 2px black;
   border-radius: 8px;
   background-color: white;
@@ -823,6 +853,12 @@ html {
   color: white;
   border: solid 2px #0078D7;
 }
+@media only screen and (min-width: 992px) {
+  .button--blue--outline {
+    font-size: 24px;
+    padding: 20px;
+  }
+}
 
 .intro-block {
   position: relative;
@@ -834,15 +870,28 @@ html {
   height: 22vw;
   margin-top: -7.4vw;
   margin-left: 15vw;
-  margin-bottom: -3.8vw;
+  margin-bottom: -5vw;
   z-index: -1;
+}
+@media only screen and (min-width: 992px) {
+  .intro-block svg {
+    margin-bottom: -3.8vw;
+  }
 }
 .intro-block__container {
   position: relative;
   display: flex;
-  gap: 100px;
-  padding: 60px 40px 60px 40px;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 15px;
   background-image: url("/assets/yellow_noise.jpg");
+}
+@media only screen and (min-width: 992px) {
+  .intro-block__container {
+    flex-direction: row;
+    gap: 100px;
+    padding: 60px 40px;
+  }
 }
 .intro-block__imagecontainer {
   flex: 1;
@@ -859,7 +908,7 @@ html {
 .intro-block__textcontainer__title {
   white-space: nowrap;
   font-family: "Lilita One";
-  font-size: 160px;
+  font-size: 84px;
   margin: 0px;
   z-index: 10;
   -webkit-user-select: none; /* Safari */
@@ -868,7 +917,7 @@ html {
 }
 .intro-block__textcontainer__title span {
   display: inline-block;
-  margin: 0 -15px;
+  margin: 0 -7px;
 }
 .intro-block__textcontainer__title span:hover {
   animation: bounceOn 0.5s forwards;
@@ -876,10 +925,23 @@ html {
 .intro-block__textcontainer__title span:not(:hover) {
   animation: bounceOff 0.5s forwards;
 }
+@media only screen and (min-width: 992px) {
+  .intro-block__textcontainer__title {
+    font-size: 160px;
+  }
+  .intro-block__textcontainer__title span {
+    margin: 0 -15px;
+  }
+}
 .intro-block__textcontainer__text {
   font-family: "Poppins-Semibold";
-  font-size: 24px;
+  font-size: 18px;
   margin-bottom: 40px;
+}
+@media only screen and (min-width: 992px) {
+  .intro-block__textcontainer__text {
+    font-size: 24px;
+  }
 }
 
 @keyframes spin {
