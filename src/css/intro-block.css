@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "Lilita One";
+  src: url(/assets/fonts/Lilita_One/LilitaOne-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(/assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-Semibold";
+  src: url(/assets/fonts/Poppins/Poppins-Semibold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(/assets/fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Black";
+  src: url(/assets/fonts/Poppins/Poppins-Black.ttf);
+}
+.intro-block {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.intro-block svg {
+  width: 100%;
+  height: 22vw;
+  margin-top: -7.4vw;
+  margin-left: 15vw;
+  margin-bottom: -3.8vw;
+  z-index: -1;
+}
+.intro-block__container {
+  position: relative;
+  display: flex;
+  gap: 100px;
+  padding: 60px 40px 60px 40px;
+  background-image: url("/assets/yellow_noise.jpg");
+}
+.intro-block__imagecontainer {
+  flex: 1;
+}
+.intro-block__imagecontainer__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-height: 700px;
+}
+.intro-block__textcontainer {
+  flex: 1;
+}
+.intro-block__textcontainer__title {
+  white-space: nowrap;
+  font-family: "Lilita One";
+  font-size: 160px;
+  margin: 0px;
+  z-index: 10;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.intro-block__textcontainer__title span {
+  display: inline-block;
+  margin: 0 -15px;
+}
+.intro-block__textcontainer__title span:hover {
+  animation: bounceOn 0.5s forwards;
+}
+.intro-block__textcontainer__title span:not(:hover) {
+  animation: bounceOff 0.5s forwards;
+}
+.intro-block__textcontainer__text {
+  font-family: "Poppins-Semibold";
+  font-size: 24px;
+  margin-bottom: 40px;
+}

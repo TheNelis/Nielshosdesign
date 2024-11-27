@@ -1,0 +1,57 @@
+@use "./variables.scss" as v;
+
+.featured-cases {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+
+    &__title {
+        font-family: 'Lilita One';
+        font-size: 64px;
+    }
+
+    &__casecontainer {
+        width: 100%;
+        display: flex;
+        gap: 15px;
+        margin: 50px 0;
+
+        &__case {
+            flex: 1;
+
+            &__imagemask {
+                overflow: hidden;
+                border-radius: 16px;
+            }
+
+            &__img {
+                width: 100%;
+                aspect-ratio: 4/5;
+                object-fit: cover;
+                border-radius: 16px;
+                transition: all .2s linear;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            &__bottomcontainer {
+                display: flex;
+                gap: 15px;
+                margin-top: 5px;
+                font-size: 16px;
+            }
+
+            &__title {
+                font-family: 'Poppins-Semibold';
+                white-space: nowrap;
+            }
+
+            &__tags {
+                font-family: 'Poppins-Regular';
+            }
+        }
+    }
+}

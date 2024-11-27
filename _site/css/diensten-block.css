@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "Lilita One";
+  src: url(/assets/fonts/Lilita_One/LilitaOne-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(/assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-Semibold";
+  src: url(/assets/fonts/Poppins/Poppins-Semibold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(/assets/fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Black";
+  src: url(/assets/fonts/Poppins/Poppins-Black.ttf);
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.diensten-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 40px 60px 40px;
+  background-image: url("/assets/yellow_noise.jpg");
+}
+.diensten-block__title {
+  font-family: "Lilita One";
+  font-size: 64px;
+  margin-bottom: 80px;
+}
+.diensten-block__container {
+  display: flex;
+  gap: 40px;
+}
+.diensten-block__container__dienst {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  margin-bottom: 65px;
+}
+.diensten-block__container__dienst__imagecontainer {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.diensten-block__container__dienst__imagecontainer__illustration {
+  width: 180px;
+  object-fit: contain;
+}
+.diensten-block__container__dienst__imagecontainer__circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: spin 20s infinite linear;
+}
+.diensten-block__container__dienst__title {
+  font-family: "Lilita One";
+  font-size: 32px;
+  text-align: center;
+  margin-top: 20px;
+}
+.diensten-block__blaadje {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22vw;
+  margin: 3.5vw 0 0 -8vw;
+  z-index: 0;
+}

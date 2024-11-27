@@ -1,0 +1,333 @@
+@use "./variables.scss" as v;
+
+// Infinite slide animation
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    } 
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+// Curtain logo rotate animation
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    } 
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+//Curtain open animation
+@keyframes curtainOpen {
+    from {
+        margin-left: -60%;
+        width: 160%;
+    }
+    to {
+        margin-left: 100%;
+        width: 100%;
+    }
+}
+
+
+
+html {
+    font-family: 'Poppins-Regular', Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+.maincontainer {
+    margin: 150px v.$margin-desktop 0 v.$margin-desktop;
+
+    &--home {
+        margin: 0 v.$margin-desktop;
+    }
+}
+
+.curtain {
+    &__container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 180%;
+        margin-left: -80%;
+        height: 100%;
+        background-color: v.$yellow;
+        z-index: 1000;
+        overflow: hidden;
+        border-radius: 100vw 0 0 100vw;
+        display: flex;
+        align-items: center;
+        animation: 1.2s curtainOpen linear forwards;
+        
+
+        &__logo {
+            height: 95vh;
+            margin-left: 5vh;
+            animation: 1.2s rotate linear forwards;
+        }
+    }
+}
+
+.navbar {
+    &__carousel {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        height: 25px;
+        display: flex;
+        z-index: 100;
+        animation: 15s slide infinite linear;
+        font-size: 15px;
+
+        &__section {
+            min-width: 380px;
+            width: 33.3333vw;
+            
+            margin: 0;
+            padding: 2px;
+            text-align: center;
+            font-family: 'Poppins-Semibold';
+            letter-spacing: 7.5px;
+
+            &--blue {
+                background-color: v.$blue;
+            }
+
+            &--red {
+                background-color: v.$red;
+            }
+
+            &--green {
+                background-color: v.$green;
+            }
+        }
+    }
+
+    &__container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: v.$yellow;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 500;
+        margin-top: 25px;
+        padding: 8px v.$margin-mobile 8px v.$margin-mobile;
+        transition: all .2s ease-in-out;
+        box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 20%);
+
+        @media only screen and (min-width: v.$lg) {
+            margin-top: 25px;
+            padding: 8px v.$margin-desktop 8px v.$margin-desktop;
+        }
+
+        &__logo {
+            width: 75px;
+            margin-bottom: -30px;
+            transition: all .2s ease-in-out;
+
+            @media only screen and (min-width: v.$lg) {
+                width: 95px;
+                margin-bottom: -63.5px;
+            }
+
+            &--small {
+                width: 55px;
+                margin-bottom: 0px;
+                transition: all .2s ease-in-out;
+            }
+        }
+    }
+
+    &__buttoncontainer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 15px;
+        padding: 5px 0px;  
+
+        @media only screen and (min-width: v.$lg) {
+            gap: 45px;
+        }
+
+
+        &__button {
+            display: none;
+            font-size: 32px;
+            text-decoration: none;
+            color: black;
+            font-family: 'Lilita One';
+
+            @media only screen and (min-width: v.$lg) {
+                display: block;
+            }
+    
+            &--right:hover {
+                transform: rotate(-4deg) scale(1.1);
+                -webkit-transform: rotate(-4deg) scale(1.1);
+                -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55), -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+            }
+            
+    
+            &--left:hover {
+                transform: rotate(4deg) scale(1.1);
+                -webkit-transform: rotate(4deg) scale(1.1);
+                -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55), -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+            }
+    
+            &--right, &--left {
+                &:not(:hover) {
+                    transform: rotate(0deg) scale(1);
+                    -webkit-transform: rotate(0deg) scale(1);
+                    -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                    transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                    transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                    transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55), -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                }
+            }
+            
+        }
+    }
+
+    &__langcontainer {
+        display: flex;
+
+        @media only screen and (min-width: v.$lg) {
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        &__button {
+            font-family: 'Lilita One';
+            background: transparent;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+
+            @media only screen and (min-width: v.$lg) {
+                font-size: 20px;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+                -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55), -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+            }
+    
+            &:not(:hover) {
+                transform: scale(1);
+                -webkit-transform: scale(1);
+                -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55), -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+            }
+        }
+    }
+}
+
+
+// Hamburgermenu toggle
+
+#nav-icon4 {
+    width: 60px;
+    height: 45px;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    display: block;
+    transform: scale(0.7);
+
+    @media only screen and (min-width: v.$lg) {
+        display: none;
+    }
+}
+  
+#nav-icon4 span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background-color: black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+#nav-icon4 span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+  
+#nav-icon4 span:nth-child(2) {
+    top: 18px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+  
+#nav-icon4 span:nth-child(3) {
+    top: 36px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+  
+#nav-icon4.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -3px;
+    left: 8px;
+}
+  
+#nav-icon4.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+}
+  
+#nav-icon4.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 39px;
+    left: 8px;
+}

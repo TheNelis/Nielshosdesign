@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "Lilita One";
+  src: url(/assets/fonts/Lilita_One/LilitaOne-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(/assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-Semibold";
+  src: url(/assets/fonts/Poppins/Poppins-Semibold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(/assets/fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Black";
+  src: url(/assets/fonts/Poppins/Poppins-Black.ttf);
+}
+.featured-cases {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+.featured-cases__title {
+  font-family: "Lilita One";
+  font-size: 64px;
+}
+.featured-cases__casecontainer {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  margin: 50px 0;
+}
+.featured-cases__casecontainer__case {
+  flex: 1;
+}
+.featured-cases__casecontainer__case__imagemask {
+  overflow: hidden;
+  border-radius: 16px;
+}
+.featured-cases__casecontainer__case__img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: all 0.2s linear;
+}
+.featured-cases__casecontainer__case__img:hover {
+  transform: scale(1.05);
+}
+.featured-cases__casecontainer__case__bottomcontainer {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+  font-size: 16px;
+}
+.featured-cases__casecontainer__case__title {
+  font-family: "Poppins-Semibold";
+  white-space: nowrap;
+}
+.featured-cases__casecontainer__case__tags {
+  font-family: "Poppins-Regular";
+}

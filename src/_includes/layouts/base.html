@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/all-styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <meta name="description" content="{{ description }}">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <!-- <div id="curtain" class="curtain__container">
+                <img class="curtain__container__logo" src="./assets/images/niels_signature_black.png" alt="NielsHosDesign logo">
+            </div> -->
+
+            <div class="navbar__carousel">
+                <p class="navbar__carousel__section navbar__carousel__section--blue">FULLSTACK-DEVELOPER</p>
+                <p class="navbar__carousel__section navbar__carousel__section--red">WEBDESIGNER</p>
+                <p class="navbar__carousel__section navbar__carousel__section--green">ILLUSTRATOR</p>
+                <p class="navbar__carousel__section navbar__carousel__section--blue">FULLSTACK-DEVELOPER</p>
+                <p class="navbar__carousel__section navbar__carousel__section--red">WEBDESIGNER</p>
+                <p class="navbar__carousel__section navbar__carousel__section--green">ILLUSTRATOR</p>
+            </div>
+            <nav id="navbar-container" class="navbar__container">
+                <img id="logo" class="navbar__container__logo" src="./assets/images/niels_signature_black.png" alt="NielsHosDesign logo">
+                <div class="navbar__buttoncontainer">
+                    <a href="/" class="navbar__buttoncontainer__button navbar__buttoncontainer__button--right">Cases</a>
+                    <a href="/" class="navbar__buttoncontainer__button navbar__buttoncontainer__button--left">Over mij</a>
+                    <a href="/" class="navbar__buttoncontainer__button navbar__buttoncontainer__button--right">Diensten</a>
+                    <a href="/" class="navbar__buttoncontainer__button navbar__buttoncontainer__button--left">Contact</a>
+                    <div class="navbar__langcontainer">
+                        <button class="navbar__langcontainer__button">NL</button>
+                        <button class="navbar__langcontainer__button">EN</button>
+                    </div>
+                    <div id="nav-icon4">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+
+
+            {{ content | safe }}
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    // document.addEventListener("DOMContentLoaded", (event) => {
+    //     gsap.registerPlugin(ScrollTrigger);
+    //     gsap.registerPlugin( ScrollSmoother);
+    //     // create the scrollSmoother before your scrollTriggers
+    //     ScrollSmoother.create({
+    //         wrapper: '#smooth-wrapper',
+    //         content: '#smooth-content',
+    //         smooth: 1,
+    //         effects: true,
+    //         smoothTouch: 0.1,
+    //     });
+    // });
+
+
+    const navIcon = document.getElementById('nav-icon4');
+    navIcon.addEventListener('click', function() {
+        this.classList.toggle('open');
+    });
+
+
+    // Change navbar on scroll
+    const logo = document.getElementById('logo');
+    const navbar = document.getElementById('navbar-container');
+    
+    window.addEventListener("scroll", (event) => {
+        let scroll = this.scrollY;
+
+        toggleNavbar(scroll);
+    });
+
+    function toggleNavbar(scroll) {
+        
+        if (scroll >= 20) {
+            logo.setAttribute('class', 'navbar__container__logo--small');
+            navbar.style.marginTop = '0px';
+        } else {
+            logo.setAttribute('class', 'navbar__container__logo');
+            navbar.style.marginTop = '25px';
+        }
+    }
+
+    // Random curtain color
+    const curtain = document.getElementById('curtain');
+
+    function curtainColor() {
+        let randomNumber = Math.floor(Math.random()*3+1);
+
+        if (randomNumber == 1) {
+            curtain.style.backgroundColor = '#0078D7'; //blue
+        } else if (randomNumber == 2) {
+            curtain.style.backgroundColor = '#FF445C' //red
+        } else {
+            curtain.style.backgroundColor = '#00BF72' //green
+        }
+    }
+
+    // curtainColor();
+</script>

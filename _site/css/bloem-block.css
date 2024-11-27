@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "Lilita One";
+  src: url(/assets/fonts/Lilita_One/LilitaOne-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(/assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-Semibold";
+  src: url(/assets/fonts/Poppins/Poppins-Semibold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(/assets/fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Black";
+  src: url(/assets/fonts/Poppins/Poppins-Black.ttf);
+}
+.bloem-block {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.bloem-block__container {
+  position: relative;
+  width: 1500px;
+  max-width: 95%;
+  height: 100%;
+  margin-right: -20%;
+  margin-top: 39px;
+}
+@media only screen and (min-width: 992px) {
+  .bloem-block__container {
+    margin-right: -10%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .bloem-block__container {
+    margin-right: -5%;
+  }
+}
+.bloem-block__bloemcontainer {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  width: 50vw;
+  height: 50vw;
+  max-width: 90vh;
+  max-height: 90vh;
+  margin-left: calc((1.2vw + 2.4vh) * -1);
+}
+@media only screen and (min-width: 992px) {
+  .bloem-block__bloemcontainer {
+    width: 50vw;
+    height: 50vw;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .bloem-block__bloemcontainer {
+    width: 90vw;
+    height: 90vw;
+  }
+}
+.bloem-block__bloemcontainer__bloem {
+  z-index: -1;
+  transform: scale(0);
+}
+.bloem-block__bloemcontainer__bloemkern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 1vw;
+  background-image: url(/assets/bloemkern.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 10vw;
+  z-index: 1;
+  transform: scale(1);
+}
+@media only screen and (min-width: 992px) {
+  .bloem-block__bloemcontainer__bloemkern {
+    background-size: 10vw;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .bloem-block__bloemcontainer__bloemkern {
+    background-size: 20vh;
+  }
+}
+.bloem-block__textcontainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: fit-content;
+  height: 100%;
+  margin-right: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: "Lilita One";
+  font-size: 5vw;
+  text-transform: uppercase;
+  line-height: 100%;
+}
+@media only screen and (min-width: 992px) {
+  .bloem-block__textcontainer {
+    margin-right: 10%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .bloem-block__textcontainer {
+    margin-right: 5%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .bloem-block__textcontainer {
+    font-size: calc(2vw + 4vh);
+  }
+}
+@media only screen and (min-width: 992px) {
+  .bloem-block__textcontainer {
+    font-size: calc(2.5vw + 5vh);
+  }
+}
+.bloem-block__textcontainer--spanletter {
+  color: #FFD12D;
+  line-height: 100%;
+  font-size: 0px;
+}
+.bloem-block__textcontainer--span2, .bloem-block__textcontainer--span3 {
+  margin-left: 6.2vw;
+}
+@media only screen and (min-width: 768px) {
+  .bloem-block__textcontainer--span2, .bloem-block__textcontainer--span3 {
+    margin-left: calc(2.5vw + 5vh);
+  }
+}
+@media only screen and (min-width: 992px) {
+  .bloem-block__textcontainer--span2, .bloem-block__textcontainer--span3 {
+    margin-left: calc(3.1vw + 6.2vh);
+  }
+}
+.bloem-block__textcontainer--span4 {
+  margin-left: 12.75vw;
+}
+@media only screen and (min-width: 768px) {
+  .bloem-block__textcontainer--span4 {
+    margin-left: calc(5.1vw + 10.2vh);
+  }
+}
+@media only screen and (min-width: 992px) {
+  .bloem-block__textcontainer--span4 {
+    margin-left: calc(6.375vw + 12.75vh);
+  }
+}

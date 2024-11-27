@@ -1,0 +1,144 @@
+@use "./variables.scss" as v;
+
+.bloem-block {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    &__container {
+        position: relative;
+        width: 1500px;
+        max-width: 95%;
+        height: 100%;
+        margin-right: -20%;
+        margin-top: 39px; //Navbar half height
+
+        @media only screen and (min-width: v.$lg) {
+            margin-right: -10%;
+        }
+
+        @media only screen and (min-width: v.$xxl) {
+            margin-right: -5%;
+        }
+    }
+
+    &__bloemcontainer {
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        transform: translate(0%, -50%);
+        width: 50vw;
+        height: 50vw;
+        max-width: 90vh;
+        max-height: 90vh;
+        margin-left: calc((1.2vw + 2.4vh)*-1);
+
+        @media only screen and (min-width: v.$lg) {
+            width: 50vw;
+            height: 50vw;
+        }
+
+        @media only screen and (min-width: v.$xxl) {
+            width: 90vw;
+            height: 90vw;
+        }
+
+        &__bloem {
+            z-index: -1;
+            transform: scale(0);
+        }
+
+        &__bloemkern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin-top: 1vw;
+            background-image: url(/assets/bloemkern.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 10vw;
+            z-index: 1;
+            transform: scale(1);
+
+            @media only screen and (min-width: v.$lg) {
+                background-size: 10vw;
+            }
+
+            @media only screen and (min-width: v.$xxl) {
+                background-size: 20vh;
+            }
+        }
+    }
+
+
+    &__textcontainer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: fit-content;
+        height: 100%;
+        margin-right: 20%;
+
+        @media only screen and (min-width: v.$lg) {
+            margin-right: 10%;
+        }
+
+        @media only screen and (min-width: v.$xxl) {
+            margin-right: 5%;
+        }
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        font-family: 'Lilita One';
+        font-size: calc(5vw);
+        text-transform: uppercase;
+        line-height: 100%;
+
+        @media only screen and (min-width: v.$md) {
+            font-size: calc(2vw + 4vh);
+        }
+
+        @media only screen and (min-width: v.$lg) {
+            font-size: calc(2.5vw + 5vh);
+        }
+
+
+        &--spanletter {
+            color: v.$yellow;
+            line-height: 100%;
+            font-size: 0px;
+        }
+
+        &--span2, &--span3 {
+            margin-left: calc(6.2vw);
+
+            @media only screen and (min-width: v.$md) {
+                margin-left: calc(2.5vw + 5vh);
+            }
+
+            @media only screen and (min-width: v.$lg) {
+                margin-left: calc(3.1vw + 6.2vh);
+            }
+        }
+
+        &--span4 {
+            margin-left: calc(12.75vw);
+
+            @media only screen and (min-width: v.$md) {
+                margin-left: calc(5.1vw + 10.2vh);
+            }
+            
+            @media only screen and (min-width: v.$lg) {
+                margin-left: calc(6.375vw + 12.75vh);
+            }
+        }
+    }
+}

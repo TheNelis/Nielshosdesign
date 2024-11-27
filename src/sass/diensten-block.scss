@@ -1,0 +1,75 @@
+@use "./variables.scss" as v;
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.diensten-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px v.$margin-desktop 60px v.$margin-desktop;
+    background-image: url('/assets/yellow_noise.jpg');
+
+    &__title {
+        font-family: 'Lilita One';
+        font-size: 64px;
+        margin-bottom: 80px;
+    }
+
+    &__container {
+        display: flex;
+        gap: 40px;
+
+        &__dienst {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            margin-bottom: 65px;
+
+            &__imagecontainer {
+                position: relative;
+                width: 250px;
+                height: 250px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &__illustration {
+                    width: 180px;
+                    object-fit: contain;
+                }
+
+                &__circle {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    animation: spin 20s infinite linear;
+                }
+            }
+
+            &__title {
+                font-family: 'Lilita One';
+                font-size: 32px;
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__blaadje {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 22vw;
+        margin: 3.5vw 0 0 -8vw;
+        z-index: 0;
+    }
+}

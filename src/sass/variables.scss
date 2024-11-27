@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Lilita One';
+    src: url(/assets/fonts/Lilita_One/LilitaOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url(/assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-Semibold';
+    src: url(/assets/fonts/Poppins/Poppins-Semibold.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url(/assets/fonts/Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-Black';
+    src: url(/assets/fonts/Poppins/Poppins-Black.ttf);
+}
+
+$yellow: #FFD12D;
+$blue: #0078D7;
+$red: #FF445C;
+$green: #00BF72;
+
+// $regular: 400;
+// $semibold: 600;
+// $bold: 700;
+// $black: 800;
+
+$margin-mobile: 15px;
+$margin-desktop: 40px;
+
+$sm: 567px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;

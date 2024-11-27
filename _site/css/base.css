@@ -1,0 +1,318 @@
+@font-face {
+  font-family: "Lilita One";
+  src: url(/assets/fonts/Lilita_One/LilitaOne-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(/assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-Semibold";
+  src: url(/assets/fonts/Poppins/Poppins-Semibold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(/assets/fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Black";
+  src: url(/assets/fonts/Poppins/Poppins-Black.ttf);
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes curtainOpen {
+  from {
+    margin-left: -60%;
+    width: 160%;
+  }
+  to {
+    margin-left: 100%;
+    width: 100%;
+  }
+}
+html {
+  font-family: "Poppins-Regular", Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.maincontainer {
+  margin: 150px 40px 0 40px;
+}
+.maincontainer--home {
+  margin: 0 40px;
+}
+
+.curtain__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180%;
+  margin-left: -80%;
+  height: 100%;
+  background-color: #FFD12D;
+  z-index: 1000;
+  overflow: hidden;
+  border-radius: 100vw 0 0 100vw;
+  display: flex;
+  align-items: center;
+  animation: 1.2s curtainOpen linear forwards;
+}
+.curtain__container__logo {
+  height: 95vh;
+  margin-left: 5vh;
+  animation: 1.2s rotate linear forwards;
+}
+
+.navbar__carousel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 25px;
+  display: flex;
+  z-index: 100;
+  animation: 15s slide infinite linear;
+  font-size: 15px;
+}
+.navbar__carousel__section {
+  min-width: 380px;
+  width: 33.3333vw;
+  margin: 0;
+  padding: 2px;
+  text-align: center;
+  font-family: "Poppins-Semibold";
+  letter-spacing: 7.5px;
+}
+.navbar__carousel__section--blue {
+  background-color: #0078D7;
+}
+.navbar__carousel__section--red {
+  background-color: #FF445C;
+}
+.navbar__carousel__section--green {
+  background-color: #00BF72;
+}
+.navbar__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FFD12D;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 500;
+  margin-top: 25px;
+  padding: 8px 15px 8px 15px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+}
+@media only screen and (min-width: 992px) {
+  .navbar__container {
+    margin-top: 25px;
+    padding: 8px 40px 8px 40px;
+  }
+}
+.navbar__container__logo {
+  width: 75px;
+  margin-bottom: -30px;
+  transition: all 0.2s ease-in-out;
+}
+@media only screen and (min-width: 992px) {
+  .navbar__container__logo {
+    width: 95px;
+    margin-bottom: -63.5px;
+  }
+}
+.navbar__container__logo--small {
+  width: 55px;
+  margin-bottom: 0px;
+  transition: all 0.2s ease-in-out;
+}
+.navbar__buttoncontainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  padding: 5px 0px;
+}
+@media only screen and (min-width: 992px) {
+  .navbar__buttoncontainer {
+    gap: 45px;
+  }
+}
+.navbar__buttoncontainer__button {
+  display: none;
+  font-size: 32px;
+  text-decoration: none;
+  color: black;
+  font-family: "Lilita One";
+}
+@media only screen and (min-width: 992px) {
+  .navbar__buttoncontainer__button {
+    display: block;
+  }
+}
+.navbar__buttoncontainer__button--right:hover {
+  transform: rotate(-4deg) scale(1.1);
+  -webkit-transform: rotate(-4deg) scale(1.1);
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.navbar__buttoncontainer__button--left:hover {
+  transform: rotate(4deg) scale(1.1);
+  -webkit-transform: rotate(4deg) scale(1.1);
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.navbar__buttoncontainer__button--right:not(:hover), .navbar__buttoncontainer__button--left:not(:hover) {
+  transform: rotate(0deg) scale(1);
+  -webkit-transform: rotate(0deg) scale(1);
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.navbar__langcontainer {
+  display: flex;
+}
+@media only screen and (min-width: 992px) {
+  .navbar__langcontainer {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+.navbar__langcontainer__button {
+  font-family: "Lilita One";
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+@media only screen and (min-width: 992px) {
+  .navbar__langcontainer__button {
+    font-size: 20px;
+  }
+}
+.navbar__langcontainer__button:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.navbar__langcontainer__button:not(:hover) {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#nav-icon4 {
+  width: 60px;
+  height: 45px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  display: block;
+  transform: scale(0.7);
+}
+@media only screen and (min-width: 992px) {
+  #nav-icon4 {
+    display: none;
+  }
+}
+
+#nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background-color: black;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon4 span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(2) {
+  top: 18px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(3) {
+  top: 36px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon4.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+
+#nav-icon4.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#nav-icon4.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 39px;
+  left: 8px;
+}

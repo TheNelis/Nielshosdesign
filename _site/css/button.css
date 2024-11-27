@@ -1,0 +1,157 @@
+@font-face {
+  font-family: "Lilita One";
+  src: url(/assets/fonts/Lilita_One/LilitaOne-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(/assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-Semibold";
+  src: url(/assets/fonts/Poppins/Poppins-Semibold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(/assets/fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Black";
+  src: url(/assets/fonts/Poppins/Poppins-Black.ttf);
+}
+.button--green {
+  display: block;
+  width: fit-content;
+  position: relative;
+  font-family: "Poppins-Semibold";
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  background-image: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50" fill="%2300BF72" /></svg>');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0%;
+  transition: all 0.3s ease-out;
+}
+.button--green:hover {
+  background-size: 120%;
+  color: white;
+}
+
+.button--red {
+  display: block;
+  width: fit-content;
+  position: relative;
+  font-family: "Poppins-Semibold";
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  background-image: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50" fill="%23FF445C" /></svg>');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0%;
+  transition: all 0.3s ease-out;
+}
+.button--red:hover {
+  background-size: 120%;
+  color: white;
+}
+
+.button--blue {
+  display: block;
+  width: fit-content;
+  position: relative;
+  font-family: "Poppins-Semibold";
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  background-image: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50" fill="%230078D7" /></svg>');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0%;
+  transition: all 0.3s ease-out;
+}
+.button--blue:hover {
+  background-size: 120%;
+  color: white;
+}
+
+.button--green--outline {
+  display: block;
+  width: fit-content;
+  position: relative;
+  font-family: "Poppins-Semibold";
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+  padding: 20px;
+  border: solid 2px black;
+  border-radius: 8px;
+  background-color: white;
+  background-image: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50" fill="%2300BF72" /></svg>');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0%;
+  transition: all 0.3s ease-out;
+}
+.button--green--outline:hover {
+  background-size: 120%;
+  color: white;
+  border: solid 2px #00BF72;
+}
+
+.button--red--outline {
+  display: block;
+  width: fit-content;
+  position: relative;
+  font-family: "Poppins-Semibold";
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+  padding: 20px;
+  border: solid 2px black;
+  border-radius: 8px;
+  background-color: white;
+  background-image: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50" fill="%23FF445C" /></svg>');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0%;
+  transition: all 0.3s ease-out;
+}
+.button--red--outline:hover {
+  background-size: 120%;
+  color: white;
+  border: solid 2px #FF445C;
+}
+
+.button--blue--outline {
+  display: block;
+  width: fit-content;
+  position: relative;
+  font-family: "Poppins-Semibold";
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+  padding: 20px;
+  border: solid 2px black;
+  border-radius: 8px;
+  background-color: white;
+  background-image: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50" fill="%230078D7" /></svg>');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0%;
+  transition: all 0.3s ease-out;
+}
+.button--blue--outline:hover {
+  background-size: 120%;
+  color: white;
+  border: solid 2px #0078D7;
+}
