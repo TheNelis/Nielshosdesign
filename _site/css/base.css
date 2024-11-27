@@ -50,10 +50,18 @@ html {
 }
 
 .maincontainer {
-  margin: 150px 40px 0 40px;
+  margin: 150px 15px 0;
 }
 .maincontainer--home {
-  margin: 0 40px;
+  margin: 0 15px;
+}
+@media only screen and (min-width: 992px) {
+  .maincontainer {
+    margin: 150px 40px 0;
+  }
+  .maincontainer--home {
+    margin: 0 40px;
+  }
 }
 
 .curtain__container {

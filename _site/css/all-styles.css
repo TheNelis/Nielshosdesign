@@ -127,10 +127,18 @@ html {
 }
 
 .maincontainer {
-  margin: 150px 40px 0 40px;
+  margin: 150px 15px 0;
 }
 .maincontainer--home {
-  margin: 0 40px;
+  margin: 0 15px;
+}
+@media only screen and (min-width: 992px) {
+  .maincontainer {
+    margin: 150px 40px 0;
+  }
+  .maincontainer--home {
+    margin: 0 40px;
+  }
 }
 
 .curtain__container {
@@ -620,13 +628,26 @@ html {
 }
 .featured-cases__title {
   font-family: "Lilita One";
-  font-size: 64px;
+  font-size: 44px;
+}
+@media only screen and (min-width: 992px) {
+  .featured-cases__title {
+    font-size: 64px;
+  }
 }
 .featured-cases__casecontainer {
   width: 100%;
   display: flex;
-  gap: 15px;
-  margin: 50px 0;
+  flex-direction: column;
+  gap: 25px;
+  margin: 30px 0;
+}
+@media only screen and (min-width: 992px) {
+  .featured-cases__casecontainer {
+    flex-direction: row;
+    gap: 15px;
+    margin: 50px 0;
+  }
 }
 .featured-cases__casecontainer__case {
   flex: 1;
@@ -647,9 +668,15 @@ html {
 }
 .featured-cases__casecontainer__case__bottomcontainer {
   display: flex;
-  gap: 15px;
+  flex-direction: column;
   margin-top: 5px;
   font-size: 16px;
+}
+@media only screen and (min-width: 992px) {
+  .featured-cases__casecontainer__case__bottomcontainer {
+    flex-direction: row;
+    gap: 15px;
+  }
 }
 .featured-cases__casecontainer__case__title {
   font-family: "Poppins-Semibold";
