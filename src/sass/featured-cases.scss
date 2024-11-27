@@ -10,6 +10,10 @@
         font-family: 'Lilita One';
         font-size: 44px;
 
+        @media only screen and (min-width: v.$md) {
+            font-size: 54px;
+        }
+
         @media only screen and (min-width: v.$lg) {
             font-size: 64px;
         }
@@ -21,6 +25,10 @@
         flex-direction: column;
         gap: 25px;
         margin: 30px 0;
+
+        @media only screen and (min-width: v.$md) {
+            gap: 50px;
+        }
 
         @media only screen and (min-width: v.$lg) {
             flex-direction: row;
@@ -54,6 +62,9 @@
                 margin-top: 5px;
                 font-size: 16px;
                 
+                @media only screen and (min-width: v.$md) {
+                    font-size: 24px;
+                }
 
                 @media only screen and (min-width: v.$lg) {
                     flex-direction: row;

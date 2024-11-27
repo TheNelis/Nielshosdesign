@@ -8,6 +8,8 @@
     justify-content: center;
     overflow: hidden;
 
+    
+
     &__container {
         position: relative;
         width: 1500px;
@@ -27,11 +29,11 @@
 
     &__bloemcontainer {
         position: absolute;
-        top: 50%;
-        left: 0%;
+        top: 68%;
+        left: -10%;
         transform: translate(0%, -50%);
-        width: 50vw;
-        height: 50vw;
+        width: 80vw;
+        height: 80vw;
         max-width: 90vh;
         max-height: 90vh;
         margin-left: calc((1.2vw + 2.4vh)*-1);
@@ -39,6 +41,8 @@
         @media only screen and (min-width: v.$lg) {
             width: 50vw;
             height: 50vw;
+            top: 50%;
+            left: 0%;
         }
 
         @media only screen and (min-width: v.$xxl) {
@@ -61,7 +65,7 @@
             background-image: url(/assets/bloemkern.png);
             background-position: center;
             background-repeat: no-repeat;
-            background-size: 10vw;
+            background-size: 22vw;
             z-index: 1;
             transform: scale(1);
 
@@ -80,17 +84,10 @@
         position: absolute;
         top: 0;
         right: 0;
-        width: fit-content;
+        width: 100vw;
         height: 100%;
-        margin-right: 20%;
+        margin-right: 8%;
 
-        @media only screen and (min-width: v.$lg) {
-            margin-right: 10%;
-        }
-
-        @media only screen and (min-width: v.$xxl) {
-            margin-right: 5%;
-        }
 
         display: flex;
         flex-direction: column;
@@ -98,18 +95,23 @@
         justify-content: center;
 
         font-family: 'Lilita One';
-        font-size: calc(5vw);
+        font-size: 14vw;
         text-transform: uppercase;
         line-height: 100%;
 
         @media only screen and (min-width: v.$md) {
-            font-size: calc(2vw + 4vh);
+            top: -10%;
         }
 
         @media only screen and (min-width: v.$lg) {
+            margin-right: 10%;
             font-size: calc(2.5vw + 5vh);
+            width: fit-content;
         }
 
+        @media only screen and (min-width: v.$xxl) {
+            margin-right: 5%;
+        }
 
         &--spanletter {
             color: v.$yellow;
@@ -117,12 +119,16 @@
             font-size: 0px;
         }
 
-        &--span2, &--span3 {
-            margin-left: calc(6.2vw);
+        &--span1 {
+            margin-left: 15px;
 
-            @media only screen and (min-width: v.$md) {
-                margin-left: calc(2.5vw + 5vh);
+            @media only screen and (min-width: v.$lg) {
+                margin-left: 0px;
             }
+        }
+
+        &--span2, &--span3 {
+            margin-left: 10vw;
 
             @media only screen and (min-width: v.$lg) {
                 margin-left: calc(3.1vw + 6.2vh);
@@ -130,14 +136,18 @@
         }
 
         &--span4 {
-            margin-left: calc(12.75vw);
+            margin-left: 40vw;
+            margin-right: 15px;
+            text-align: end;
 
             @media only screen and (min-width: v.$md) {
-                margin-left: calc(5.1vw + 10.2vh);
+                margin-right: 30px;
             }
             
             @media only screen and (min-width: v.$lg) {
                 margin-left: calc(6.375vw + 12.75vh);
+                margin-right: 15px;
+                text-align: start;
             }
         }
     }

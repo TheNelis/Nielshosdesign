@@ -135,6 +135,8 @@
     </div>
 </div>
 
+
+<!-- Bloem-block desktop -->
 <div id="bloem-block" class="bloem-block">
     <div class="bloem-block__container">
         <div class="bloem-block__bloemcontainer">
@@ -255,14 +257,11 @@
     let bounceAnimationText = bloemLetter();  
     
     function bloemLetter() {
-        if (containerWidth >= 768 && containerWidth < 992) {
-            return 'calc(2vw + 4vh)';
-
-        } else if (containerWidth >= 992) {
+        if (containerWidth >= 992) {
             return 'calc(2.5vw + 5vh)';
 
         } else {
-            return '5vw';
+            return '14vw';
         }
     }
 
