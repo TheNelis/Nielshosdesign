@@ -82,6 +82,7 @@
   font-family: "Poppins-Black";
   margin: 0px;
   z-index: 10;
+  font-size: 17vw;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
@@ -129,6 +130,11 @@
 .herocontainer__bottomcontainer__socials div a svg {
   width: 34px;
   height: 34px;
+  transition: all 0.15s ease-out;
+}
+.herocontainer__bottomcontainer__socials div a svg:hover {
+  margin-top: -3px;
+  margin-bottom: 3px;
 }
 .herocontainer__bottomcontainer__scrolldown {
   position: absolute;

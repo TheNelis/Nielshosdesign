@@ -25,6 +25,7 @@
   display: flex;
   justify-content: center;
   overflow: hidden;
+  margin: 100px 0;
 }
 .bloem-block__container {
   position: relative;

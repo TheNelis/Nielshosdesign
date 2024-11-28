@@ -121,6 +121,10 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  overflow: hidden;
+}
+
 .maincontainer {
   margin: 150px 15px 0;
 }
@@ -242,6 +246,11 @@ html {
 .navbar__mobilemenu div a svg {
   width: 34px;
   height: 34px;
+  transition: all 0.15s ease-out;
+}
+.navbar__mobilemenu div a svg:hover {
+  margin-top: -3px;
+  margin-bottom: 3px;
 }
 .navbar__container {
   position: fixed;
@@ -519,6 +528,7 @@ html {
   font-family: "Poppins-Black";
   margin: 0px;
   z-index: 10;
+  font-size: 17vw;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
@@ -566,6 +576,11 @@ html {
 .herocontainer__bottomcontainer__socials div a svg {
   width: 34px;
   height: 34px;
+  transition: all 0.15s ease-out;
+}
+.herocontainer__bottomcontainer__socials div a svg:hover {
+  margin-top: -3px;
+  margin-bottom: 3px;
 }
 .herocontainer__bottomcontainer__scrolldown {
   position: absolute;
@@ -682,10 +697,15 @@ html {
 }
 .featured-cases__casecontainer__case__img {
   width: 100%;
-  aspect-ratio: 4/5;
+  aspect-ratio: 5/4;
   object-fit: cover;
   border-radius: 16px;
   transition: all 0.2s linear;
+}
+@media only screen and (min-width: 992px) {
+  .featured-cases__casecontainer__case__img {
+    aspect-ratio: 4/5;
+  }
 }
 .featured-cases__casecontainer__case__img:hover {
   transform: scale(1.05);
@@ -705,6 +725,7 @@ html {
   .featured-cases__casecontainer__case__bottomcontainer {
     flex-direction: row;
     gap: 15px;
+    font-size: 16px;
   }
 }
 .featured-cases__casecontainer__case__title {
@@ -980,7 +1001,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 40px 60px 40px;
+  padding: 80px 40px 160px 40px;
   background-image: url("/assets/yellow_noise.jpg");
 }
 .diensten-block__title {
@@ -1061,6 +1082,7 @@ html {
   display: flex;
   justify-content: center;
   overflow: hidden;
+  margin: 100px 0;
 }
 .bloem-block__container {
   position: relative;
@@ -1202,5 +1224,122 @@ html {
     margin-left: calc(6.375vw + 12.75vh);
     margin-right: 15px;
     text-align: start;
+  }
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 30px 15px 0px;
+}
+@media only screen and (min-width: 992px) {
+  .footer {
+    padding: 80px 40px 0px;
+  }
+}
+.footer--white {
+  background-color: white;
+}
+.footer--yellow {
+  background-color: #FFD12D;
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 992px) {
+  .footer__container {
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+}
+.footer__container__column {
+  flex: 1;
+}
+@media only screen and (min-width: 992px) {
+  .footer__container__column {
+    padding-right: 17%;
+  }
+}
+.footer__container__column__title {
+  font-family: "Poppins-Bold";
+  font-size: 18px;
+  padding-right: 40%;
+  text-wrap: wrap;
+}
+@media only screen and (min-width: 992px) {
+  .footer__container__column__title {
+    font-size: 24px;
+    padding-right: 0%;
+  }
+}
+.footer__container__column__text {
+  font-family: "Poppins-Regular";
+  font-size: 16px;
+}
+.footer__container__column__text--first {
+  padding-right: 20%;
+}
+@media only screen and (min-width: 992px) {
+  .footer__container__column__text {
+    font-size: 20px;
+  }
+  .footer__container__column__text--first {
+    padding-right: 0%;
+  }
+}
+.footer__container__column div {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+.footer__container__column div a svg {
+  width: 34px;
+  height: 34px;
+  transition: all 0.15s ease-out;
+}
+.footer__container__column div a svg:hover {
+  margin-top: -3px;
+  margin-bottom: 3px;
+}
+.footer__email {
+  font-family: "Lilita One";
+  font-size: 14.5vw;
+  line-height: 65%;
+  display: flex;
+  flex-direction: column;
+}
+.footer__email span {
+  font-size: 7vw;
+}
+@media only screen and (min-width: 992px) {
+  .footer__email {
+    font-size: 9vw;
+    display: block;
+    line-height: 100%;
+  }
+}
+.footer__blaadje {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55vw;
+  margin: -25vw -15vw 0 0;
+  z-index: 0;
+}
+@media only screen and (min-width: 768px) {
+  .footer__blaadje {
+    width: 42vw;
+    margin: -18vw -14vw 0 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .footer__blaadje {
+    width: 22vw;
+    margin: -9.5vw -7vw 0 0;
   }
 }

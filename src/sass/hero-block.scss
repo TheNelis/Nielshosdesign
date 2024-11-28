@@ -46,15 +46,16 @@
         font-family: 'Poppins-Black';
         margin: 0px;
         z-index: 10;
+        font-size: 17vw;
+
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
 
         @media only screen and (min-width: v.$lg) {
             top: 0;
             transform: translateX(-50%);
         }
-
-        -webkit-user-select: none; /* Safari */
-        -ms-user-select: none; /* IE 10 and IE 11 */
-        user-select: none; /* Standard syntax */
 
 
         span {
@@ -97,6 +98,12 @@
                 a svg {
                     width: 34px;
                     height: 34px;
+                    transition: all .15s ease-out;
+
+                    &:hover {
+                        margin-top: -3px;
+                        margin-bottom: 3px;
+                    }
                 }
             }
         }

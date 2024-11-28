@@ -66,10 +66,15 @@
 }
 .featured-cases__casecontainer__case__img {
   width: 100%;
-  aspect-ratio: 4/5;
+  aspect-ratio: 5/4;
   object-fit: cover;
   border-radius: 16px;
   transition: all 0.2s linear;
+}
+@media only screen and (min-width: 992px) {
+  .featured-cases__casecontainer__case__img {
+    aspect-ratio: 4/5;
+  }
 }
 .featured-cases__casecontainer__case__img:hover {
   transform: scale(1.05);
@@ -89,6 +94,7 @@
   .featured-cases__casecontainer__case__bottomcontainer {
     flex-direction: row;
     gap: 15px;
+    font-size: 16px;
   }
 }
 .featured-cases__casecontainer__case__title {

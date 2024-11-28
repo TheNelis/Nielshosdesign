@@ -44,6 +44,10 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  overflow: hidden;
+}
+
 .maincontainer {
   margin: 150px 15px 0;
 }
@@ -165,6 +169,11 @@ html {
 .navbar__mobilemenu div a svg {
   width: 34px;
   height: 34px;
+  transition: all 0.15s ease-out;
+}
+.navbar__mobilemenu div a svg:hover {
+  margin-top: -3px;
+  margin-bottom: 3px;
 }
 .navbar__container {
   position: fixed;
