@@ -37,6 +37,7 @@
   background-color: #FFD12D;
 }
 .footer__container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -59,8 +60,10 @@
 .footer__container__column__title {
   font-family: "Poppins-Bold";
   font-size: 18px;
-  padding-right: 40%;
+  line-height: 140%;
   text-wrap: wrap;
+  padding-right: 40%;
+  margin-bottom: 5px;
 }
 @media only screen and (min-width: 992px) {
   .footer__container__column__title {
