@@ -99,7 +99,7 @@ body {
 }
 @media only screen and (min-width: 992px) {
   .curtain__container__logo {
-    animation: 1.2s rotate linear forwards;
+    animation: 1.1s rotate linear forwards;
   }
 }
 
