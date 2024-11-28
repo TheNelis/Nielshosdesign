@@ -1272,6 +1272,7 @@ body {
   flex-direction: column;
   gap: 40px;
   padding: 30px 15px 0px;
+  background-color: white;
 }
 @media only screen and (min-width: 992px) {
   .footer {
@@ -1282,7 +1283,7 @@ body {
   background-color: white;
 }
 .footer--yellow {
-  background-color: #FFD12D;
+  background-image: url("/assets/yellow_noise.jpg");
 }
 .footer__container {
   width: 100%;

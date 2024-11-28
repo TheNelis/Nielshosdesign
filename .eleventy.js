@@ -1,4 +1,4 @@
-const Card = require('./src/_includes/components/Card');
+const Footer = require('./src/_includes/components/Footer');
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets/");
@@ -6,7 +6,7 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addWatchTarget("src/css/");
 
-    eleventyConfig.addShortcode("Card", Card);
+    eleventyConfig.addShortcode("Footer", Footer);
 
     eleventyConfig.addCollection('posts', function(collectionApi) {
       return collectionApi.getFilteredByGlob('src/blog/posts/**/*.md');

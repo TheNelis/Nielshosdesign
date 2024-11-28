@@ -6,6 +6,7 @@
     flex-direction: column;
     gap: 40px;
     padding: 30px v.$margin-mobile 0px;
+    background-color: white;
 
     @media only screen and (min-width: v.$lg) {
         padding: 80px v.$margin-desktop 0px;
@@ -15,7 +16,7 @@
         background-color: white;
     }
     &--yellow {
-        background-color: v.$yellow;
+        background-image: url('/assets/yellow_noise.jpg');
     }
 
 
