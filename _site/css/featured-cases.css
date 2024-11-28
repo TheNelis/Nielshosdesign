@@ -59,6 +59,14 @@
 }
 .featured-cases__casecontainer__case {
   flex: 1;
+  color: black;
+  text-decoration: none;
+}
+.featured-cases__casecontainer__case:hover {
+  cursor: pointer;
+}
+.featured-cases__casecontainer__case:hover img {
+  transform: scale(1.05);
 }
 .featured-cases__casecontainer__case__imagemask {
   overflow: hidden;
@@ -75,9 +83,6 @@
   .featured-cases__casecontainer__case__img {
     aspect-ratio: 4/5;
   }
-}
-.featured-cases__casecontainer__case__img:hover {
-  transform: scale(1.05);
 }
 .featured-cases__casecontainer__case__bottomcontainer {
   display: flex;

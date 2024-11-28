@@ -38,6 +38,16 @@
 
         &__case {
             flex: 1;
+            color: black;
+            text-decoration: none;
+
+            &:hover {
+                cursor: pointer;
+
+                img {
+                    transform: scale(1.05);
+                }
+            }
 
             &__imagemask {
                 overflow: hidden;
@@ -54,10 +64,6 @@
                 @media only screen and (min-width: v.$lg) {
                     aspect-ratio: 4/5;
                 }
-
-                &:hover {
-                    transform: scale(1.05);
-                }
             }
 
             &__bottomcontainer {
@@ -65,6 +71,7 @@
                 flex-direction: column;
                 margin-top: 5px;
                 font-size: 16px;
+                
                 
                 @media only screen and (min-width: v.$md) {
                     font-size: 24px;
