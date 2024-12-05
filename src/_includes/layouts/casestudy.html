@@ -2,14 +2,58 @@
 layout: layouts/base.html
 ---
 
+<div class="casestudypage">
+    <div class="maincontainer">
+        <a href="/casepage/cases" class="backbutton">
+            <svg width="38px" height="38px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"/><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5303 9.46967C18.8232 9.76256 18.8232 10.2374 18.5303 10.5303L12.5303 16.5303C12.2374 16.8232 11.7626 16.8232 11.4697 16.5303L5.46967 10.5303C5.17678 10.2374 5.17678 9.76256 5.46967 9.46967C5.76256 9.17678 6.23744 9.17678 6.53033 9.46967L12 14.9393L17.4697 9.46967C17.7626 9.17678 18.2374 9.17678 18.5303 9.46967Z" fill="#000000"/> </g></svg>
+            <p>Cases</p>
+        </a>
 
-<div class="maincontainer">
-    <a href="/casepage/cases" class="backbutton">
-        <svg width="38px" height="38px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"/><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5303 9.46967C18.8232 9.76256 18.8232 10.2374 18.5303 10.5303L12.5303 16.5303C12.2374 16.8232 11.7626 16.8232 11.4697 16.5303L5.46967 10.5303C5.17678 10.2374 5.17678 9.76256 5.46967 9.46967C5.76256 9.17678 6.23744 9.17678 6.53033 9.46967L12 14.9393L17.4697 9.46967C17.7626 9.17678 18.2374 9.17678 18.5303 9.46967Z" fill="#000000"/> </g></svg>
-        <p>Cases</p>
-    </a>
+        <div class="infocontainer">
+            <div class="infocontainer__container">
+                <h1 class="infocontainer__title">{{ casetitle }}</h1>
+                <div class="infocontainer__div">
+                    <div class="infocontainer__detailcontainer">
+                        <div class="infocontainer__detailcontainer__detail">
+                            <h3>Project type</h3>
+                            <p>{{ categories }}</p>
+                        </div>
+                        <div class="infocontainer__detailcontainer__detail">
+                            <h3>Functie</h3>
+                            <p>{{ functies }}</p>
+                        </div>
+                    </div>
+                    <div class="infocontainer__detailcontainer">
+                        <div class="infocontainer__detailcontainer__detail">
+                            <h3>Hulpmiddelen</h3>
+                            <p>{{ tools }}</p>
+                        </div>
+                        <div class="infocontainer__detailcontainer__detail">
+                            <h3>Jaar</h3>
+                            <p>{{ year }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infocontainer__container">
+                {{ text }}
+                <br/><br/>
+                {{ secondtext }}
+            </div>
+        </div>
 
+        <div class="breakline">
+            <svg width="1264" height="29" viewBox="0 0 1264 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 14.6867C8.5625 5.68673 28.7188 -7.81319 47 14.6867C65.2812 37.1867 85.4374 23.6869 91.9999 14.6869C98.5624 5.68688 118.719 -7.81319 137 14.6867C155.281 37.1867 175.437 23.6869 182 14.6869C188.562 5.68688 208.719 -7.81319 227 14.6867C245.281 37.1867 265.437 23.6869 272 14.6869C278.562 5.68688 298.719 -7.81319 317 14.6867C335.281 37.1867 355.437 23.6869 362 14.6869C368.562 5.68688 388.718 -7.81319 407 14.6867C425.281 37.1867 445.438 23.6869 452 14.6869C458.563 5.68688 478.719 -7.81319 497 14.6867C515.281 37.1867 535.437 23.6869 542 14.6869C548.562 5.68688 568.718 -7.81319 587 14.6867C605.281 37.1867 625.437 23.6869 632 14.6869C638.562 5.68688 658.719 -7.81319 677 14.6867C695.281 37.1867 715.437 23.6869 722 14.6869C728.562 5.68688 748.719 -7.81319 767 14.6867C785.281 37.1867 805.437 23.6869 812 14.6869C818.562 5.68688 838.719 -7.81319 857 14.6867C875.281 37.1867 895.437 23.6869 902 14.6869C908.562 5.68688 928.719 -7.81319 947 14.6867C965.281 37.1867 985.437 23.6869 992 14.6869C998.562 5.68688 1018.72 -7.81319 1037 14.6867C1055.28 37.1867 1075.44 23.6869 1082 14.6869C1088.56 5.68688 1108.72 -7.81319 1127 14.6867C1145.28 37.1867 1165.44 23.6869 1172 14.6869C1178.56 5.68688 1198.72 -7.81319 1217 14.6867C1235.28 37.1867 1255.44 23.6869 1262 14.6869" stroke="black" stroke-width="3"/>
+            </svg>
+        </div>
 
-    {{ content | safe }}
+        <div class="contentcontainer">
+            {{ content | safe }}
+        </div>
+    </div>
 </div>
+
+
+
 

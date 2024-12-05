@@ -126,17 +126,19 @@ body {
 }
 
 .maincontainer {
-  margin: 160px 15px 0;
+  display: flex;
+  flex-direction: column;
+  padding: 160px 15px 0;
 }
 .maincontainer--home {
-  margin: 0 15px;
+  padding: 0 15px;
 }
 @media only screen and (min-width: 992px) {
   .maincontainer {
-    margin: 160px 40px 0;
+    padding: 160px 40px 0;
   }
   .maincontainer--home {
-    margin: 0 40px;
+    padding: 0 40px;
   }
 }
 
@@ -462,6 +464,16 @@ body {
   transform: rotate(-45deg);
   top: 39px;
   left: 8px;
+}
+
+.breakline {
+  position: relative;
+  width: 45%;
+  align-self: center;
+  overflow: hidden;
+}
+.breakline svg {
+  animation: 4s breaklineSlide infinite linear;
 }
 
 @keyframes bounceOn {
@@ -1549,26 +1561,95 @@ body {
   }
 }
 
-.backbutton {
+@keyframes breaklineSlide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-28.4%);
+  }
+}
+.casestudypage {
+  background-image: url("/assets/yellow_noise.jpg");
+}
+.casestudypage .backbutton {
   position: relative;
   display: flex;
   align-items: center;
-  height: 50px;
   color: black;
   text-decoration: none;
+  width: fit-content;
 }
-.backbutton p {
+.casestudypage .backbutton p {
   font-family: "Poppins-Semibold";
   font-size: 24px;
   margin-left: 35px;
 }
-.backbutton svg {
+.casestudypage .backbutton svg {
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%) rotate(90deg);
   transition: all 0.3s ease-in-out;
 }
-.backbutton:hover svg {
+.casestudypage .backbutton:hover svg {
   margin-left: -10px;
+}
+.casestudypage .infocontainer {
+  display: flex;
+  width: 100%;
+  gap: 100px;
+  margin-bottom: 160px;
+}
+.casestudypage .infocontainer__container {
+  flex: 1;
+  font-size: 20px;
+}
+.casestudypage .infocontainer__title {
+  font-family: "Lilita One";
+  font-size: 118px;
+  margin-bottom: 50px;
+}
+.casestudypage .infocontainer__div {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.casestudypage .infocontainer__detailcontainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.casestudypage .infocontainer__detailcontainer__detail {
+  width: 50%;
+}
+.casestudypage .infocontainer__detailcontainer__detail h3 {
+  font-family: "Lilita One";
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.casestudypage .contentcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 120px 0;
+}
+.casestudypage .contentcontainer__image {
+  flex: 1;
+  min-width: 40%;
+}
+.casestudypage .contentcontainer__image img {
+  width: 100%;
+  height: calc((100vw - 120px) / 2);
+  object-fit: cover;
+}
+.casestudypage .contentcontainer__text {
+  padding: 0 35% 0 0;
+  margin: 50px 0;
+  font-size: 20px;
+}
+.casestudypage .contentcontainer__text h3 {
+  font-family: "Lilita One";
+  font-size: 32px;
+  margin-bottom: 5px;
 }
