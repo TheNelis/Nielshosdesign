@@ -10,10 +10,9 @@ description: Dit is de casepage
     <section class="splide" aria-label="Splide Basic HTML Example">
         <div class="splide__track">
             <ul class="splide__list casepage__casecontainer">
-                {% Case size="large", title="Slokkie", categories="Print / Illustratie", image="/assets/images/slokkie/Slokkie_mockup1.png" %}
-                {% Case size="small", title="Slokkie", categories="Print / Illustratie", image="/assets/images/slokkie/Slokkie_mockup1.png" %}
-                {% Case size="medium", title="Slokkie", categories="Print / Illustratie", image="/assets/images/slokkie/Slokkie_mockup1.png" %}
-                {% Case size="large", title="Slokkie", categories="Print / Illustratie", image="/assets/images/slokkie/Slokkie_mockup1.png" %}
+                {% for case in collections.cases %}
+                    {% Case size=case.data.size, title=case.data.casetitle, categories=case.data.categories, cover=case.data.cover, link=case.url %}
+                {% endfor %}
             </ul>
         </div>
     </section>
@@ -23,10 +22,9 @@ description: Dit is de casepage
 <div class="casepage casepage--mobile">
     <img class="casepage__blaadje" src="/assets/blaadje_low.png" alt="">
     <ul class="splide__list casepage__casecontainer">
-        {% Case size="large", title="Slokkie", categories="Print / Illustratie", image="/assets/images/slokkie/Slokkie_mockup1.png" %}
-        {% Case size="small", title="Slokkie", categories="Print / Illustratie", image="/assets/images/slokkie/Slokkie_mockup1.png" %}
-        {% Case size="medium", title="Slokkie", categories="Print / Illustratie", image="/assets/images/slokkie/Slokkie_mockup1.png" %}
-        {% Case size="large", title="Slokkie", categories="Print / Illustratie", image="/assets/images/slokkie/Slokkie_mockup1.png" %}
+        {% for case in collections.cases %}
+            {% Case size=case.data.size, title=case.data.casetitle, categories=case.data.categories, cover=case.data.cover, link=case.url %}
+        {% endfor %}
     </ul>
 </div>
 

@@ -1,7 +1,8 @@
 @use "./variables.scss" as v;
 
 .casepage {
-    margin: 200px v.$margin-mobile 160px;
+    position: relative;
+    padding: 200px v.$margin-mobile 120px;
 
     &--mobile {
         display: flex;
@@ -21,7 +22,7 @@
         height: 100vh;
         flex-direction: column;
         justify-content: flex-end;
-        margin: 0;
+        padding: 0;
     }
 
 

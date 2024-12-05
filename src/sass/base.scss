@@ -39,14 +39,14 @@ body {
 }
 
 .maincontainer {
-    margin: 150px v.$margin-mobile 0;
+    margin: 160px v.$margin-mobile 0;
 
     &--home {
         margin: 0 v.$margin-mobile;
     }
 
     @media only screen and (min-width: v.$lg) {
-        margin: 150px v.$margin-desktop 0 ;
+        margin: 160px v.$margin-desktop 0 ;
 
         &--home {
             margin: 0 v.$margin-desktop;

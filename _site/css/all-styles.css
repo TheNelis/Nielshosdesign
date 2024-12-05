@@ -126,14 +126,14 @@ body {
 }
 
 .maincontainer {
-  margin: 150px 15px 0;
+  margin: 160px 15px 0;
 }
 .maincontainer--home {
   margin: 0 15px;
 }
 @media only screen and (min-width: 992px) {
   .maincontainer {
-    margin: 150px 40px 0;
+    margin: 160px 40px 0;
   }
   .maincontainer--home {
     margin: 0 40px;
@@ -1393,7 +1393,8 @@ body {
 }
 
 .casepage {
-  margin: 200px 15px 160px;
+  position: relative;
+  padding: 200px 15px 120px;
 }
 .casepage--mobile {
   display: flex;
@@ -1416,7 +1417,7 @@ body {
     height: 100vh;
     flex-direction: column;
     justify-content: flex-end;
-    margin: 0;
+    padding: 0;
   }
 }
 .casepage .splide__track {
@@ -1546,4 +1547,28 @@ body {
   #caseFooter {
     display: none;
   }
+}
+
+.backbutton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  color: black;
+  text-decoration: none;
+}
+.backbutton p {
+  font-family: "Poppins-Semibold";
+  font-size: 24px;
+  margin-left: 35px;
+}
+.backbutton svg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(90deg);
+  transition: all 0.3s ease-in-out;
+}
+.backbutton:hover svg {
+  margin-left: -10px;
 }

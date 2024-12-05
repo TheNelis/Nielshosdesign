@@ -5,7 +5,7 @@ function FeaturedCases() {
         <div class="featured-cases">
             <h2 class="featured-cases__title">Cases</h2>
             <div class="featured-cases__casecontainer">
-                <a href="/" class="featured-cases__casecontainer__case">
+                <a href="/casepage/cases" class="featured-cases__casecontainer__case">
                     <div class="featured-cases__casecontainer__case__imagemask">
                         <img src="/assets/images/Sneakers/blazing_luke/blazin_luke3.jpeg" alt="Case afbeelding" class="featured-cases__casecontainer__case__img">
                     </div>
@@ -14,7 +14,7 @@ function FeaturedCases() {
                         <p class="featured-cases__casecontainer__case__tags">Illustratie / Sneakers</p>
                     </div>
                 </a>
-                <a href="/" class="featured-cases__casecontainer__case">
+                <a href="/casepage/cases" class="featured-cases__casecontainer__case">
                     <div class="featured-cases__casecontainer__case__imagemask">
                         <img src="/assets/images/Campagnes/slokkie/Slokkie_mockup1.png" alt="Case afbeelding" class="featured-cases__casecontainer__case__img">
                     </div>
@@ -23,7 +23,7 @@ function FeaturedCases() {
                         <p class="featured-cases__casecontainer__case__tags">Print / Illustratie</p>
                     </div>
                 </a>
-                <a href="/" class="featured-cases__casecontainer__case">
+                <a href="/casepage/cases" class="featured-cases__casecontainer__case">
                     <div class="featured-cases__casecontainer__case__imagemask">
                         <img src="/assets/images/Websites & Webapps/boomstamhuis_84/Boomstamhuis_homepage.png" alt="Case afbeelding" class="featured-cases__casecontainer__case__img">
                     </div>

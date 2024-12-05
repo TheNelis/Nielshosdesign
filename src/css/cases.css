@@ -19,7 +19,8 @@
   src: url(/assets/fonts/Poppins/Poppins-Black.ttf);
 }
 .casepage {
-  margin: 200px 15px 160px;
+  position: relative;
+  padding: 200px 15px 120px;
 }
 .casepage--mobile {
   display: flex;
@@ -42,7 +43,7 @@
     height: 100vh;
     flex-direction: column;
     justify-content: flex-end;
-    margin: 0;
+    padding: 0;
   }
 }
 .casepage .splide__track {

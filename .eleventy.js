@@ -12,8 +12,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addShortcode("FeaturedCases", FeaturedCases);
     eleventyConfig.addShortcode("Case", Case);
 
-    eleventyConfig.addCollection('posts', function(collectionApi) {
-      return collectionApi.getFilteredByGlob('src/blog/posts/**/*.md');
+    eleventyConfig.addCollection('cases', function(collectionApi) {
+      return collectionApi.getFilteredByGlob('src/casepage/cases/**/*.html');
     });
 
     return {

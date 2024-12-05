@@ -1,11 +1,11 @@
 const { html } = require('common-tags');
 
-function Case({size, title, categories, image}) {
+function Case({size, title, categories, cover, link}) {
     return html`
         <li class="splide__slide casepage__casecontainer__case casepage__casecontainer__case--${size}">
-            <a href="/">
+            <a href="${link}">
                 <div class="casepage__casecontainer__case__imagemask">
-                    <img src="${image}" alt="Case afbeelding" class="casepage__casecontainer__case__img casepage__casecontainer__case__img--medium">
+                    <img src="${cover}" alt="Case afbeelding" class="casepage__casecontainer__case__img casepage__casecontainer__case__img--medium">
                 </div>
                 <div class="casepage__casecontainer__case__bottomcontainer">
                     <p class="casepage__casecontainer__case__title">${title}</p>
