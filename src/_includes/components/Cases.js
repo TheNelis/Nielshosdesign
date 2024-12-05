@@ -10,7 +10,7 @@ function Cases() {
                         <img src="/assets/images/Sneakers/blazing_luke/blazin_luke3.jpeg" alt="Case afbeelding" class="featured-cases__casecontainer__case__img">
                     </div>
                     <div class="featured-cases__casecontainer__case__bottomcontainer">
-                        <p class="featured-cases__casecontainer__case__title">Case title</p>
+                        <p class="featured-cases__casecontainer__case__title">Blazin’ Luke  Nikes</p>
                         <p class="featured-cases__casecontainer__case__tags">Illustratie / Sneakers</p>
                     </div>
                 </a>
@@ -19,8 +19,8 @@ function Cases() {
                         <img src="/assets/images/Campagnes/slokkie/Slokkie_mockup1.png" alt="Case afbeelding" class="featured-cases__casecontainer__case__img">
                     </div>
                     <div class="featured-cases__casecontainer__case__bottomcontainer">
-                        <p class="featured-cases__casecontainer__case__title">Case title</p>
-                        <p class="featured-cases__casecontainer__case__tags">Illustratie / Sneakers</p>
+                        <p class="featured-cases__casecontainer__case__title">Slokkie</p>
+                        <p class="featured-cases__casecontainer__case__tags">Print / Illustratie</p>
                     </div>
                 </a>
                 <a href="/" class="featured-cases__casecontainer__case">
@@ -28,8 +28,8 @@ function Cases() {
                         <img src="/assets/images/Websites & Webapps/boomstamhuis_84/Boomstamhuis_homepage.png" alt="Case afbeelding" class="featured-cases__casecontainer__case__img">
                     </div>
                     <div class="featured-cases__casecontainer__case__bottomcontainer">
-                        <p class="featured-cases__casecontainer__case__title">Case title</p>
-                        <p class="featured-cases__casecontainer__case__tags">Illustratie / Sneakers</p>
+                        <p class="featured-cases__casecontainer__case__title">Boomstamhuis 84</p>
+                        <p class="featured-cases__casecontainer__case__tags">Identiteit / Web</p>
                     </div>
                 </a>
             </div>

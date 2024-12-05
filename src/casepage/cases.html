@@ -1,0 +1,62 @@
+---
+layout: layouts/base.html
+title: Cases - NielsHosDesign
+description: Dit is de casepage
+---
+
+<div class="casepage">
+    <section class="splide" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+            <ul class="splide__list casepage__casecontainer">
+                <li class="splide__slide casepage__casecontainer__case casepage__casecontainer__case--medium">
+                    <a href="/">
+                        <div class="casepage__casecontainer__case__imagemask">
+                            <img src="/assets/images/slokkie/Slokkie_mockup1.png" alt="Case afbeelding" class="casepage__casecontainer__case__img casepage__casecontainer__case__img--medium">
+                        </div>
+                        <div class="casepage__casecontainer__case__bottomcontainer">
+                            <p class="casepage__casecontainer__case__title">Slokkie</p>
+                            <p class="casepage__casecontainer__case__tags">Print / Illustratie</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="splide__slide casepage__casecontainer__case casepage__casecontainer__case--small">
+                    <a href="/">
+                        <div class="casepage__casecontainer__case__imagemask">
+                            <img src="/assets/images/slokkie/Slokkie_mockup1.png" alt="Case afbeelding" class="casepage__casecontainer__case__img casepage__casecontainer__case__img--medium">
+                        </div>
+                        <div class="casepage__casecontainer__case__bottomcontainer">
+                            <p class="casepage__casecontainer__case__title">Slokkie</p>
+                            <p class="casepage__casecontainer__case__tags">Print / Illustratie</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="splide__slide casepage__casecontainer__case casepage__casecontainer__case--large">
+                    <a href="/">
+                        <div class="casepage__casecontainer__case__imagemask">
+                            <img src="/assets/images/slokkie/Slokkie_mockup1.png" alt="Case afbeelding" class="casepage__casecontainer__case__img casepage__casecontainer__case__img--medium">
+                        </div>
+                        <div class="casepage__casecontainer__case__bottomcontainer">
+                            <p class="casepage__casecontainer__case__title">Slokkie</p>
+                            <p class="casepage__casecontainer__case__tags">Print / Illustratie</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+
+<script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        var splide = new Splide( '.splide', {
+            wheel: true,
+            pagination: false,
+            arrows: false,
+            speed: 1200,
+        } );
+
+        splide.mount();
+    } );
+</script>
+
