@@ -1,0 +1,167 @@
+@use "./variables.scss" as v;
+
+.casepage {
+    margin: 200px v.$margin-mobile 160px;
+
+    &--mobile {
+        display: flex;
+        @media only screen and (min-width: v.$lg) {
+            display: none;
+        }
+    }
+
+    &--desktop {
+        display: none;
+        @media only screen and (min-width: v.$lg) {
+            display: flex;
+        }
+    }
+
+    @media only screen and (min-width: v.$lg) {
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin: 0;
+    }
+
+
+    .splide__track {
+        margin: 0 v.$margin-desktop 20px;
+        overflow: visible;
+        cursor: ew-resize;
+    }
+
+    &__casecontainer {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        
+        @media only screen and (min-width: v.$md) {
+            gap: 50px;
+        }
+
+        @media only screen and (min-width: v.$lg) {
+            height: 72vh;
+            flex-direction: row;
+            gap: 20px
+        }
+
+        &__case {
+            a {
+                color: black;
+                text-decoration: none;
+            }
+            
+            &--large {
+                @media only screen and (min-width: v.$lg) {
+                    width: 95vh !important;
+
+                    div img {
+                        width: 95vh;
+                    }
+                }
+            }
+
+            &--medium {
+                @media only screen and (min-width: v.$lg) {
+                    width: 67vh !important;
+
+                    div img {
+                        width: 67vh;
+                    }
+                }
+            }
+
+            &--small {
+                @media only screen and (min-width: v.$lg) {
+                    width: 45vh !important;
+
+                    div img {
+                        width: 45vh;
+                    }
+                }
+            }
+            
+
+            &:hover {
+                cursor: pointer;
+                img {
+                    transform: scale(1.05);
+                }
+            }
+
+            &__imagemask {
+                overflow: hidden;
+                border-radius: 16px;
+            }
+
+            &__img {
+                aspect-ratio: 5/4;
+                object-fit: cover;
+                border-radius: 16px;
+                transition: all .2s linear;
+
+                @media only screen and (min-width: v.$lg) {
+                    aspect-ratio: auto;
+                    height: 67vh;
+                }
+            }
+
+            &__bottomcontainer {
+                display: flex;
+                flex-direction: column;
+                margin-top: 5px;
+                font-size: 16px;
+                
+                
+                @media only screen and (min-width: v.$md) {
+                    font-size: 24px;
+                }
+
+                @media only screen and (min-width: v.$lg) {
+                    flex-direction: row;
+                    gap: 15px;
+                    font-size: 16px;
+                }
+            }
+
+            &__title {
+                font-family: 'Poppins-Semibold';
+                white-space: nowrap;
+            }
+
+            &__tags {
+                font-family: 'Poppins-Regular';
+            }
+        }
+    }
+
+    &__blaadje {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50vw;
+        margin: 4vw -15vw -7vw 0;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        z-index: 0;
+
+        @media only screen and (min-width: v.$md) {
+            width: 35vw;
+            margin: -6vw -8vw 0 0;
+        }
+
+        @media only screen and (min-width: v.$lg) {
+            width: 22vw;
+            margin: -4vw -6vw 0 0;
+        }
+    }
+}
+
+#caseFooter {
+    display: flex;
+
+    @media only screen and (min-width: v.$lg) {
+        display: none;
+    }
+}

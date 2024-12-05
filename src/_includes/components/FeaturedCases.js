@@ -1,6 +1,6 @@
 const { html } = require('common-tags');
 
-function Cases() {
+function FeaturedCases() {
     return html`
         <div class="featured-cases">
             <h2 class="featured-cases__title">Cases</h2>
@@ -38,4 +38,4 @@ function Cases() {
     `;
 }
 
-module.exports = Cases;
+module.exports = FeaturedCases;

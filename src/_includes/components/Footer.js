@@ -18,7 +18,7 @@ function Footer({color}) {
                 </div>
             </div>
             <h1 id="footer-email" class="footer__email">nielshosdesign<span>@gmail.com</span></h1>
-            <img class="footer__blaadje" src="assets/Leafs_assets/blaadje_double.png" alt="">
+            <img class="footer__blaadje" src="/assets/Leafs_assets/blaadje_double.png" alt="">
         </footer>
     `;
 }
