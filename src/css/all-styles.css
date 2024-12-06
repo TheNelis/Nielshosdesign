@@ -514,12 +514,23 @@ body {
 
 .breakline {
   position: relative;
-  width: 45%;
+  width: 80%;
   align-self: center;
   overflow: hidden;
 }
 .breakline svg {
   animation: 4s breaklineSlide infinite linear;
+  width: 300%;
+}
+@media only screen and (min-width: 992px) {
+  .breakline svg {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .breakline {
+    width: 45%;
+  }
 }
 
 @keyframes bounceOn {
@@ -1625,41 +1636,81 @@ body {
   color: black;
   text-decoration: none;
   width: fit-content;
+  margin-bottom: 5px;
+}
+@media only screen and (min-width: 992px) {
+  .casestudypage .backbutton {
+    margin-bottom: 0;
+  }
 }
 .casestudypage .backbutton p {
   font-family: "Poppins-Semibold";
-  font-size: 24px;
+  font-size: 20px;
   margin-left: 35px;
+}
+@media only screen and (min-width: 992px) {
+  .casestudypage .backbutton p {
+    font-size: 24px;
+  }
 }
 .casestudypage .backbutton svg {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(90deg) scale(0.8);
   transition: all 0.3s ease-in-out;
+}
+@media only screen and (min-width: 992px) {
+  .casestudypage .backbutton svg {
+    transform: translateY(-50%) rotate(90deg) scale(1);
+  }
 }
 .casestudypage .backbutton:hover svg {
   margin-left: -10px;
 }
 .casestudypage .infocontainer {
   display: flex;
+  flex-direction: column;
   width: 100%;
-  gap: 100px;
-  margin-bottom: 160px;
+  gap: 80px;
+  margin-bottom: 80px;
+}
+@media only screen and (min-width: 992px) {
+  .casestudypage .infocontainer {
+    flex-direction: row;
+    gap: 100px;
+    margin-bottom: 160px;
+  }
 }
 .casestudypage .infocontainer__container {
   flex: 1;
-  font-size: 20px;
+  font-size: 16px;
+}
+@media only screen and (min-width: 992px) {
+  .casestudypage .infocontainer__container {
+    font-size: 20px;
+  }
 }
 .casestudypage .infocontainer__title {
   font-family: "Lilita One";
-  font-size: 118px;
-  margin-bottom: 50px;
+  font-size: 64px;
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 992px) {
+  .casestudypage .infocontainer__title {
+    font-size: 118px;
+    margin-bottom: 50px;
+  }
 }
 .casestudypage .infocontainer__div {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
+}
+@media only screen and (min-width: 992px) {
+  .casestudypage .infocontainer__div {
+    gap: 40px;
+  }
 }
 .casestudypage .infocontainer__detailcontainer {
   display: flex;
@@ -1667,18 +1718,30 @@ body {
   gap: 40px;
 }
 .casestudypage .infocontainer__detailcontainer__detail {
-  width: 50%;
+  flex: 1;
 }
 .casestudypage .infocontainer__detailcontainer__detail h3 {
   font-family: "Lilita One";
-  font-size: 32px;
+  font-size: 24px;
   margin-bottom: 10px;
+}
+@media only screen and (min-width: 992px) {
+  .casestudypage .infocontainer__detailcontainer__detail h3 {
+    font-size: 32px;
+  }
 }
 .casestudypage .contentcontainer {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 40px;
-  margin: 120px 0;
+  margin: 80px 0 140px 0;
+}
+@media only screen and (min-width: 992px) {
+  .casestudypage .contentcontainer {
+    margin: 120px 0 200px 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 .casestudypage .contentcontainer__image {
   flex: 1;
@@ -1686,16 +1749,33 @@ body {
 }
 .casestudypage .contentcontainer__image img {
   width: 100%;
-  height: calc((100vw - 120px) / 2);
+  height: calc(100vw - 30px);
   object-fit: cover;
 }
+@media only screen and (min-width: 992px) {
+  .casestudypage .contentcontainer__image img {
+    height: calc((100vw - 120px) / 2);
+  }
+}
 .casestudypage .contentcontainer__text {
-  padding: 0 35% 0 0;
-  margin: 50px 0;
-  font-size: 20px;
+  padding: 0;
+  margin: 20px 0;
+  font-size: 16px;
+}
+@media only screen and (min-width: 992px) {
+  .casestudypage .contentcontainer__text {
+    font-size: 20px;
+    padding: 0 35% 0 0;
+    margin: 50px 0;
+  }
 }
 .casestudypage .contentcontainer__text h3 {
   font-family: "Lilita One";
-  font-size: 32px;
+  font-size: 24px;
   margin-bottom: 5px;
+}
+@media only screen and (min-width: 992px) {
+  .casestudypage .contentcontainer__text h3 {
+    font-size: 32px;
+  }
 }

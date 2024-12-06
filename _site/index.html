@@ -245,7 +245,7 @@
     const containerWidth = window.innerWidth;
 
     window.addEventListener('resize', function() {
-        if (containerWidth >= 992) {
+        if (containerWidth >= 1200 && window.location.pathname == '/') {
             location.reload();
         }
     });

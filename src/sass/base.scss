@@ -462,11 +462,21 @@ body {
 
 .breakline {
     position: relative;
-    width: 45%;
+    width: 80%;
     align-self: center;
     overflow: hidden;
 
     svg {
         animation: 4s breaklineSlide infinite linear;
+        width: 300%;
+
+        @media only screen and (min-width: v.$lg) {
+            width: auto;
+        }
     }
+
+    @media only screen and (min-width: v.$lg) {
+        width: 45%;
+    }
+    
 }
