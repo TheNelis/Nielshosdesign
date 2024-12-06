@@ -36,12 +36,12 @@
 }
 .diensten-block__title {
   font-family: "Lilita One";
-  font-size: 44px;
+  font-size: 2.75rem;
   margin-bottom: 80px;
 }
 @media only screen and (min-width: 992px) {
   .diensten-block__title {
-    font-size: 64px;
+    font-size: 4rem;
   }
 }
 .diensten-block__container {
@@ -81,13 +81,13 @@
 }
 .diensten-block__container__dienst__title {
   font-family: "Lilita One";
-  font-size: 28px;
+  font-size: 1.75rem;
   text-align: center;
   margin-top: 20px;
 }
 @media only screen and (min-width: 768px) {
   .diensten-block__container__dienst__title {
-    font-size: 32px;
+    font-size: 2rem;
   }
 }
 .diensten-block__blaadje {

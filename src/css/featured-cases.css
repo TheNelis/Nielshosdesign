@@ -26,16 +26,16 @@
 }
 .featured-cases__title {
   font-family: "Lilita One";
-  font-size: 44px;
+  font-size: 2.75rem;
 }
 @media only screen and (min-width: 768px) {
   .featured-cases__title {
-    font-size: 54px;
+    font-size: 3.375rem;
   }
 }
 @media only screen and (min-width: 992px) {
   .featured-cases__title {
-    font-size: 64px;
+    font-size: 4rem;
   }
 }
 .featured-cases__casecontainer {
@@ -88,18 +88,18 @@
   display: flex;
   flex-direction: column;
   margin-top: 5px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 @media only screen and (min-width: 768px) {
   .featured-cases__casecontainer__case__bottomcontainer {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 @media only screen and (min-width: 992px) {
   .featured-cases__casecontainer__case__bottomcontainer {
     flex-direction: row;
     gap: 15px;
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 .featured-cases__casecontainer__case__title {

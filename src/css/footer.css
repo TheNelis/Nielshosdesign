@@ -60,7 +60,7 @@
 }
 .footer__container__column__title {
   font-family: "Poppins-Bold";
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 140%;
   text-wrap: wrap;
   padding-right: 40%;
@@ -68,20 +68,20 @@
 }
 @media only screen and (min-width: 992px) {
   .footer__container__column__title {
-    font-size: 24px;
+    font-size: 1.5rem;
     padding-right: 0%;
   }
 }
 .footer__container__column__text {
   font-family: "Poppins-Regular";
-  font-size: 16px;
+  font-size: 1rem;
 }
 .footer__container__column__text--first {
   padding-right: 20%;
 }
 @media only screen and (min-width: 992px) {
   .footer__container__column__text {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .footer__container__column__text--first {
     padding-right: 0%;

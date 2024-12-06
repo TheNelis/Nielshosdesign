@@ -106,7 +106,6 @@
   font-family: "Poppins-Black";
   margin: 0px;
   z-index: 10;
-  font-size: 16vw;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
@@ -155,7 +154,7 @@
   display: flex;
   gap: 5px;
   font-family: "Poppins-Bold";
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 10px;
 }
 .herocontainer__bottomcontainer__socials div {
@@ -188,7 +187,7 @@
 }
 .herocontainer__bottomcontainer__scrolldown__text {
   font-family: "Poppins-Semibold";
-  font-size: 16px;
+  font-size: 1rem;
 }
 .herocontainer__bottomcontainer__scrolldown svg {
   margin-top: -10px;

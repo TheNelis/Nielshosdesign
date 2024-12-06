@@ -41,28 +41,28 @@
 
             &__title {
                 font-family: 'Poppins-Bold';
-                font-size: 18px;
+                font-size: 1.125rem;
                 line-height: 140%;
                 text-wrap: wrap;
                 padding-right: 40%;
                 margin-bottom: 5px;
 
                 @media only screen and (min-width: v.$lg) {
-                    font-size: 24px;
+                    font-size: 1.5rem;
                     padding-right: 0%;
                 }
             }
 
             &__text {
                 font-family: 'Poppins-Regular';
-                font-size: 16px;
+                font-size: 1rem;
                 
                 &--first {
                     padding-right: 20%;
                 }
 
                 @media only screen and (min-width: v.$lg) {
-                    font-size: 20px;
+                    font-size: 1.25rem;
 
                     &--first {
                         padding-right: 0%;

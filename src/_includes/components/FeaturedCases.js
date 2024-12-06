@@ -33,7 +33,7 @@ function FeaturedCases() {
                     </div>
                 </a>
             </div>
-            <a href="/" class="button--green--outline">Bekijk cases</a>
+            <a href="/casepage/cases" class="button--green--outline">Bekijk cases</a>
         </div>
     `;
 }

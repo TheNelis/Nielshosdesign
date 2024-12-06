@@ -50,7 +50,7 @@
         &__title {
             white-space: nowrap;
             font-family: 'Lilita One';
-            font-size: 84px;
+            font-size: 5.25rem;
             margin: 0px;
             z-index: 10;
 
@@ -72,7 +72,7 @@
             }
 
             @media only screen and (min-width: v.$lg) {
-                font-size: 160px;
+                font-size: 10rem;
 
                 span {
                     margin: 0 -15px;
@@ -82,11 +82,11 @@
 
         &__text {
             font-family: 'Poppins-Semibold';
-            font-size: 18px;
+            font-size: 1.125rem;
             margin-bottom: 40px;
 
             @media only screen and (min-width: v.$lg) {
-                font-size: 24px;
+                font-size: 1.5rem;
             }
         }
     }

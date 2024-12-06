@@ -45,12 +45,12 @@
 }
 .casestudypage .backbutton p {
   font-family: "Poppins-Semibold";
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-left: 35px;
 }
 @media only screen and (min-width: 992px) {
   .casestudypage .backbutton p {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 .casestudypage .backbutton svg {
@@ -84,21 +84,21 @@
 }
 .casestudypage .infocontainer__container {
   flex: 1;
-  font-size: 16px;
+  font-size: 1rem;
 }
 @media only screen and (min-width: 992px) {
   .casestudypage .infocontainer__container {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 .casestudypage .infocontainer__title {
   font-family: "Lilita One";
-  font-size: 64px;
+  font-size: 4rem;
   margin-bottom: 30px;
 }
 @media only screen and (min-width: 992px) {
   .casestudypage .infocontainer__title {
-    font-size: 118px;
+    font-size: 7.35rem;
     margin-bottom: 50px;
   }
 }
@@ -122,12 +122,12 @@
 }
 .casestudypage .infocontainer__detailcontainer__detail h3 {
   font-family: "Lilita One";
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 @media only screen and (min-width: 992px) {
   .casestudypage .infocontainer__detailcontainer__detail h3 {
-    font-size: 32px;
+    font-size: 2rem;
   }
 }
 .casestudypage .contentcontainer {
@@ -160,22 +160,22 @@
 .casestudypage .contentcontainer__text {
   padding: 0;
   margin: 20px 0;
-  font-size: 16px;
+  font-size: 1rem;
 }
 @media only screen and (min-width: 992px) {
   .casestudypage .contentcontainer__text {
-    font-size: 20px;
+    font-size: 1.25rem;
     padding: 0 35% 0 0;
     margin: 50px 0;
   }
 }
 .casestudypage .contentcontainer__text h3 {
   font-family: "Lilita One";
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 5px;
 }
 @media only screen and (min-width: 992px) {
   .casestudypage .contentcontainer__text h3 {
-    font-size: 32px;
+    font-size: 2rem;
   }
 }

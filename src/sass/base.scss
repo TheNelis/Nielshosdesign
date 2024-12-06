@@ -74,11 +74,14 @@
     }
 }
 
-
+* {
+    font-synthesis: none;
+}
 
 html {
     font-family: 'Poppins-Regular', Arial, Helvetica, sans-serif;
     overflow-x: hidden;
+    font-size: 16px;
 }
 
 body {
@@ -159,7 +162,7 @@ body {
         display: flex;
         z-index: 100;
         animation: 15s slide infinite linear;
-        font-size: 15px;
+        font-size: 0.94rem;
 
         &__section {
             min-width: 380px;
@@ -208,7 +211,7 @@ body {
 
         &__button {
             display: block;
-            font-size: 32px;
+            font-size: 2rem;
             text-decoration: none;
             color: black;
             font-family: 'Lilita One';
@@ -284,14 +287,14 @@ body {
 
         &__button {
             display: none;
-            font-size: 36px;
+            font-size: 2.25rem;
             text-decoration: none;
             color: black;
             font-family: 'Lilita One';
 
             @media only screen and (min-width: v.$lg) {
                 display: block;
-                font-size: 32px;
+                font-size: 2rem;
             }
     
             &--right:hover {
@@ -339,13 +342,13 @@ body {
             font-family: 'Lilita One';
             background: transparent;
             border: none;
-            font-size: 24px;
+            font-size: 1.5rem;
             cursor: pointer;
             color: black;
             padding: 0;
 
             @media only screen and (min-width: v.$lg) {
-                font-size: 20px;
+                font-size: 1.25rem;
             }
 
             &:hover {

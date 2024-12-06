@@ -160,9 +160,14 @@ textarea:not([rows]) {
     margin-left: 100%;
   }
 }
+* {
+  font-synthesis: none;
+}
+
 html {
   font-family: "Poppins-Regular", Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+  font-size: 16px;
 }
 
 body {
@@ -235,7 +240,7 @@ body {
   display: flex;
   z-index: 100;
   animation: 15s slide infinite linear;
-  font-size: 15px;
+  font-size: 0.94rem;
 }
 .navbar__carousel__section {
   min-width: 380px;
@@ -279,7 +284,7 @@ body {
 }
 .navbar__mobilemenu__button {
   display: block;
-  font-size: 32px;
+  font-size: 2rem;
   text-decoration: none;
   color: black;
   font-family: "Lilita One";
@@ -349,7 +354,7 @@ body {
 }
 .navbar__buttoncontainer__button {
   display: none;
-  font-size: 36px;
+  font-size: 2.25rem;
   text-decoration: none;
   color: black;
   font-family: "Lilita One";
@@ -357,7 +362,7 @@ body {
 @media only screen and (min-width: 992px) {
   .navbar__buttoncontainer__button {
     display: block;
-    font-size: 32px;
+    font-size: 2rem;
   }
 }
 .navbar__buttoncontainer__button--right:hover {
@@ -397,14 +402,14 @@ body {
   font-family: "Lilita One";
   background: transparent;
   border: none;
-  font-size: 24px;
+  font-size: 1.5rem;
   cursor: pointer;
   color: black;
   padding: 0;
 }
 @media only screen and (min-width: 992px) {
   .navbar__langcontainer__button {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 .navbar__langcontainer__button:hover {
@@ -621,7 +626,6 @@ body {
   font-family: "Poppins-Black";
   margin: 0px;
   z-index: 10;
-  font-size: 16vw;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
@@ -670,7 +674,7 @@ body {
   display: flex;
   gap: 5px;
   font-family: "Poppins-Bold";
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 10px;
 }
 .herocontainer__bottomcontainer__socials div {
@@ -703,7 +707,7 @@ body {
 }
 .herocontainer__bottomcontainer__scrolldown__text {
   font-family: "Poppins-Semibold";
-  font-size: 16px;
+  font-size: 1rem;
 }
 .herocontainer__bottomcontainer__scrolldown svg {
   margin-top: -10px;
@@ -765,16 +769,16 @@ body {
 }
 .featured-cases__title {
   font-family: "Lilita One";
-  font-size: 44px;
+  font-size: 2.75rem;
 }
 @media only screen and (min-width: 768px) {
   .featured-cases__title {
-    font-size: 54px;
+    font-size: 3.375rem;
   }
 }
 @media only screen and (min-width: 992px) {
   .featured-cases__title {
-    font-size: 64px;
+    font-size: 4rem;
   }
 }
 .featured-cases__casecontainer {
@@ -827,18 +831,18 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 5px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 @media only screen and (min-width: 768px) {
   .featured-cases__casecontainer__case__bottomcontainer {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 @media only screen and (min-width: 992px) {
   .featured-cases__casecontainer__case__bottomcontainer {
     flex-direction: row;
     gap: 15px;
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 .featured-cases__casecontainer__case__title {
@@ -854,7 +858,7 @@ body {
   width: fit-content;
   position: relative;
   font-family: "Poppins-Semibold";
-  font-size: 18px;
+  font-size: 1.125rem;
   color: black;
   text-decoration: none;
   padding: 20px;
@@ -872,7 +876,7 @@ body {
 }
 @media only screen and (min-width: 992px) {
   .button--green {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 
@@ -881,7 +885,7 @@ body {
   width: fit-content;
   position: relative;
   font-family: "Poppins-Semibold";
-  font-size: 18px;
+  font-size: 1.125rem;
   color: black;
   text-decoration: none;
   padding: 20px;
@@ -899,7 +903,7 @@ body {
 }
 @media only screen and (min-width: 992px) {
   .button--red {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 
@@ -908,7 +912,7 @@ body {
   width: fit-content;
   position: relative;
   font-family: "Poppins-Semibold";
-  font-size: 18px;
+  font-size: 1.125rem;
   color: black;
   text-decoration: none;
   padding: 20px;
@@ -926,7 +930,7 @@ body {
 }
 @media only screen and (min-width: 992px) {
   .button--blue {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 
@@ -935,7 +939,7 @@ body {
   width: fit-content;
   position: relative;
   font-family: "Poppins-Semibold";
-  font-size: 18px;
+  font-size: 1.125rem;
   color: black;
   text-decoration: none;
   padding: 20px;
@@ -955,7 +959,7 @@ body {
 }
 @media only screen and (min-width: 992px) {
   .button--green--outline {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 
@@ -964,7 +968,7 @@ body {
   width: fit-content;
   position: relative;
   font-family: "Poppins-Semibold";
-  font-size: 18px;
+  font-size: 1.125rem;
   color: black;
   text-decoration: none;
   padding: 20px;
@@ -984,7 +988,7 @@ body {
 }
 @media only screen and (min-width: 992px) {
   .button--red--outline {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 
@@ -993,7 +997,7 @@ body {
   width: fit-content;
   position: relative;
   font-family: "Poppins-Semibold";
-  font-size: 18px;
+  font-size: 1.125rem;
   color: black;
   text-decoration: none;
   padding: 20px;
@@ -1013,7 +1017,7 @@ body {
 }
 @media only screen and (min-width: 992px) {
   .button--blue--outline {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 
@@ -1065,7 +1069,7 @@ body {
 .intro-block__textcontainer__title {
   white-space: nowrap;
   font-family: "Lilita One";
-  font-size: 84px;
+  font-size: 5.25rem;
   margin: 0px;
   z-index: 10;
   -webkit-user-select: none; /* Safari */
@@ -1084,7 +1088,7 @@ body {
 }
 @media only screen and (min-width: 992px) {
   .intro-block__textcontainer__title {
-    font-size: 160px;
+    font-size: 10rem;
   }
   .intro-block__textcontainer__title span {
     margin: 0 -15px;
@@ -1092,12 +1096,12 @@ body {
 }
 .intro-block__textcontainer__text {
   font-family: "Poppins-Semibold";
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 40px;
 }
 @media only screen and (min-width: 992px) {
   .intro-block__textcontainer__text {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 
@@ -1119,12 +1123,12 @@ body {
 }
 .diensten-block__title {
   font-family: "Lilita One";
-  font-size: 44px;
+  font-size: 2.75rem;
   margin-bottom: 80px;
 }
 @media only screen and (min-width: 992px) {
   .diensten-block__title {
-    font-size: 64px;
+    font-size: 4rem;
   }
 }
 .diensten-block__container {
@@ -1164,13 +1168,13 @@ body {
 }
 .diensten-block__container__dienst__title {
   font-family: "Lilita One";
-  font-size: 28px;
+  font-size: 1.75rem;
   text-align: center;
   margin-top: 20px;
 }
 @media only screen and (min-width: 768px) {
   .diensten-block__container__dienst__title {
-    font-size: 32px;
+    font-size: 2rem;
   }
 }
 .diensten-block__blaadje {
@@ -1382,7 +1386,7 @@ body {
 }
 .footer__container__column__title {
   font-family: "Poppins-Bold";
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 140%;
   text-wrap: wrap;
   padding-right: 40%;
@@ -1390,20 +1394,20 @@ body {
 }
 @media only screen and (min-width: 992px) {
   .footer__container__column__title {
-    font-size: 24px;
+    font-size: 1.5rem;
     padding-right: 0%;
   }
 }
 .footer__container__column__text {
   font-family: "Poppins-Regular";
-  font-size: 16px;
+  font-size: 1rem;
 }
 .footer__container__column__text--first {
   padding-right: 20%;
 }
 @media only screen and (min-width: 992px) {
   .footer__container__column__text {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .footer__container__column__text--first {
     padding-right: 0%;
@@ -1550,6 +1554,7 @@ body {
   border-radius: 16px;
 }
 .casepage__casecontainer__case__img {
+  width: 100%;
   aspect-ratio: 5/4;
   object-fit: cover;
   border-radius: 16px;
@@ -1565,18 +1570,18 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 5px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 @media only screen and (min-width: 768px) {
   .casepage__casecontainer__case__bottomcontainer {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 @media only screen and (min-width: 992px) {
   .casepage__casecontainer__case__bottomcontainer {
     flex-direction: row;
     gap: 15px;
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 .casepage__casecontainer__case__title {
@@ -1645,12 +1650,12 @@ body {
 }
 .casestudypage .backbutton p {
   font-family: "Poppins-Semibold";
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-left: 35px;
 }
 @media only screen and (min-width: 992px) {
   .casestudypage .backbutton p {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 .casestudypage .backbutton svg {
@@ -1684,21 +1689,21 @@ body {
 }
 .casestudypage .infocontainer__container {
   flex: 1;
-  font-size: 16px;
+  font-size: 1rem;
 }
 @media only screen and (min-width: 992px) {
   .casestudypage .infocontainer__container {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 .casestudypage .infocontainer__title {
   font-family: "Lilita One";
-  font-size: 64px;
+  font-size: 4rem;
   margin-bottom: 30px;
 }
 @media only screen and (min-width: 992px) {
   .casestudypage .infocontainer__title {
-    font-size: 118px;
+    font-size: 7.35rem;
     margin-bottom: 50px;
   }
 }
@@ -1722,12 +1727,12 @@ body {
 }
 .casestudypage .infocontainer__detailcontainer__detail h3 {
   font-family: "Lilita One";
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 @media only screen and (min-width: 992px) {
   .casestudypage .infocontainer__detailcontainer__detail h3 {
-    font-size: 32px;
+    font-size: 2rem;
   }
 }
 .casestudypage .contentcontainer {
@@ -1760,22 +1765,22 @@ body {
 .casestudypage .contentcontainer__text {
   padding: 0;
   margin: 20px 0;
-  font-size: 16px;
+  font-size: 1rem;
 }
 @media only screen and (min-width: 992px) {
   .casestudypage .contentcontainer__text {
-    font-size: 20px;
+    font-size: 1.25rem;
     padding: 0 35% 0 0;
     margin: 50px 0;
   }
 }
 .casestudypage .contentcontainer__text h3 {
   font-family: "Lilita One";
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 5px;
 }
 @media only screen and (min-width: 992px) {
   .casestudypage .contentcontainer__text h3 {
-    font-size: 32px;
+    font-size: 2rem;
   }
 }

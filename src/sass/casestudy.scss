@@ -27,11 +27,11 @@
     
         p {
             font-family: 'Poppins-Semibold';
-            font-size: 20px;
+            font-size: 1.25rem;
             margin-left: 35px;
 
             @media only screen and (min-width: v.$lg) {
-                font-size: 24px;
+                font-size: 1.5rem;
             }
         }
     
@@ -70,20 +70,20 @@
 
         &__container {
             flex: 1;
-            font-size: 16px;
+            font-size: 1rem;
 
             @media only screen and (min-width: v.$lg) {
-                font-size: 20px;
+                font-size: 1.25rem;
             }
         }
 
         &__title {
             font-family: 'Lilita One';
-            font-size: 64px;
+            font-size: 4rem;
             margin-bottom: 30px;
 
             @media only screen and (min-width: v.$lg) {
-                font-size: 118px;
+                font-size: 7.35rem;
                 margin-bottom: 50px;
             }
         }
@@ -109,11 +109,11 @@
 
                 h3 {
                     font-family: 'Lilita One';
-                    font-size: 24px;
+                    font-size: 1.5rem;
                     margin-bottom: 10px;
 
                     @media only screen and (min-width: v.$lg) {
-                        font-size: 32px;
+                        font-size: 2rem;
                     }
                 }
             }
@@ -150,21 +150,21 @@
         &__text {
             padding: 0;
             margin: 20px 0;
-            font-size: 16px;
+            font-size: 1rem;
 
             @media only screen and (min-width: v.$lg) {
-                font-size: 20px;
+                font-size: 1.25rem;
                 padding: 0 35% 0 0;
                 margin: 50px 0;
             }
 
             h3 {
                 font-family: 'Lilita One';
-                font-size: 24px;
+                font-size: 1.5rem;
                 margin-bottom: 5px;
 
                 @media only screen and (min-width: v.$lg) {
-                    font-size: 32px;
+                    font-size: 2rem;
                 }
             }
         }

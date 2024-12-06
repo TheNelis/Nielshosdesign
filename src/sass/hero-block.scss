@@ -64,7 +64,6 @@
         font-family: 'Poppins-Black';
         margin: 0px;
         z-index: 10;
-        font-size: 16vw;
 
         -webkit-user-select: none; /* Safari */
         -ms-user-select: none; /* IE 10 and IE 11 */
@@ -117,7 +116,7 @@
             display: flex;
             gap: 5px;
             font-family: 'Poppins-Bold';
-            font-size: 32px;
+            font-size: 2rem;
             line-height: 10px;
 
             div {
@@ -153,7 +152,7 @@
 
             &__text {
                 font-family: 'Poppins-Semibold';
-                font-size: 16px;
+                font-size: 1rem;
             }
 
             svg {
