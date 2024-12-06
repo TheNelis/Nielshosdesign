@@ -19,6 +19,7 @@
   src: url(/assets/fonts/Poppins/Poppins-Black.ttf);
 }
 .dienstenpage {
+  position: relative;
   background-image: url("/assets/yellow_noise.jpg");
 }
 .dienstenpage__title {
@@ -182,5 +183,45 @@
   .dienstenpage .cases-block__blaadje {
     width: 22vw;
     margin: -6vw 0 0 -8vw;
+  }
+}
+.dienstenpage__blaadje {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30vw;
+  margin: 14vw 0 0 -8vw;
+  z-index: 0;
+}
+@media only screen and (min-width: 768px) {
+  .dienstenpage__blaadje {
+    width: 30vw;
+    margin: 14vw 0 0 -10vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .dienstenpage__blaadje {
+    width: 22vw;
+    margin: 10vw 0 0 -7vw;
+  }
+}
+.dienstenpage__flower {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60vw;
+  margin: -3vh -30vw 0 0;
+  z-index: 0;
+}
+@media only screen and (min-width: 768px) {
+  .dienstenpage__flower {
+    width: 55vw;
+    margin: -12vw -26vw 0 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .dienstenpage__flower {
+    width: 45vw;
+    margin: -9vw -22vw 0 0;
   }
 }

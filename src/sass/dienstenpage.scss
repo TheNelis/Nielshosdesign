@@ -1,6 +1,7 @@
 @use "./variables.scss" as v;
 
 .dienstenpage {
+    position: relative;
     background-image: url('/assets/yellow_noise.jpg');
 
     &__title {
@@ -166,6 +167,44 @@
                 width: 22vw;
                 margin: -6vw 0 0 -8vw;
             }
+        }
+    }
+
+    &__blaadje {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30vw;
+        margin: 14vw 0 0 -8vw;
+        z-index: 0;
+
+        @media only screen and (min-width: v.$md) {
+            width: 30vw;
+            margin: 14vw 0 0 -10vw;
+        }
+
+        @media only screen and (min-width: v.$lg) {
+            width: 22vw;
+            margin: 10vw 0 0 -7vw;
+        }
+    }
+
+    &__flower {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60vw;
+        margin: -3vh -30vw 0 0;
+        z-index: 0;
+
+        @media only screen and (min-width: v.$md) {
+            width: 55vw;
+            margin: -12vw -26vw 0 0;
+        }
+
+        @media only screen and (min-width: v.$lg) {
+            width: 45vw;
+            margin: -9vw -22vw 0 0;
         }
     }
 }

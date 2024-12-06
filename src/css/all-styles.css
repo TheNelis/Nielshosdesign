@@ -1801,6 +1801,7 @@ body {
 }
 
 .dienstenpage {
+  position: relative;
   background-image: url("/assets/yellow_noise.jpg");
 }
 .dienstenpage__title {
@@ -1964,5 +1965,158 @@ body {
   .dienstenpage .cases-block__blaadje {
     width: 22vw;
     margin: -6vw 0 0 -8vw;
+  }
+}
+.dienstenpage__blaadje {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30vw;
+  margin: 14vw 0 0 -8vw;
+  z-index: 0;
+}
+@media only screen and (min-width: 768px) {
+  .dienstenpage__blaadje {
+    width: 30vw;
+    margin: 14vw 0 0 -10vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .dienstenpage__blaadje {
+    width: 22vw;
+    margin: 10vw 0 0 -7vw;
+  }
+}
+.dienstenpage__flower {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60vw;
+  margin: -3vh -30vw 0 0;
+  z-index: 0;
+}
+@media only screen and (min-width: 768px) {
+  .dienstenpage__flower {
+    width: 55vw;
+    margin: -12vw -26vw 0 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .dienstenpage__flower {
+    width: 45vw;
+    margin: -9vw -22vw 0 0;
+  }
+}
+
+.aboutpage {
+  background-image: url("/assets/yellow_noise.jpg");
+}
+.aboutpage__title {
+  font-family: "Lilita One";
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 992px) {
+  .aboutpage__title {
+    font-size: 7.38rem;
+  }
+}
+.aboutpage__summary {
+  font-family: "Poppins-Bold";
+  font-size: 1.125rem;
+  text-align: center;
+  margin-bottom: 80px;
+}
+@media only screen and (min-width: 768px) {
+  .aboutpage__summary {
+    padding: 0 20%;
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .aboutpage__summary {
+    font-size: 1.5rem;
+    padding: 0 27.5%;
+  }
+}
+.aboutpage__infocontainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 60px 0;
+}
+@media only screen and (min-width: 992px) {
+  .aboutpage__infocontainer {
+    flex-direction: row;
+    gap: 100px;
+    margin: 160px 0;
+  }
+}
+.aboutpage__infocontainer svg {
+  width: 100%;
+  height: 22vw;
+  margin-top: -7.4vw;
+  margin-left: 15vw;
+  margin-bottom: -5vw;
+  z-index: -1;
+}
+@media only screen and (min-width: 992px) {
+  .aboutpage__infocontainer svg {
+    margin-bottom: -3.8vw;
+  }
+}
+.aboutpage__infocontainer__imagecontainer {
+  flex: 1;
+}
+.aboutpage__infocontainer__imagecontainer__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-height: 700px;
+}
+.aboutpage__infocontainer__textcontainer {
+  flex: 1;
+}
+.aboutpage__infocontainer__textcontainer__title {
+  white-space: nowrap;
+  font-family: "Lilita One";
+  font-size: 5.25rem;
+  margin: 0px;
+  z-index: 10;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.aboutpage__infocontainer__textcontainer__title span {
+  display: inline-block;
+  margin: 0 -7px;
+}
+.aboutpage__infocontainer__textcontainer__title span:hover {
+  animation: bounceOn 0.5s forwards;
+}
+.aboutpage__infocontainer__textcontainer__title span:not(:hover) {
+  animation: bounceOff 0.5s forwards;
+}
+@media only screen and (min-width: 992px) {
+  .aboutpage__infocontainer__textcontainer__title {
+    font-size: 10rem;
+  }
+  .aboutpage__infocontainer__textcontainer__title span {
+    margin: 0 -15px;
+  }
+}
+.aboutpage__infocontainer__textcontainer__text {
+  font-family: "Poppins-Regular";
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+.aboutpage__infocontainer__textcontainer__text--bold {
+  font-family: "Poppins-Semibold";
+}
+@media only screen and (min-width: 992px) {
+  .aboutpage__infocontainer__textcontainer__text {
+    font-size: 1.25rem;
   }
 }
