@@ -138,7 +138,9 @@ description: Welkom op mijn portfolio!
     const containerWidth = window.innerWidth;
 
     window.addEventListener('resize', function() {
-        location.reload();
+        if (containerWidth >= 992) {
+            location.reload();
+        }
     });
 
 

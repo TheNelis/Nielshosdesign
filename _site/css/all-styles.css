@@ -386,11 +386,11 @@ body {
 }
 .navbar__langcontainer {
   display: flex;
+  gap: 10px;
 }
 @media only screen and (min-width: 992px) {
   .navbar__langcontainer {
     flex-direction: column;
-    gap: 5px;
   }
 }
 .navbar__langcontainer__button {
@@ -399,6 +399,8 @@ body {
   border: none;
   font-size: 24px;
   cursor: pointer;
+  color: black;
+  padding: 0;
 }
 @media only screen and (min-width: 992px) {
   .navbar__langcontainer__button {
@@ -608,7 +610,7 @@ body {
   font-family: "Poppins-Black";
   margin: 0px;
   z-index: 10;
-  font-size: 17vw;
+  font-size: 16vw;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
@@ -633,11 +635,11 @@ body {
   display: inline-block;
   transform-origin: 51% 31.5%;
   animation: rotateStar 0.7s;
-  animation-delay: 1.1s;
+  animation-delay: 2.2s;
 }
 @media only screen and (min-width: 768px) {
   .herocontainer__text .star {
-    animation-delay: 1.3s;
+    animation-delay: 2.2s;
   }
 }
 .herocontainer__bottomcontainer {
@@ -728,13 +730,13 @@ body {
   transform-origin: 20% 20%;
   z-index: 0;
   animation: leaf 1s forwards;
-  animation-delay: 1.5s;
+  animation-delay: 2.6s;
 }
 @media only screen and (min-width: 768px) {
   .herocontainer__blaadje {
     width: 35vw;
     margin: 0 -37vw -6.5vw 0;
-    animation-delay: 1.7s;
+    animation-delay: 2.6s;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -1412,7 +1414,7 @@ body {
 }
 .footer__email {
   font-family: "Lilita One";
-  font-size: 14.5vw;
+  font-size: 13.5vw;
   line-height: 65%;
   display: flex;
   flex-direction: column;

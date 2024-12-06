@@ -309,11 +309,11 @@ body {
 }
 .navbar__langcontainer {
   display: flex;
+  gap: 10px;
 }
 @media only screen and (min-width: 992px) {
   .navbar__langcontainer {
     flex-direction: column;
-    gap: 5px;
   }
 }
 .navbar__langcontainer__button {
@@ -322,6 +322,8 @@ body {
   border: none;
   font-size: 24px;
   cursor: pointer;
+  color: black;
+  padding: 0;
 }
 @media only screen and (min-width: 992px) {
   .navbar__langcontainer__button {
