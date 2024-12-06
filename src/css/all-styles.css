@@ -103,6 +103,11 @@ textarea:not([rows]) {
     transform: translateX(-28.4%);
   }
 }
+@keyframes breaklineSlideFull {
+  to {
+    transform: translateX(-38.6%);
+  }
+}
 @keyframes slide {
   from {
     transform: translateX(0);
@@ -552,6 +557,35 @@ body {
 @media only screen and (min-width: 992px) {
   .breakline {
     width: 45%;
+  }
+}
+.breakline--full {
+  position: relative;
+  width: 100%;
+  align-self: center;
+  overflow: hidden;
+}
+.breakline--full svg {
+  animation: 1s breaklineSlideFull infinite linear;
+  width: 250%;
+  transform: translateX(-31.6%);
+}
+@media only screen and (min-width: 768px) {
+  .breakline--full svg {
+    animation: 2.9s breaklineSlideFull infinite linear;
+    transform: translateX(-26.4%);
+  }
+}
+@media only screen and (min-width: 992px) {
+  .breakline--full svg {
+    animation: 3.2s breaklineSlideFull infinite linear;
+    transform: translateX(-23.6%);
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .breakline--full svg {
+    animation: 2.2s breaklineSlideFull infinite linear;
+    transform: translateX(-31.6%);
   }
 }
 
@@ -2009,6 +2043,7 @@ body {
 }
 
 .aboutpage {
+  position: relative;
   background-image: url("/assets/yellow_noise.jpg");
 }
 .aboutpage__title {
@@ -2045,13 +2080,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin: 60px 0;
+  margin-top: 60px;
 }
 @media only screen and (min-width: 992px) {
   .aboutpage__infocontainer {
     flex-direction: row;
     gap: 100px;
-    margin: 160px 0;
+    margin-top: 140px;
   }
 }
 .aboutpage__infocontainer svg {
@@ -2084,6 +2119,7 @@ body {
   font-family: "Lilita One";
   font-size: 5.25rem;
   margin: 0px;
+  margin-left: 7px;
   z-index: 10;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
@@ -2099,7 +2135,7 @@ body {
 .aboutpage__infocontainer__textcontainer__title span:not(:hover) {
   animation: bounceOff 0.5s forwards;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .aboutpage__infocontainer__textcontainer__title {
     font-size: 10rem;
   }
@@ -2115,8 +2151,129 @@ body {
 .aboutpage__infocontainer__textcontainer__text--bold {
   font-family: "Poppins-Semibold";
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .aboutpage__infocontainer__textcontainer__text {
     font-size: 1.25rem;
+  }
+}
+.aboutpage .careercontainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 150px;
+}
+@media only screen and (min-width: 768px) {
+  .aboutpage .careercontainer {
+    margin-bottom: 200px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .aboutpage .careercontainer {
+    flex-direction: row;
+    gap: 100px;
+    margin-bottom: 250px;
+  }
+}
+.aboutpage .careercontainer__column {
+  flex: 1;
+  margin-top: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .aboutpage .careercontainer__column {
+    margin-top: 80px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .aboutpage .careercontainer__column {
+    margin-top: 120px;
+  }
+}
+.aboutpage .careercontainer__title {
+  font-family: "Lilita One";
+  font-size: 4rem;
+  margin: 40px 0;
+}
+@media only screen and (min-width: 768px) {
+  .aboutpage .careercontainer__title {
+    font-size: 7.2rem;
+  }
+}
+.aboutpage .careercontainer__blockcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.aboutpage .careercontainer__block__title {
+  font-family: "Poppins-Semibold";
+  font-size: 1rem;
+  margin-bottom: 5px;
+  width: 80%;
+  text-wrap: wrap;
+}
+@media only screen and (min-width: 768px) {
+  .aboutpage .careercontainer__block__title {
+    font-size: 1.25rem;
+  }
+}
+.aboutpage .careercontainer__block__detailcontainer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .aboutpage .careercontainer__block__detailcontainer {
+    font-size: 1.25rem;
+  }
+}
+.aboutpage .careercontainer__block__detailcontainer p:first-child {
+  width: 70%;
+}
+.aboutpage .careercontainer__block__detailcontainer p:last-child {
+  text-align: end;
+}
+.aboutpage__blaadje {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  z-index: 0;
+}
+@media only screen and (min-width: 768px) {
+  .aboutpage__blaadje {
+    display: block;
+    width: 35vw;
+    margin: 16vw 0 0 -14vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .aboutpage__blaadje {
+    width: 22vw;
+    margin: 12vw 0 0 -8vw;
+  }
+}
+.aboutpage__blaadje2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30vw;
+  margin: 14vw -8vw 0 0;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  z-index: 0;
+}
+@media only screen and (min-width: 768px) {
+  .aboutpage__blaadje2 {
+    width: 30vw;
+    margin: 14vw -10vw 0 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .aboutpage__blaadje2 {
+    width: 22vw;
+    margin: 10vw -7vw 0 0;
   }
 }

@@ -10,6 +10,12 @@
     }
 }
 
+@keyframes breaklineSlideFull {
+    to {
+        transform: translateX(-38.6%);
+    }
+}
+
 // Infinite slide animation
 @keyframes slide {
     from {
@@ -495,6 +501,34 @@ body {
 
     @media only screen and (min-width: v.$lg) {
         width: 45%;
+    }
+
+    &--full {
+        position: relative;
+        width: 100%;
+        align-self: center;
+        overflow: hidden;
+
+        svg {
+            animation: 1s breaklineSlideFull infinite linear;
+            width: 250%;
+            transform: translateX(-31.6%);
+
+            @media only screen and (min-width: v.$md) {
+                animation: 2.9s breaklineSlideFull infinite linear;
+                transform: translateX(-26.4%);
+            }
+
+            @media only screen and (min-width: v.$lg) {
+                animation: 3.2s breaklineSlideFull infinite linear;
+                transform: translateX(-23.6%);
+            }
+
+            @media only screen and (min-width: v.$xxl) {
+                animation: 2.2s breaklineSlideFull infinite linear;
+                transform: translateX(-31.6%);
+            }
+        }
     }
     
 }

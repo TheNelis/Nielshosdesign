@@ -26,6 +26,11 @@
     transform: translateX(-28.4%);
   }
 }
+@keyframes breaklineSlideFull {
+  to {
+    transform: translateX(-38.6%);
+  }
+}
 @keyframes slide {
   from {
     transform: translateX(0);
@@ -475,5 +480,34 @@ body {
 @media only screen and (min-width: 992px) {
   .breakline {
     width: 45%;
+  }
+}
+.breakline--full {
+  position: relative;
+  width: 100%;
+  align-self: center;
+  overflow: hidden;
+}
+.breakline--full svg {
+  animation: 1s breaklineSlideFull infinite linear;
+  width: 250%;
+  transform: translateX(-31.6%);
+}
+@media only screen and (min-width: 768px) {
+  .breakline--full svg {
+    animation: 2.9s breaklineSlideFull infinite linear;
+    transform: translateX(-26.4%);
+  }
+}
+@media only screen and (min-width: 992px) {
+  .breakline--full svg {
+    animation: 3.2s breaklineSlideFull infinite linear;
+    transform: translateX(-23.6%);
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .breakline--full svg {
+    animation: 2.2s breaklineSlideFull infinite linear;
+    transform: translateX(-31.6%);
   }
 }
