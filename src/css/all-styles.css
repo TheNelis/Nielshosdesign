@@ -95,6 +95,14 @@ textarea:not([rows]) {
   font-family: "Poppins-Black";
   src: url(/assets/fonts/Poppins/Poppins-Black.ttf);
 }
+@keyframes breaklineSlide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-28.4%);
+  }
+}
 @keyframes slide {
   from {
     transform: translateX(0);
@@ -282,22 +290,26 @@ body {
     display: none;
   }
 }
-.navbar__mobilemenu__button {
-  display: block;
-  font-size: 2rem;
-  text-decoration: none;
-  color: black;
-  font-family: "Lilita One";
-}
 .navbar__mobilemenu div {
   display: flex;
   gap: 15px;
   margin-top: 40px;
 }
+@media only screen and (min-width: 768px) {
+  .navbar__mobilemenu div {
+    gap: 25px;
+  }
+}
 .navbar__mobilemenu div a svg {
   width: 34px;
   height: 34px;
   transition: all 0.15s ease-out;
+}
+@media only screen and (min-width: 768px) {
+  .navbar__mobilemenu div a svg {
+    width: 40px;
+    height: 40px;
+  }
 }
 .navbar__mobilemenu div a svg:hover {
   margin-top: -3px;
@@ -358,6 +370,11 @@ body {
   text-decoration: none;
   color: black;
   font-family: "Lilita One";
+}
+@media only screen and (min-width: 768px) {
+  .navbar__buttoncontainer__button {
+    font-size: 3rem;
+  }
 }
 @media only screen and (min-width: 992px) {
   .navbar__buttoncontainer__button {
@@ -527,7 +544,7 @@ body {
   animation: 4s breaklineSlide infinite linear;
   width: 300%;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .breakline svg {
     width: auto;
   }
@@ -798,6 +815,7 @@ body {
     flex-direction: row;
     gap: 15px;
     margin: 50px 0;
+    padding: 0;
   }
 }
 .featured-cases__casecontainer__case {
@@ -822,6 +840,11 @@ body {
   border-radius: 16px;
   transition: all 0.2s linear;
 }
+@media only screen and (min-width: 768px) {
+  .featured-cases__casecontainer__case__img {
+    aspect-ratio: 3/2;
+  }
+}
 @media only screen and (min-width: 992px) {
   .featured-cases__casecontainer__case__img {
     aspect-ratio: 4/5;
@@ -835,13 +858,13 @@ body {
 }
 @media only screen and (min-width: 768px) {
   .featured-cases__casecontainer__case__bottomcontainer {
-    font-size: 1.5rem;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 1.2rem;
   }
 }
 @media only screen and (min-width: 992px) {
   .featured-cases__casecontainer__case__bottomcontainer {
-    flex-direction: row;
-    gap: 15px;
     font-size: 1rem;
   }
 }
@@ -1623,14 +1646,6 @@ body {
   }
 }
 
-@keyframes breaklineSlide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-28.4%);
-  }
-}
 .casestudypage {
   background-image: url("/assets/yellow_noise.jpg");
 }
@@ -1782,5 +1797,172 @@ body {
 @media only screen and (min-width: 992px) {
   .casestudypage .contentcontainer__text h3 {
     font-size: 2rem;
+  }
+}
+
+.dienstenpage {
+  background-image: url("/assets/yellow_noise.jpg");
+}
+.dienstenpage__title {
+  font-family: "Lilita One";
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 992px) {
+  .dienstenpage__title {
+    font-size: 7.38rem;
+  }
+}
+.dienstenpage__summary {
+  font-family: "Poppins-Bold";
+  font-size: 1.125rem;
+  text-align: center;
+  margin-bottom: 80px;
+}
+@media only screen and (min-width: 768px) {
+  .dienstenpage__summary {
+    padding: 0 20%;
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .dienstenpage__summary {
+    font-size: 1.5rem;
+    padding: 0 27.5%;
+  }
+}
+.dienstenpage .dienstencontainer {
+  display: flex;
+  flex-direction: column;
+  margin: 80px 0 100px;
+  gap: 120px;
+}
+@media only screen and (min-width: 768px) {
+  .dienstenpage .dienstencontainer {
+    margin: 120px 14% 200px;
+    gap: 80px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .dienstenpage .dienstencontainer {
+    margin: 120px 14%;
+  }
+}
+.dienstenpage .dienstencontainer__dienst {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+@media only screen and (min-width: 992px) {
+  .dienstenpage .dienstencontainer__dienst {
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+  }
+}
+.dienstenpage .dienstencontainer__dienst__imagecontainer {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+}
+.dienstenpage .dienstencontainer__dienst__imagecontainer__illustration {
+  width: 180px;
+  object-fit: contain;
+}
+.dienstenpage .dienstencontainer__dienst__imagecontainer__circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: spin 20s infinite linear;
+}
+.dienstenpage .dienstencontainer__dienst__textcontainer {
+  font-size: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .dienstenpage .dienstencontainer__dienst__textcontainer {
+    font-size: 1.125rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .dienstenpage .dienstencontainer__dienst__textcontainer {
+    font-size: 1.25rem;
+  }
+}
+.dienstenpage .dienstencontainer__dienst__textcontainer h3 {
+  font-family: "Lilita One";
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+@media only screen and (min-width: 768px) {
+  .dienstenpage .dienstencontainer__dienst__textcontainer h3 {
+    font-size: 1.75rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .dienstenpage .dienstencontainer__dienst__textcontainer h3 {
+    font-size: 2rem;
+  }
+}
+.dienstenpage .cases-block {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 120px;
+}
+@media only screen and (min-width: 992px) {
+  .dienstenpage .cases-block {
+    margin-bottom: 140px;
+  }
+}
+.dienstenpage .cases-block svg {
+  width: 100%;
+  height: 22vw;
+  margin-top: -7.4vw;
+  margin-left: -15vw;
+  margin-bottom: -5vw;
+  z-index: -1;
+  transform: scaleX(-1);
+}
+@media only screen and (min-width: 992px) {
+  .dienstenpage .cases-block svg {
+    margin-bottom: -3.8vw;
+  }
+}
+.dienstenpage .cases-block__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0px 15px 60px;
+  background-color: white;
+}
+@media only screen and (min-width: 992px) {
+  .dienstenpage .cases-block__container {
+    flex-direction: row;
+    gap: 100px;
+    padding: 0px 40px 60px;
+  }
+}
+.dienstenpage .cases-block__wrapper {
+  position: relative;
+}
+.dienstenpage .cases-block__blaadje {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45vw;
+  margin: -15vw 0 0 -16vw;
+  z-index: 0;
+}
+@media only screen and (min-width: 992px) {
+  .dienstenpage .cases-block__blaadje {
+    width: 22vw;
+    margin: -6vw 0 0 -8vw;
   }
 }

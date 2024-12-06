@@ -18,6 +18,14 @@
   font-family: "Poppins-Black";
   src: url(/assets/fonts/Poppins/Poppins-Black.ttf);
 }
+@keyframes breaklineSlide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-28.4%);
+  }
+}
 @keyframes slide {
   from {
     transform: translateX(0);
@@ -205,22 +213,26 @@ body {
     display: none;
   }
 }
-.navbar__mobilemenu__button {
-  display: block;
-  font-size: 2rem;
-  text-decoration: none;
-  color: black;
-  font-family: "Lilita One";
-}
 .navbar__mobilemenu div {
   display: flex;
   gap: 15px;
   margin-top: 40px;
 }
+@media only screen and (min-width: 768px) {
+  .navbar__mobilemenu div {
+    gap: 25px;
+  }
+}
 .navbar__mobilemenu div a svg {
   width: 34px;
   height: 34px;
   transition: all 0.15s ease-out;
+}
+@media only screen and (min-width: 768px) {
+  .navbar__mobilemenu div a svg {
+    width: 40px;
+    height: 40px;
+  }
 }
 .navbar__mobilemenu div a svg:hover {
   margin-top: -3px;
@@ -281,6 +293,11 @@ body {
   text-decoration: none;
   color: black;
   font-family: "Lilita One";
+}
+@media only screen and (min-width: 768px) {
+  .navbar__buttoncontainer__button {
+    font-size: 3rem;
+  }
 }
 @media only screen and (min-width: 992px) {
   .navbar__buttoncontainer__button {
@@ -450,7 +467,7 @@ body {
   animation: 4s breaklineSlide infinite linear;
   width: 300%;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .breakline svg {
     width: auto;
   }

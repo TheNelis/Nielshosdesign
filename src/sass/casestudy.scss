@@ -1,14 +1,5 @@
 @use "./variables.scss" as v;
 
-@keyframes breaklineSlide {
-    from {
-        transform: translateX(0);
-    } 
-    to {
-        transform: translateX(-28.4%);
-    }
-}
-
 .casestudypage {
     background-image: url('/assets/yellow_noise.jpg');
 

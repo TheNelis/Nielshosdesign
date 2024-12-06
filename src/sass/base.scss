@@ -1,5 +1,15 @@
 @use "./variables.scss" as v;
 
+// Breakline animation
+@keyframes breaklineSlide {
+    from {
+        transform: translateX(0);
+    } 
+    to {
+        transform: translateX(-28.4%);
+    }
+}
+
 // Infinite slide animation
 @keyframes slide {
     from {
@@ -209,23 +219,24 @@ body {
             display: none;
         }
 
-        &__button {
-            display: block;
-            font-size: 2rem;
-            text-decoration: none;
-            color: black;
-            font-family: 'Lilita One';
-        }
-
         div {
             display: flex;
             gap: 15px;
             margin-top: 40px;
 
+            @media only screen and (min-width: v.$md) {
+                gap: 25px;
+            }
+
             a svg {
                 width: 34px;
                 height: 34px;
                 transition: all .15s ease-out;
+
+                @media only screen and (min-width: v.$md) {
+                    width: 40px;
+                    height: 40px;
+                }
 
                 &:hover {
                     margin-top: -3px;
@@ -291,6 +302,10 @@ body {
             text-decoration: none;
             color: black;
             font-family: 'Lilita One';
+
+            @media only screen and (min-width: v.$md) {
+                font-size: 3rem;
+            }
 
             @media only screen and (min-width: v.$lg) {
                 display: block;
@@ -473,7 +488,7 @@ body {
         animation: 4s breaklineSlide infinite linear;
         width: 300%;
 
-        @media only screen and (min-width: v.$lg) {
+        @media only screen and (min-width: v.$md) {
             width: auto;
         }
     }

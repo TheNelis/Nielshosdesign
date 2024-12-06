@@ -55,6 +55,7 @@
     flex-direction: row;
     gap: 15px;
     margin: 50px 0;
+    padding: 0;
   }
 }
 .featured-cases__casecontainer__case {
@@ -79,6 +80,11 @@
   border-radius: 16px;
   transition: all 0.2s linear;
 }
+@media only screen and (min-width: 768px) {
+  .featured-cases__casecontainer__case__img {
+    aspect-ratio: 3/2;
+  }
+}
 @media only screen and (min-width: 992px) {
   .featured-cases__casecontainer__case__img {
     aspect-ratio: 4/5;
@@ -92,13 +98,13 @@
 }
 @media only screen and (min-width: 768px) {
   .featured-cases__casecontainer__case__bottomcontainer {
-    font-size: 1.5rem;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 1.2rem;
   }
 }
 @media only screen and (min-width: 992px) {
   .featured-cases__casecontainer__case__bottomcontainer {
-    flex-direction: row;
-    gap: 15px;
     font-size: 1rem;
   }
 }
