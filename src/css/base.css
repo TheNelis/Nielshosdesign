@@ -20,15 +20,18 @@
 }
 @keyframes breaklineSlide {
   from {
-    transform: translateX(0);
+    transform: translate(0, -50%) scale(2);
   }
   to {
-    transform: translateX(-28.4%);
+    transform: translate(-28.7%, -50%) scale(2);
   }
 }
 @keyframes breaklineSlideFull {
+  from {
+    transform: translate(0, -50%) scale(2);
+  }
   to {
-    transform: translateX(-38.6%);
+    transform: translate(-33.5%, -50%) scale(2);
   }
 }
 @keyframes slide {
@@ -464,18 +467,19 @@ body {
 
 .breakline {
   position: relative;
-  width: 80%;
+  width: 80vw;
   align-self: center;
   overflow: hidden;
+  height: 50px;
 }
 .breakline svg {
-  animation: 4s breaklineSlide infinite linear;
-  width: 300%;
-}
-@media only screen and (min-width: 768px) {
-  .breakline svg {
-    width: auto;
-  }
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translate(0, -50%) scale(2);
+  transform-origin: 0 50%;
+  animation: 2s breaklineSlide infinite linear;
 }
 @media only screen and (min-width: 992px) {
   .breakline {
@@ -483,31 +487,9 @@ body {
   }
 }
 .breakline--full {
-  position: relative;
   width: 100%;
-  align-self: center;
-  overflow: hidden;
 }
 .breakline--full svg {
-  animation: 1s breaklineSlideFull infinite linear;
-  width: 250%;
-  transform: translateX(-31.6%);
-}
-@media only screen and (min-width: 768px) {
-  .breakline--full svg {
-    animation: 2.9s breaklineSlideFull infinite linear;
-    transform: translateX(-26.4%);
-  }
-}
-@media only screen and (min-width: 992px) {
-  .breakline--full svg {
-    animation: 3.2s breaklineSlideFull infinite linear;
-    transform: translateX(-23.6%);
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .breakline--full svg {
-    animation: 2.2s breaklineSlideFull infinite linear;
-    transform: translateX(-31.6%);
-  }
+  transform: translate(0, -50%) scale(2);
+  animation: 2.2s breaklineSlideFull infinite linear;
 }

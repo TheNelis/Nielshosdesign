@@ -3,16 +3,19 @@
 // Breakline animation
 @keyframes breaklineSlide {
     from {
-        transform: translateX(0);
+        transform: translate(0, -50%) scale(2);
     } 
     to {
-        transform: translateX(-28.4%);
+        transform: translate(-28.7%, -50%) scale(2);
     }
 }
 
 @keyframes breaklineSlideFull {
+    from {
+        transform: translate(0, -50%) scale(2);
+    } 
     to {
-        transform: translateX(-38.6%);
+        transform: translate(-33.5%, -50%) scale(2);
     }
 }
 
@@ -486,17 +489,19 @@ body {
 
 .breakline {
     position: relative;
-    width: 80%;
+    width: 80vw;
     align-self: center;
     overflow: hidden;
+    height: 50px;
 
     svg {
-        animation: 4s breaklineSlide infinite linear;
-        width: 300%;
-
-        @media only screen and (min-width: v.$md) {
-            width: auto;
-        }
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        transform: translate(0, -50%) scale(2);
+        transform-origin: 0 50%;
+        animation: 2s breaklineSlide infinite linear;
     }
 
     @media only screen and (min-width: v.$lg) {
@@ -504,30 +509,11 @@ body {
     }
 
     &--full {
-        position: relative;
         width: 100%;
-        align-self: center;
-        overflow: hidden;
-
+        
         svg {
-            animation: 1s breaklineSlideFull infinite linear;
-            width: 250%;
-            transform: translateX(-31.6%);
-
-            @media only screen and (min-width: v.$md) {
-                animation: 2.9s breaklineSlideFull infinite linear;
-                transform: translateX(-26.4%);
-            }
-
-            @media only screen and (min-width: v.$lg) {
-                animation: 3.2s breaklineSlideFull infinite linear;
-                transform: translateX(-23.6%);
-            }
-
-            @media only screen and (min-width: v.$xxl) {
-                animation: 2.2s breaklineSlideFull infinite linear;
-                transform: translateX(-31.6%);
-            }
+            transform: translate(0, -50%) scale(2);
+            animation: 2.2s breaklineSlideFull infinite linear;
         }
     }
     
