@@ -77,21 +77,24 @@
                 <form id="contact-form" class="contactpage__form" method="POST" action="https://api.web3forms.com/submit">
 
                     <input type="hidden" name="access_key" value="209a68f7-7192-4d39-a20e-d9a1c3cdfe34">
+                    <input type="hidden" name="from_name" value="NielsHosDesign">
 
                     <label for="name" hidden>Name</label>
-                    <input type="text" id="name" name="name" placeholder="Naam*" required>
+                    <input type="text" name="name" placeholder="Naam*" required>
 
                     <label for="email" hidden>Email</label>
-                    <input type="email" id="email" name="email" placeholder="E-mailadres*" required>
+                    <input type="email" name="email" placeholder="E-mailadres*" required>
 
                     <label for="subject" hidden>Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Onderwerp*" required>
+                    <input type="text" name="subject" placeholder="Onderwerp*" required>
 
                     <label for="message" hidden>Message</label>
-                    <textarea id="message" name="message" placeholder="Bericht*" minlength="10" required></textarea>
+                    <textarea name="message" placeholder="Bericht*" minlength="10" required></textarea>
 
-                    <input type="submit" id="submit" class="button--blue--outline" placeholder="Versturen"></input>
-                    <div id="result"></div>
+                    <input type="submit" id="submit" class="button--blue--outline" value="Versturen"></input>
+                    <div class="contactpage__form__result">
+                        <div id="result"></div>
+                    </div>
                 </form>
             </div>
         </div>

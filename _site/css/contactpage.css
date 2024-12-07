@@ -81,6 +81,16 @@
 .contactpage__form #submit:hover {
   cursor: pointer;
 }
+.contactpage__form__result {
+  height: 30px;
+  font-family: "Poppins-Regular";
+  font-size: 1rem;
+}
+@media only screen and (min-width: 992px) {
+  .contactpage__form__result {
+    font-size: 1.125rem;
+  }
+}
 .contactpage__flower {
   display: none;
   position: absolute;

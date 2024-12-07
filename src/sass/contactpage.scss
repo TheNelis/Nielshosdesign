@@ -66,6 +66,16 @@
         #submit:hover {
             cursor: pointer;
         }
+
+        &__result {
+            height: 30px;
+            font-family: 'Poppins-Regular';
+            font-size: 1rem;
+
+            @media only screen and (min-width: v.$lg) {
+                font-size: 1.125rem;
+            }
+        }
     }
 
     &__flower {
