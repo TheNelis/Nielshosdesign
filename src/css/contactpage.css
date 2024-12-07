@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "Lilita One";
+  src: url(/assets/fonts/Lilita_One/LilitaOne-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(/assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-Semibold";
+  src: url(/assets/fonts/Poppins/Poppins-Semibold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(/assets/fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Black";
+  src: url(/assets/fonts/Poppins/Poppins-Black.ttf);
+}
+.contactpage {
+  position: relative;
+  background-image: url("/assets/yellow_noise.jpg");
+}
+.contactpage__container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-bottom: 150px;
+}
+@media only screen and (min-width: 992px) {
+  .contactpage__container {
+    flex-direction: row;
+    gap: 80px;
+    margin-bottom: 200px;
+  }
+}
+.contactpage__container__column {
+  flex: 1;
+}
+.contactpage__title {
+  font-family: "Lilita One";
+  font-size: 4rem;
+  line-height: 50%;
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 992px) {
+  .contactpage__title {
+    font-size: 7.35rem;
+    margin-bottom: 60px;
+  }
+}
+.contactpage__text {
+  font-size: 1rem;
+}
+@media only screen and (min-width: 992px) {
+  .contactpage__text {
+    font-size: 1.25rem;
+  }
+}
+.contactpage__text span {
+  font-family: "Poppins-Semibold";
+}
+.contactpage__form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.contactpage__form input:not(#submit), .contactpage__form textarea {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: solid 2px black;
+  border-radius: 8px;
+}
+@media only screen and (min-width: 992px) {
+  .contactpage__form input:not(#submit), .contactpage__form textarea {
+    font-size: 1.25rem;
+  }
+}
+.contactpage__form #submit:hover {
+  cursor: pointer;
+}
+.contactpage__flower {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90vw;
+  margin: 0 0 -17vw -14vw;
+  -webkit-transform: scaleX(-1) rotate(70deg);
+  transform: scaleX(-1) rotate(70deg);
+  z-index: 0;
+}
+@media only screen and (min-width: 992px) {
+  .contactpage__flower {
+    display: block;
+    width: 45vw;
+    margin: 0 0 -17vw -14vw;
+  }
+}

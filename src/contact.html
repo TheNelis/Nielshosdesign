@@ -1,0 +1,41 @@
+---
+layout: layouts/base.html
+title: Diensten - Niels Hos Design
+description: Van custom sneakers tot een volledige website, bij mij ben je aan het juiste adres!
+---
+
+<div class="contactpage">
+    <div class="maincontainer">
+        <div class="contactpage__container">
+            <div class="contactpage__container__column">
+                <h1 class="contactpage__title">Contact</h1>
+                <p class="contactpage__text">
+                    Stuur me een bericht via het formulier hiernaast of mail me op 
+                    <span>nielshosdesign@gmail.com</span>
+                    <br/><br/>Laten we een mooi product neerzetten
+                </p>
+            </div>
+            <div class="contactpage__container__column contactpage__container__column--form">
+                <form class="contactpage__form">
+                    <label for="name" hidden>Name</label>
+                    <input type="text" id="name" name="name" placeholder="Naam*" required>
+
+                    <label for="email" hidden>Email</label>
+                    <input type="text" id="email" name="email" placeholder="E-mailadres*" required>
+
+                    <label for="subject" hidden>Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Onderwerp*" required>
+
+                    <label for="message" hidden>Message</label>
+                    <textarea id="message" name="message" placeholder="Bericht*" required></textarea>
+
+                    <input type="submit" id="submit" class="button--blue--outline" placeholder="Versturen"></input>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    <img class="contactpage__flower" src="/assets/Leafs_assets/bloem.png" alt="">
+</div>
+
+{% Footer color="white" %}
