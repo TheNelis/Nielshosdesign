@@ -74,20 +74,24 @@
                 </p>
             </div>
             <div class="contactpage__container__column contactpage__container__column--form">
-                <form class="contactpage__form">
+                <form id="contact-form" class="contactpage__form" method="POST" action="https://api.web3forms.com/submit">
+
+                    <input type="hidden" name="access_key" value="209a68f7-7192-4d39-a20e-d9a1c3cdfe34">
+
                     <label for="name" hidden>Name</label>
                     <input type="text" id="name" name="name" placeholder="Naam*" required>
 
                     <label for="email" hidden>Email</label>
-                    <input type="text" id="email" name="email" placeholder="E-mailadres*" required>
+                    <input type="email" id="email" name="email" placeholder="E-mailadres*" required>
 
                     <label for="subject" hidden>Subject</label>
                     <input type="text" id="subject" name="subject" placeholder="Onderwerp*" required>
 
                     <label for="message" hidden>Message</label>
-                    <textarea id="message" name="message" placeholder="Bericht*" required></textarea>
+                    <textarea id="message" name="message" placeholder="Bericht*" minlength="10" required></textarea>
 
                     <input type="submit" id="submit" class="button--blue--outline" placeholder="Versturen"></input>
+                    <div id="result"></div>
                 </form>
             </div>
         </div>
@@ -114,6 +118,48 @@
     <h1 id="footer-email" class="footer__email">nielshosdesign<span>@gmail.com</span></h1>
     <img class="footer__blaadje" src="/assets/Leafs_assets/blaadje_double.png" alt="">
 </footer>
+
+
+<script>
+    const form = document.getElementById('contact-form');
+    const result = document.getElementById('result');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+        result.innerHTML = "Please wait..."
+
+        fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = json.message;
+                } else {
+                    console.log(response);
+                    result.innerHTML = json.message;
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+            })
+            .then(function() {
+                form.reset();
+                setTimeout(() => {
+                    result.style.display = "none";
+                }, 3000);
+            });
+    });
+</script>
 
 </body>
 </html>
