@@ -148,7 +148,7 @@ body {
   width: 300%;
   margin-left: -200%;
   height: 100%;
-  background-color: #FFD12D;
+  background-color: #766f55;
   z-index: 20000;
   overflow: hidden;
   border-radius: 100vw 0 0 100vw;
@@ -251,7 +251,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #FFD12D;
+  background-color: #766f55;
   display: flex;
   justify-content: space-between;
   align-items: center;
