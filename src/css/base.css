@@ -1,8 +1,4 @@
 @font-face {
-  font-family: "Lilita One";
-  src: url(/assets/fonts/Lilita_One/LilitaOne-Regular.ttf);
-}
-@font-face {
   font-family: "Poppins-Regular";
   src: url(/assets/fonts/Poppins/Poppins-Regular.ttf);
 }
@@ -148,7 +144,7 @@ body {
   width: 300%;
   margin-left: -200%;
   height: 100%;
-  background-color: #766f55;
+  background-color: #FFD12D;
   z-index: 20000;
   overflow: hidden;
   border-radius: 100vw 0 0 100vw;
@@ -251,7 +247,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #766f55;
+  background-color: #FFD12D;
   display: flex;
   justify-content: space-between;
   align-items: center;

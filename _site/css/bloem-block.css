@@ -1,8 +1,4 @@
 @font-face {
-  font-family: "Lilita One";
-  src: url(/assets/fonts/Lilita_One/LilitaOne-Regular.ttf);
-}
-@font-face {
   font-family: "Poppins-Regular";
   src: url(/assets/fonts/Poppins/Poppins-Regular.ttf);
 }
@@ -132,7 +128,7 @@
   }
 }
 .bloem-block__textcontainer--spanletter {
-  color: #766f55;
+  color: #FFD12D;
   line-height: 100%;
   font-size: 0px;
 }
