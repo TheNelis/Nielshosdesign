@@ -156,6 +156,7 @@
   font-family: "Poppins-Semibold";
   font-size: 2rem;
   line-height: 10px;
+  z-index: 10;
 }
 .herocontainer__bottomcontainer__socials div {
   display: flex;
