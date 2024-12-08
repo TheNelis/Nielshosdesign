@@ -40,10 +40,11 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- <div id="loaderscreen" class="loaderscreen"></div>
+
+    <div id="loaderscreen" class="loaderscreen"></div>
     <div id="curtain" class="curtain__container">
         <img id="curtain-logo" class="curtain__container__logo" src="/assets/images/niels_signature_black.png" alt="NielsHosDesign logo">
-    </div> -->
+    </div>
 
     <div class="navbar__carousel">
         <p class="navbar__carousel__section navbar__carousel__section--blue">FULLSTACK-DEVELOPER</p>
@@ -274,46 +275,46 @@
 
 
 
-    // if (window.location.pathname == '/') {
-    //     if (viewportWidth >= 768 && viewportWidth < 992) {
-    //         curtain.style.animation = '2.1s curtainOpenLong-md linear forwards';
-    //         curtainLogo.style.animation = '2.1s rotateLong linear forwards'
+    if (window.location.pathname == '/') {
+        if (viewportWidth >= 768 && viewportWidth < 992) {
+            curtain.style.animation = '2.1s curtainOpenLong-md linear forwards';
+            curtainLogo.style.animation = '2.1s rotateLong linear forwards'
 
-    //     } else if (viewportWidth >= 992) {
-    //         curtain.style.animation = '2.2s curtainOpenLong-lg linear forwards';
-    //         curtainLogo.style.animation = '2.2s rotateLong linear forwards'
+        } else if (viewportWidth >= 992) {
+            curtain.style.animation = '2.2s curtainOpenLong-lg linear forwards';
+            curtainLogo.style.animation = '2.2s rotateLong linear forwards'
 
-    //     } else {
-    //         curtain.style.animation = '2s curtainOpenLong-sm linear forwards';
-    //         curtainLogo.style.animation = '2s rotateLong linear forwards'
-    //     }
+        } else {
+            curtain.style.animation = '2s curtainOpenLong-sm linear forwards';
+            curtainLogo.style.animation = '2s rotateLong linear forwards'
+        }
 
-    //     window.addEventListener('load', function() {
-    //         setTimeout(function() {
-    //             loaderscreen.style.display = 'none';
-    //         }, 1000);
-    //         curtain.style.display = 'flex';
-    //     })
-    // } else {
-    //     loaderscreen.style.display = 'none';
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                loaderscreen.style.display = 'none';
+            }, 1000);
+            curtain.style.display = 'flex';
+        })
+    } else {
+        loaderscreen.style.display = 'none';
 
-    //     if (viewportWidth >= 768 && viewportWidth < 992) {
-    //         curtainLogo.style.animation = '1.2s rotate linear forwards'
-    //         curtain.style.animation = '1.2s curtainOpen linear forwards';
+        if (viewportWidth >= 768 && viewportWidth < 992) {
+            curtainLogo.style.animation = '1.2s rotate linear forwards'
+            curtain.style.animation = '1.2s curtainOpen linear forwards';
 
-    //     } else if (viewportWidth >= 992) {
-    //         curtainLogo.style.animation = '1.2s rotate linear forwards'
-    //         curtain.style.animation = '1.2s curtainOpen linear forwards';
+        } else if (viewportWidth >= 992) {
+            curtainLogo.style.animation = '1.2s rotate linear forwards'
+            curtain.style.animation = '1.2s curtainOpen linear forwards';
 
-    //     } else {
-    //         curtainLogo.style.animation = '1s rotate linear forwards'
-    //         curtain.style.animation = '1s curtainOpen linear forwards';
-    //     }
+        } else {
+            curtainLogo.style.animation = '1s rotate linear forwards'
+            curtain.style.animation = '1s curtainOpen linear forwards';
+        }
 
         
-    //     curtain.style.display = 'flex';
-    //     curtainColor();
-    // }
+        curtain.style.display = 'flex';
+        curtainColor();
+    }
 
     
 
