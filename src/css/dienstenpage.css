@@ -1,22 +1,22 @@
 @font-face {
   font-family: "Lilita One";
-  src: url(/assets/fonts/Lilita_One/LilitaOne-Regular.ttf) format("truetype");
+  src: url(../assets/fonts/Lilita_One/LilitaOne-Regular.ttf) format("truetype");
 }
 @font-face {
   font-family: "Poppins-Regular";
-  src: url(/assets/fonts/Poppins/Poppins-Regular.ttf) format("truetype");
+  src: url(../assets/fonts/Poppins/Poppins-Regular.ttf) format("truetype");
 }
 @font-face {
-  font-family: Poppins-Semibold;
-  src: url(/assets/fonts/Poppins/Poppins-Semibold.ttf) format("truetype");
+  font-family: "Poppins-Semibold";
+  src: url(../assets/fonts/Poppins/Poppins-Semibold.ttf) format("truetype");
 }
 @font-face {
   font-family: "Poppins-Bold";
-  src: url(/assets/fonts/Poppins/Poppins-Bold.ttf) format("truetype");
+  src: url(../assets/fonts/Poppins/Poppins-Bold.ttf) format("truetype");
 }
 @font-face {
   font-family: "Poppins-Black";
-  src: url(/assets/fonts/Poppins/Poppins-Black.ttf) format("truetype");
+  src: url(../assets/fonts/Poppins/Poppins-Black.ttf) format("truetype");
 }
 .dienstenpage {
   position: relative;
