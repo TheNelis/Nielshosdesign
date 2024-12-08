@@ -85,7 +85,7 @@ textarea:not([rows]) {
 }
 @font-face {
   font-family: "Poppins-Semibold";
-  src: url(../assets/fonts/Poppins/Poppins-Semibold.ttf) format("truetype");
+  src: url(../assets/fonts/Poppins/Poppins-SemiBold.ttf) format("truetype");
 }
 @font-face {
   font-family: "Poppins-Bold";
