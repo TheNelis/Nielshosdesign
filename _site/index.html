@@ -273,32 +273,32 @@
     window.addEventListener('resize', function() {
         if (containerWidth >= 1200 && window.location.pathname == '/') {
             location.reload();
-            adjustFontSize();
+            // adjustFontSize();
         }
     });
 
     
-    const heroTitle = document.getElementById('hero-title');
+    // const heroTitle = document.getElementById('hero-title');
 
-    function adjustFontSize() {
-        let fontSize = 20; // Startwaarde
-        let currentWidth = heroTitle.offsetWidth;
+    // function adjustFontSize() {
+    //     let fontSize = 20; // Startwaarde
+    //     let currentWidth = heroTitle.offsetWidth;
 
-        // Zolang het woord kleiner is dan de container, vergroot de font-size
-        while (currentWidth < containerWidth - 40) {
-            fontSize++;
-            heroTitle.style.fontSize = fontSize + 'px';
-            currentWidth = heroTitle.offsetWidth;
-        }
+    //     // Zolang het woord kleiner is dan de container, vergroot de font-size
+    //     while (currentWidth < containerWidth - 40) {
+    //         fontSize++;
+    //         heroTitle.style.fontSize = fontSize + 'px';
+    //         currentWidth = heroTitle.offsetWidth;
+    //     }
         
-        while (currentWidth >= containerWidth - 40) {
-            fontSize--;
-            heroTitle.style.fontSize = fontSize + 'px';
-            currentWidth = heroTitle.offsetWidth;
-        }
-    }
+    //     while (currentWidth >= containerWidth - 40) {
+    //         fontSize--;
+    //         heroTitle.style.fontSize = fontSize + 'px';
+    //         currentWidth = heroTitle.offsetWidth;
+    //     }
+    // }
 
-    adjustFontSize();
+    // adjustFontSize();
 
 
 // Bloem-block letter fontsize aanpassen

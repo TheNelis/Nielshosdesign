@@ -659,14 +659,23 @@ body {
   font-family: "Poppins-Black";
   margin: 0px;
   z-index: 10;
+  font-size: 16vw;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+}
+@media only screen and (min-width: 768px) {
+  .herocontainer__text {
+    top: 15%;
+    transform: translateX(-50%);
+    font-size: 16vw;
+  }
 }
 @media only screen and (min-width: 992px) {
   .herocontainer__text {
     top: 0;
     transform: translateX(-50%);
+    font-size: 16vw;
   }
 }
 .herocontainer__text span:not(.star) {
@@ -751,7 +760,7 @@ body {
   top: 0;
   left: 0;
   width: 90vw;
-  margin: 32vh 0 0 -48vw;
+  margin: 32vh 0 0 -43vw;
   -webkit-transform: scaleX(-1) rotate(55deg);
   transform: scaleX(-1) rotate(55deg);
   z-index: 0;
@@ -769,6 +778,7 @@ body {
   }
 }
 .herocontainer__blaadje {
+  display: none;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -783,6 +793,7 @@ body {
 }
 @media only screen and (min-width: 768px) {
   .herocontainer__blaadje {
+    display: block;
     width: 35vw;
     margin: 0 -37vw -6.5vw 0;
     animation-delay: 2.6s;
