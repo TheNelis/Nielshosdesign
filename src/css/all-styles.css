@@ -1786,7 +1786,7 @@ body {
 }
 @media only screen and (min-width: 992px) {
   .casestudypage .contentcontainer {
-    margin: 120px 0 200px 0;
+    margin: 120px 0 250px 0;
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -1804,6 +1804,9 @@ body {
   .casestudypage .contentcontainer__image img {
     height: calc((100vw - 120px) / 2);
   }
+}
+.casestudypage .contentcontainer__image--large {
+  min-width: 80%;
 }
 .casestudypage .contentcontainer__text {
   padding: 0;

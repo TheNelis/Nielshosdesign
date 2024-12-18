@@ -118,7 +118,7 @@
         margin: 80px 0 140px 0;
 
         @media only screen and (min-width: v.$lg) {
-            margin: 120px 0 200px 0;
+            margin: 120px 0 250px 0;
             flex-direction: row;
             flex-wrap: wrap;
         }
@@ -135,6 +135,10 @@
                 @media only screen and (min-width: v.$lg) {
                     height: calc((100vw - (v.$margin-desktop * 3)) / 2);
                 }
+            }
+
+            &--large {
+                min-width: 80%;
             }
         }
 
