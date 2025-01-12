@@ -370,6 +370,7 @@ body {
             cursor: pointer;
             color: black;
             padding: 0;
+            text-decoration: none;
 
             @media only screen and (min-width: v.$lg) {
                 font-size: 1.25rem;
