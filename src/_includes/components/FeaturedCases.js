@@ -3,7 +3,7 @@ const { html } = require('common-tags');
 function FeaturedCases() {
     return html`
         <div class="featured-cases">
-            <h2 class="featured-cases__title">Cases</h2>
+            <h2 class="featured-cases__title">Uitgelichte cases</h2>
             <div class="featured-cases__casecontainer">
                 <a href="/casepage/cases/DaveVleugel" class="featured-cases__casecontainer__case">
                     <div class="featured-cases__casecontainer__case__imagemask">
