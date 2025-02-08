@@ -7,12 +7,23 @@ description: Benieuwd naar wat ik doe? Bekijk mijn cases en zie meer over mijn p
 <!-- Desktop cases -->
 <div class="casepage casepage--desktop">
     <img class="casepage__blaadje" src="/assets/blaadje_low.png" alt="">
-    <section class="splide" aria-label="Splide Basic HTML Example">
+    <section class="splide" aria-label="Cases slider">
         <div class="splide__track">
             <ul class="splide__list casepage__casecontainer">
                 {% for case in collections.cases %}
                     {% Case size=case.data.size, title=case.data.casetitle, categories=case.data.categories, cover=case.data.cover, link=case.url %}
                 {% endfor %}
+                <li class="splide__slide casepage__casecontainer__case--medium casepage__casecontainer__end">
+                    <h1>Klaar om te bloeien?</h1>
+                    <p>
+                        Weten wat ik voor jou kan betekenen?
+                        <br/><br/>
+                        Neem contact met me op, <br/>
+                        Laten we een mooi product neerzetten!
+                    </p>
+                    <a href="/contact" class="button--green--outline">Contact</a>
+                    <img class="casepage__casecontainer__end__blaadje" src="/assets/Leafs_assets/blaadje_low.png" alt="">
+                </li>
             </ul>
         </div>
     </section>
@@ -54,7 +65,10 @@ description: Benieuwd naar wat ik doe? Bekijk mijn cases en zie meer over mijn p
             wheel: true,
             pagination: false,
             arrows: false,
-            speed: 1200,
+            drag: 'free',
+            snap: true,
+            dragMinThreshold: 10,
+            speed: 1500,
         } );
 
         splide.mount();

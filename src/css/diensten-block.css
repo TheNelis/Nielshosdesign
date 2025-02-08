@@ -51,7 +51,7 @@
 @media only screen and (min-width: 992px) {
   .diensten-block__container {
     flex-direction: row;
-    gap: 40px;
+    gap: 150px;
   }
 }
 .diensten-block__container__dienst {
@@ -63,21 +63,47 @@
 }
 .diensten-block__container__dienst__imagecontainer {
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 270px;
+  height: 270px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .diensten-block__container__dienst__imagecontainer__illustration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 180px;
   object-fit: contain;
+  z-index: 10;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.diensten-block__container__dienst__imagecontainer__illustration:hover {
+  width: 200px;
+}
+.diensten-block__container__dienst__imagecontainer__illustration:hover + * {
+  transform: scale(2);
 }
 .diensten-block__container__dienst__imagecontainer__circle {
   position: absolute;
   top: 0;
   left: 0;
   animation: spin 20s infinite linear;
+  z-index: 5;
+}
+.diensten-block__container__dienst__imagecontainer__blob1, .diensten-block__container__dienst__imagecontainer__blob2 {
+  border-radius: 100%;
+  width: 140px;
+  height: 140px;
+  transition: all 0.2s ease-in-out;
+}
+.diensten-block__container__dienst__imagecontainer__blob1 {
+  background-color: #00BF72;
+}
+.diensten-block__container__dienst__imagecontainer__blob2 {
+  background-color: #FF445C;
 }
 .diensten-block__container__dienst__title {
   font-family: "Lilita One";

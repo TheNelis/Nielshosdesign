@@ -63,8 +63,8 @@
 
             &__imagecontainer {
                 position: relative;
-                width: 250px;
-                height: 250px;
+                width: 270px;
+                height: 270px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -106,6 +106,10 @@
                     @media only screen and (min-width: v.$lg) {
                         font-size: 2rem;
                     }
+                }
+
+                p {
+                    margin-bottom: 20px;
                 }
             }
         }

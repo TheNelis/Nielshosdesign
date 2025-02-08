@@ -266,6 +266,7 @@ body {
   text-align: center;
   font-family: "Poppins-Semibold";
   letter-spacing: 7.5px;
+  text-transform: uppercase;
 }
 .navbar__carousel__section--blue {
   background-color: #0078D7;
@@ -889,12 +890,7 @@ body {
   .featured-cases__casecontainer__case__bottomcontainer {
     flex-direction: row;
     gap: 10px;
-    font-size: 1.2rem;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .featured-cases__casecontainer__case__bottomcontainer {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 }
 .featured-cases__casecontainer__case__title {
@@ -1190,7 +1186,7 @@ body {
 @media only screen and (min-width: 992px) {
   .diensten-block__container {
     flex-direction: row;
-    gap: 40px;
+    gap: 150px;
   }
 }
 .diensten-block__container__dienst {
@@ -1202,21 +1198,47 @@ body {
 }
 .diensten-block__container__dienst__imagecontainer {
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 270px;
+  height: 270px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .diensten-block__container__dienst__imagecontainer__illustration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 180px;
   object-fit: contain;
+  z-index: 10;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.diensten-block__container__dienst__imagecontainer__illustration:hover {
+  width: 200px;
+}
+.diensten-block__container__dienst__imagecontainer__illustration:hover + * {
+  transform: scale(2);
 }
 .diensten-block__container__dienst__imagecontainer__circle {
   position: absolute;
   top: 0;
   left: 0;
   animation: spin 20s infinite linear;
+  z-index: 5;
+}
+.diensten-block__container__dienst__imagecontainer__blob1, .diensten-block__container__dienst__imagecontainer__blob2 {
+  border-radius: 100%;
+  width: 140px;
+  height: 140px;
+  transition: all 0.2s ease-in-out;
+}
+.diensten-block__container__dienst__imagecontainer__blob1 {
+  background-color: #00BF72;
+}
+.diensten-block__container__dienst__imagecontainer__blob2 {
+  background-color: #FF445C;
 }
 .diensten-block__container__dienst__title {
   font-family: "Lilita One";
@@ -1491,9 +1513,41 @@ body {
 }
 @media only screen and (min-width: 992px) {
   .footer__email {
-    font-size: 9vw;
+    font-size: 8.6vw;
     display: block;
     line-height: 100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .footer__email {
+    font-size: 9.2vw;
+  }
+}
+.footer__bottomcontainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -40px;
+  font-size: 14px;
+}
+@media only screen and (min-width: 768px) {
+  .footer__bottomcontainer {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .footer__bottomcontainer {
+    margin-top: -50px;
+    font-size: 1.5vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .footer__bottomcontainer {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .footer__bottomcontainer {
+    margin-top: -70px;
   }
 }
 .footer__blaadje {
@@ -1633,7 +1687,7 @@ body {
   .casepage__casecontainer__case__bottomcontainer {
     flex-direction: row;
     gap: 15px;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 }
 .casepage__casecontainer__case__title {
@@ -1643,6 +1697,52 @@ body {
 .casepage__casecontainer__case__tags {
   font-family: "Poppins-Regular";
 }
+.casepage__casecontainer__end {
+  display: none;
+}
+@media only screen and (min-width: 992px) {
+  .casepage__casecontainer__end {
+    display: block;
+  }
+}
+.casepage__casecontainer__end h1 {
+  font-family: "Lilita One";
+  font-size: 2.75rem;
+}
+@media only screen and (min-width: 992px) {
+  .casepage__casecontainer__end h1 {
+    font-size: 4rem;
+  }
+}
+.casepage__casecontainer__end p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .casepage__casecontainer__end p {
+    font-size: 1.25rem;
+  }
+}
+.casepage__casecontainer__end__blaadje {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30vw;
+  margin: 14vw 0 0 -8vw;
+  z-index: -1;
+}
+@media only screen and (min-width: 992px) {
+  .casepage__casecontainer__end__blaadje {
+    width: 22vw;
+    margin: 30vh 0 0 -11vw;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .casepage__casecontainer__end__blaadje {
+    width: 22vw;
+    margin: 27vh 0 0 -11vw;
+  }
+}
 .casepage__blaadje {
   position: absolute;
   top: 0;
@@ -1651,7 +1751,7 @@ body {
   margin: 4vw -15vw -7vw 0;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  z-index: 0;
+  z-index: -1;
 }
 @media only screen and (min-width: 768px) {
   .casepage__blaadje {
@@ -1662,7 +1762,13 @@ body {
 @media only screen and (min-width: 992px) {
   .casepage__blaadje {
     width: 22vw;
-    margin: -4vw -6vw 0 0;
+    margin: -4.5vw -6vw 0 0;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .casepage__blaadje {
+    width: 22vw;
+    margin: -5.5vw -6vw 0 0;
   }
 }
 
@@ -1897,8 +2003,8 @@ body {
 }
 .dienstenpage .dienstencontainer__dienst__imagecontainer {
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 270px;
+  height: 270px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1941,6 +2047,9 @@ body {
   .dienstenpage .dienstencontainer__dienst__textcontainer h3 {
     font-size: 2rem;
   }
+}
+.dienstenpage .dienstencontainer__dienst__textcontainer p {
+  margin-bottom: 20px;
 }
 .dienstenpage .cases-block {
   position: relative;

@@ -83,8 +83,8 @@
 }
 .dienstenpage .dienstencontainer__dienst__imagecontainer {
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 270px;
+  height: 270px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,6 +127,9 @@
   .dienstenpage .dienstencontainer__dienst__textcontainer h3 {
     font-size: 2rem;
   }
+}
+.dienstenpage .dienstencontainer__dienst__textcontainer p {
+  margin-bottom: 20px;
 }
 .dienstenpage .cases-block {
   position: relative;

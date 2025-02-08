@@ -1,5 +1,6 @@
 const { html } = require('common-tags');
 
+let year = new Date().getFullYear();
 function Footer({color}) {
     return html`
         <footer class="footer footer--${color}">
@@ -18,6 +19,10 @@ function Footer({color}) {
                 </div>
             </div>
             <h1 id="footer-email" class="footer__email">nielshosdesign<span>@gmail.com</span></h1>
+            <div class="footer__bottomcontainer">
+                <p class="footer__bottomcontainer__text">© ${year} nielshosdesign. All Rights Reserved</p>
+                <p class="footer__bottomcontainer__text">KVK: </p>
+            </div>
             <img class="footer__blaadje" src="/assets/Leafs_assets/blaadje_double.png" alt="">
         </footer>
     `;

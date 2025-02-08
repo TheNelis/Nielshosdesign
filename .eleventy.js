@@ -13,7 +13,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addShortcode("Case", Case);
 
     eleventyConfig.addCollection('cases', function(collectionApi) {
-      return collectionApi.getFilteredByGlob('src/casepage/cases/**/*.html');
+      return collectionApi.getFilteredByGlob('src/casepage/cases/**/*.html')
+        .sort(function(a, b) {
+          return new Date(b.data.date) - new Date(a.data.date);
+        });
     });
 
     return {

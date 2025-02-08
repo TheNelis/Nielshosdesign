@@ -113,9 +113,41 @@
 }
 @media only screen and (min-width: 992px) {
   .footer__email {
-    font-size: 9vw;
+    font-size: 8.6vw;
     display: block;
     line-height: 100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .footer__email {
+    font-size: 9.2vw;
+  }
+}
+.footer__bottomcontainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -40px;
+  font-size: 14px;
+}
+@media only screen and (min-width: 768px) {
+  .footer__bottomcontainer {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .footer__bottomcontainer {
+    margin-top: -50px;
+    font-size: 1.5vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .footer__bottomcontainer {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .footer__bottomcontainer {
+    margin-top: -70px;
   }
 }
 .footer__blaadje {

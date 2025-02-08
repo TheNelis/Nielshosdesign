@@ -100,12 +100,7 @@
   .featured-cases__casecontainer__case__bottomcontainer {
     flex-direction: row;
     gap: 10px;
-    font-size: 1.2rem;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .featured-cases__casecontainer__case__bottomcontainer {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 }
 .featured-cases__casecontainer__case__title {

@@ -134,7 +134,7 @@
   .casepage__casecontainer__case__bottomcontainer {
     flex-direction: row;
     gap: 15px;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 }
 .casepage__casecontainer__case__title {
@@ -144,6 +144,52 @@
 .casepage__casecontainer__case__tags {
   font-family: "Poppins-Regular";
 }
+.casepage__casecontainer__end {
+  display: none;
+}
+@media only screen and (min-width: 992px) {
+  .casepage__casecontainer__end {
+    display: block;
+  }
+}
+.casepage__casecontainer__end h1 {
+  font-family: "Lilita One";
+  font-size: 2.75rem;
+}
+@media only screen and (min-width: 992px) {
+  .casepage__casecontainer__end h1 {
+    font-size: 4rem;
+  }
+}
+.casepage__casecontainer__end p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .casepage__casecontainer__end p {
+    font-size: 1.25rem;
+  }
+}
+.casepage__casecontainer__end__blaadje {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30vw;
+  margin: 14vw 0 0 -8vw;
+  z-index: -1;
+}
+@media only screen and (min-width: 992px) {
+  .casepage__casecontainer__end__blaadje {
+    width: 22vw;
+    margin: 30vh 0 0 -11vw;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .casepage__casecontainer__end__blaadje {
+    width: 22vw;
+    margin: 27vh 0 0 -11vw;
+  }
+}
 .casepage__blaadje {
   position: absolute;
   top: 0;
@@ -152,7 +198,7 @@
   margin: 4vw -15vw -7vw 0;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  z-index: 0;
+  z-index: -1;
 }
 @media only screen and (min-width: 768px) {
   .casepage__blaadje {
@@ -163,7 +209,13 @@
 @media only screen and (min-width: 992px) {
   .casepage__blaadje {
     width: 22vw;
-    margin: -4vw -6vw 0 0;
+    margin: -4.5vw -6vw 0 0;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .casepage__blaadje {
+    width: 22vw;
+    margin: -5.5vw -6vw 0 0;
   }
 }
 

@@ -101,9 +101,37 @@
         }
 
         @media only screen and (min-width: v.$lg) {
-            font-size: 9vw;
+            font-size: 8.6vw;
             display: block;
             line-height: 100%;
+        }
+
+        @media only screen and (min-width: v.$xl) {
+            font-size: 9.2vw;
+        }
+    }
+
+    &__bottomcontainer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -40px;
+        font-size: 14px;
+
+        @media only screen and (min-width: v.$md) {
+            font-size: 16px
+        }
+
+        @media only screen and (min-width: v.$lg) {
+            margin-top: -50px;
+            font-size: 1.5vw;
+        }
+
+        @media only screen and (min-width: v.$xl) {
+            font-size: 16px;
+        }
+
+        @media only screen and (min-width: v.$xxl) {
+            margin-top: -70px;
         }
     }
 
