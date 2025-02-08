@@ -69,7 +69,7 @@
   justify-content: center;
   align-items: center;
 }
-.diensten-block__container__dienst__imagecontainer__illustration {
+.diensten-block__container__dienst__imagecontainer__illustration img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -80,7 +80,7 @@
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
-.diensten-block__container__dienst__imagecontainer__illustration:hover {
+.diensten-block__container__dienst__imagecontainer__illustration img:hover {
   width: 200px;
 }
 .diensten-block__container__dienst__imagecontainer__illustration:hover + * {
