@@ -1,0 +1,294 @@
+@use "./variables.scss" as v;
+
+
+@keyframes spinDienst {
+    from {
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+    to {
+        transform: rotate(-360deg) translate(-50%, -50%);
+    }
+}
+
+.dienst {
+    position: relative;
+    background-image: url('/assets/yellow_noise.jpg');
+
+    &__headercontainer {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 240px;
+
+        &__textcontainer {
+
+            @media only screen and (min-width: v.$xl) {
+                width: 60%;
+            }
+
+            h1 {
+                font-family: 'Lilita One';
+                font-size: 4rem;
+                margin-bottom: 30px;
+                line-height: 85%;
+
+                @media only screen and (min-width: v.$lg) {
+                    font-size: 7.35rem;
+                    margin-bottom: 50px;
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                
+                @media only screen and (min-width: v.$lg) {
+                    font-size: 1.25rem;
+                    max-width: 90%;
+                }
+            }
+
+            &--bold {
+                font-family: 'Poppins-Semibold';
+            }
+        }
+    }
+
+
+    .dienst-circle {
+        display: none;
+        position: absolute;
+        top: 25vh;
+        right: 8.5vw;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        z-index: 20;
+
+        @media only screen and (min-width: v.$xl) {
+            display: flex;
+        }
+
+        &__imagecontainer {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &__illustration {
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 245px;
+                    object-fit: contain;
+                    z-index: 10;
+                }
+            }
+
+            &__circle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform-origin: 0% 0%;
+                animation: spinDienst 20s infinite linear;
+                z-index: -1;
+
+                &--secondary {
+                    width: 50px;
+                }
+            }
+
+            &__blob {
+                border-radius: 100%;
+                width: 190px;
+                height: 190px;
+
+                &--green {
+                    background-color: v.$green;
+                }
+
+                &--red {
+                    background-color: v.$red;
+                }
+            }
+        }
+    }
+
+    .procescontainer {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        width: 80vw;
+        margin-bottom: 350px;
+
+        @media only screen and (min-width: v.$md) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        @media only screen and (min-width: v.$xl) {
+            flex-wrap: nowrap;
+            gap: 0;
+        }
+
+        &__wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__title {
+            font-family: 'Lilita One';
+            font-size: 4rem;
+            margin-bottom: 50px;
+            line-height: 85%;
+
+            @media only screen and (min-width: v.$md) {
+                width: 80%;
+            }
+
+            @media only screen and (min-width: v.$lg) {
+                font-size: 7.35rem;
+                margin-bottom: 80px;
+            }
+        }
+
+        @media only screen and (min-width: v.$xl) {
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 7%;
+                transform: translateY(-50%);
+                background-color: black;
+                width: 78%;
+                height: 5px;
+                z-index: 0;
+            }
+        }
+
+        &__fase {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            z-index: 10;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+
+            &--invisible {
+                margin-right: 115px;
+                z-index: 20;
+                opacity: 0;
+            }
+
+            &__uitleg {
+                position: relative;
+                width: 100%;
+                z-index: 10;
+                overflow: hidden;
+                transition: all .4s ease-in-out;
+                margin-bottom: 50px;
+
+                h3 {
+                    font-family: 'Lilita One';
+                    font-size: 2rem;
+                }
+
+                p {
+                    font-size: 1.25rem;
+                }
+
+                @media only screen and (min-width: v.$md) {
+                    width: 70%;
+                    margin-bottom: 10px;
+                }
+
+                @media only screen and (min-width: v.$xl) {
+                    position: absolute;
+                    top: 170px;
+                    left: 0;
+                    width: 60%;
+                    opacity: 0;
+                    height: 0px;
+                    margin-bottom: 0px;
+                }
+            }
+
+            &:hover {
+                transform: scale(1.2);
+                filter: drop-shadow(0px 10px 5px rgb(0,0,0,0.1));
+            }
+
+            &:hover + * {
+                opacity: 1;
+                height: 200px;
+            }
+        }
+    }
+
+
+    .cases-block {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 120px;
+
+        @media only screen and (min-width: v.$lg) {
+            margin-bottom: 140px;
+        }
+    
+        svg {
+            width: 100%;
+            height: 22vw;
+            margin-top: -7.4vw;
+            margin-left: -15vw;
+            margin-bottom: -5vw;
+            z-index: -1;
+            transform: scaleX(-1);
+    
+            @media only screen and (min-width: v.$lg) {
+                margin-bottom: -3.8vw;
+            }
+        }
+    
+        &__container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 0px v.$margin-mobile 60px;
+            background-color: white;
+    
+            @media only screen and (min-width: v.$lg) {
+                flex-direction: row;
+                gap: 100px;
+                padding: 00px v.$margin-desktop 60px;
+            }
+        }
+
+        &__wrapper {
+            position: relative;
+        }
+
+        &__blaadje {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 45vw;
+            margin: -15vw 0 0 -16vw;
+            z-index: 0;
+    
+            @media only screen and (min-width: v.$lg) {
+                width: 22vw;
+                margin: -6vw 0 0 -8vw;
+            }
+        }
+    }
+}

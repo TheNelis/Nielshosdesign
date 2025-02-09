@@ -1,0 +1,148 @@
+---
+layout: layouts/base.html
+title: Niels Hos Design
+description: Heb je een nieuwe website nodig of wil je een al bestaande website opfrissen, dan kan ik je daar mee helpen!
+---
+
+<div class="dienst">
+
+
+    <div class="maincontainer">
+        <div class="dienst__headercontainer">
+            <div class="dienst__headercontainer__textcontainer">
+                <h1>Branding & Strategie</h1>
+                <p class="dienst__headercontainer__textcontainer--bold">
+                    Een probleemanalyse, nieuw logo, of een compleet nieuwe huisstijl (denk aan kleurenpaletten, typografie, 
+                    merk elementen, etc). Samen zorgen we ervoor dat het product aansluit op jouw merk en jij impact maakt 
+                    bij de doelgroep. Als probleemoplosser kan ik je ook helpen met het vinden van een oplossing om jouw 
+                    product of strategie op gang te krijgen en verandering te maken!
+                </p>
+                <br/><br/>
+                <p>
+                    Als bedrijf of onderneming is je uitstraling natuurlijk belangrijk om op te vallen bij de doelgroep. 
+                    Daarom kan ik voor jou een logo of huisstijl ontwerpen die bij jou past en de juiste uitstraling met 
+                    zich meebrengt. Naast de uitstraling is het natuurlijk belangrijk dat jouw boodschap ook écht overkomt 
+                    bij de doelgroep. Daarbij kan ik je helpen met het nadenken over een strategie, zodat jouw doel wordt 
+                    bereikt en je een verschil kunt maken!
+                </p>
+            </div>
+        </div>
+        
+        <div id="dienst-circle" class="dienst-circle">
+            <div class="dienst-circle__imagecontainer">
+                <img id="dienst-circle-1" class="dienst-circle__imagecontainer__circle" src="/assets/Diensten_assets/branding_circle.png" alt="Onderhoud, UX/UI Design, Webdevelopment">
+                <img id="dienst-circle-2" class="dienst-circle__imagecontainer__circle dienst-circle__imagecontainer__circle--secondary" src="/assets/Diensten_assets/Oplevering_circle.png">
+                <div class="dienst-circle__imagecontainer__illustration">
+                    <img src="/assets/Diensten_assets/graphic-design_illustration.png" alt="Illustratie van webdevelopment">
+                </div>
+                <div class="dienst-circle__imagecontainer__blob dienst-circle__imagecontainer__blob--red"></div>
+            </div>
+        </div>
+
+        <div class="procescontainer__wrapper">
+            <h2 class="procescontainer__title">Het proces</h2>
+            <div id="proces" class="procescontainer">
+                <img src="/assets/Diensten_assets/Inzicht_illustratie.png" class="procescontainer__fase">
+                <div class="procescontainer__fase__uitleg">
+                    <h3>Inzicht</h3>
+                    <p>We beginnen met een gezellig gesprek, waarin we het hebben over o.a. de uitstraling die jouw merk 
+                        moet hebben, jouw visie en missie, en andere inzichten die essentieel zijn om een gepersonaliseerd 
+                        ontwerp neer te kunnen zetten.
+                    </p>
+                </div>
+                <img src="/assets/Diensten_assets/Design_illustratie.png" class="procescontainer__fase">
+                <div class="procescontainer__fase__uitleg">
+                    <h3>Ontwerp</h3>
+                    <p>Na de inzichten verwerkt te hebben gaan we bezig met het ontwerpen van de huisstijl of het logo, 
+                        waarbij we een stijl kiezen die aansluit op je bedrijf en jouw wensen. Hierbij kunnen we meerdere 
+                        voorstellen maken die gekozen of gecombineerd kunnen worden.
+                    </p>
+                </div>
+                <div class="procescontainer__fase procescontainer__fase--invisible"></div>
+                <div class="procescontainer__fase__uitleg">
+                    <h3>Oplevering</h3>
+                    <p>Nadat de huisstijl of het logo ontworpen is sturen we deze door. De huisstijl weergegeven in een 
+                        brandbook, en het logo in verschillende bestandsformaten.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="cases-block__wrapper">
+        <div class="cases-block">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#fff" fill-opacity="1" d="M0,280C160,267,320,277,480,240C640,203,800,117,960,112C1120,107,1280,181,1360,218.7L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+            </svg>
+            <div class="cases-block__container">
+                {% FeaturedCases %}
+            </div>
+        </div>
+        <img class="cases-block__blaadje" src="/assets/Leafs_assets/blaadje_high.png" alt="">
+    </div>
+</div>
+
+{% Footer color="yellow" %}
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+        gsap.registerPlugin(ScrollTrigger);
+        
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#dienst-circle',
+                pin: true,
+                start: 'center center',
+                endTrigger: "#proces",
+                end: 'center center',
+                scrub: 1,
+                onLeave: startCircleAnimations,
+                onEnterBack: reverseCircleAnimations
+            }
+        });
+
+        tl.to('#dienst-circle', {
+            scale: 0.7,
+            duration: 1,
+            ease: "none",
+        }, '+=0.5');
+
+        function startCircleAnimations() {
+            let autoTl = gsap.timeline({
+                defaults: {
+                    ease: "power1.out"
+                }
+            });
+
+            autoTl
+                .to('#dienst-circle-1', {
+                    width: '50px',
+                    duration: 0.3
+                })
+                .to('#dienst-circle-2', {
+                    width: '100%',
+                    duration: 0.3
+                });
+        }
+
+        function reverseCircleAnimations() {
+            let reverseTl = gsap.timeline({
+                defaults: {
+                    ease: "power1.out"
+                }
+            });
+
+            reverseTl
+                .to('#dienst-circle-2', {
+                    width: '50px',
+                    duration: 0.3
+                })
+                .to('#dienst-circle-1', {
+                    width: '100%',
+                    duration: 0.3
+                });
+        }
+    });
+</script>

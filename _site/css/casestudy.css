@@ -87,6 +87,7 @@
   font-family: "Lilita One";
   font-size: 4rem;
   margin-bottom: 30px;
+  line-height: 85%;
 }
 @media only screen and (min-width: 992px) {
   .casestudypage .infocontainer__title {

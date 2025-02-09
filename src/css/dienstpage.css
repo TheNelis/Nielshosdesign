@@ -1,0 +1,289 @@
+@font-face {
+  font-family: "Lilita One";
+  src: url(../assets/fonts/Lilita_One/LilitaOne-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(../assets/fonts/Poppins/Poppins-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins-Semibold";
+  src: url(../assets/fonts/Poppins/Poppins-SemiBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../assets/fonts/Poppins/Poppins-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins-Black";
+  src: url(../assets/fonts/Poppins/Poppins-Black.ttf) format("truetype");
+}
+@keyframes spinDienst {
+  from {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  to {
+    transform: rotate(-360deg) translate(-50%, -50%);
+  }
+}
+.dienst {
+  position: relative;
+  background-image: url("/assets/yellow_noise.jpg");
+}
+.dienst__headercontainer {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 240px;
+}
+@media only screen and (min-width: 1200px) {
+  .dienst__headercontainer__textcontainer {
+    width: 60%;
+  }
+}
+.dienst__headercontainer__textcontainer h1 {
+  font-family: "Lilita One";
+  font-size: 4rem;
+  margin-bottom: 30px;
+  line-height: 85%;
+}
+@media only screen and (min-width: 992px) {
+  .dienst__headercontainer__textcontainer h1 {
+    font-size: 7.35rem;
+    margin-bottom: 50px;
+  }
+}
+.dienst__headercontainer__textcontainer p {
+  font-size: 1rem;
+}
+@media only screen and (min-width: 992px) {
+  .dienst__headercontainer__textcontainer p {
+    font-size: 1.25rem;
+    max-width: 90%;
+  }
+}
+.dienst__headercontainer__textcontainer--bold {
+  font-family: "Poppins-Semibold";
+}
+.dienst .dienst-circle {
+  display: none;
+  position: absolute;
+  top: 25vh;
+  right: 8.5vw;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  z-index: 20;
+}
+@media only screen and (min-width: 1200px) {
+  .dienst .dienst-circle {
+    display: flex;
+  }
+}
+.dienst .dienst-circle__imagecontainer {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dienst .dienst-circle__imagecontainer__illustration img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 245px;
+  object-fit: contain;
+  z-index: 10;
+}
+.dienst .dienst-circle__imagecontainer__circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 0%;
+  animation: spinDienst 20s infinite linear;
+  z-index: -1;
+}
+.dienst .dienst-circle__imagecontainer__circle--secondary {
+  width: 50px;
+}
+.dienst .dienst-circle__imagecontainer__blob {
+  border-radius: 100%;
+  width: 190px;
+  height: 190px;
+}
+.dienst .dienst-circle__imagecontainer__blob--green {
+  background-color: #00BF72;
+}
+.dienst .dienst-circle__imagecontainer__blob--red {
+  background-color: #FF445C;
+}
+.dienst .procescontainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 80vw;
+  margin-bottom: 350px;
+}
+@media only screen and (min-width: 768px) {
+  .dienst .procescontainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .dienst .procescontainer {
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+}
+.dienst .procescontainer__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dienst .procescontainer__title {
+  font-family: "Lilita One";
+  font-size: 4rem;
+  margin-bottom: 50px;
+  line-height: 85%;
+}
+@media only screen and (min-width: 768px) {
+  .dienst .procescontainer__title {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .dienst .procescontainer__title {
+    font-size: 7.35rem;
+    margin-bottom: 80px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .dienst .procescontainer::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+    background-color: black;
+    width: 78%;
+    height: 5px;
+    z-index: 0;
+  }
+}
+.dienst .procescontainer__fase {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  z-index: 10;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.dienst .procescontainer__fase--invisible {
+  margin-right: 115px;
+  z-index: 20;
+  opacity: 0;
+}
+.dienst .procescontainer__fase__uitleg {
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  margin-bottom: 50px;
+}
+.dienst .procescontainer__fase__uitleg h3 {
+  font-family: "Lilita One";
+  font-size: 2rem;
+}
+.dienst .procescontainer__fase__uitleg p {
+  font-size: 1.25rem;
+}
+@media only screen and (min-width: 768px) {
+  .dienst .procescontainer__fase__uitleg {
+    width: 70%;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .dienst .procescontainer__fase__uitleg {
+    position: absolute;
+    top: 170px;
+    left: 0;
+    width: 60%;
+    opacity: 0;
+    height: 0px;
+    margin-bottom: 0px;
+  }
+}
+.dienst .procescontainer__fase:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.1));
+}
+.dienst .procescontainer__fase:hover + * {
+  opacity: 1;
+  height: 200px;
+}
+.dienst .cases-block {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 120px;
+}
+@media only screen and (min-width: 992px) {
+  .dienst .cases-block {
+    margin-bottom: 140px;
+  }
+}
+.dienst .cases-block svg {
+  width: 100%;
+  height: 22vw;
+  margin-top: -7.4vw;
+  margin-left: -15vw;
+  margin-bottom: -5vw;
+  z-index: -1;
+  transform: scaleX(-1);
+}
+@media only screen and (min-width: 992px) {
+  .dienst .cases-block svg {
+    margin-bottom: -3.8vw;
+  }
+}
+.dienst .cases-block__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0px 15px 60px;
+  background-color: white;
+}
+@media only screen and (min-width: 992px) {
+  .dienst .cases-block__container {
+    flex-direction: row;
+    gap: 100px;
+    padding: 0px 40px 60px;
+  }
+}
+.dienst .cases-block__wrapper {
+  position: relative;
+}
+.dienst .cases-block__blaadje {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45vw;
+  margin: -15vw 0 0 -16vw;
+  z-index: 0;
+}
+@media only screen and (min-width: 992px) {
+  .dienst .cases-block__blaadje {
+    width: 22vw;
+    margin: -6vw 0 0 -8vw;
+  }
+}
