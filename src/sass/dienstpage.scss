@@ -183,9 +183,11 @@
             transition: all .2s ease-in-out;
 
             &--invisible {
-                margin-right: 115px;
-                z-index: 20;
-                opacity: 0;
+                @media only screen and (min-width: v.$xl) {
+                    margin-right: 115px;
+                    opacity: 0;
+                    z-index: 20;
+                }
             }
 
             &__uitleg {

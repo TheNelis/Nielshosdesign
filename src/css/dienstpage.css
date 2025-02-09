@@ -185,10 +185,12 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-.dienst .procescontainer__fase--invisible {
-  margin-right: 115px;
-  z-index: 20;
-  opacity: 0;
+@media only screen and (min-width: 1200px) {
+  .dienst .procescontainer__fase--invisible {
+    margin-right: 115px;
+    opacity: 0;
+    z-index: 20;
+  }
 }
 .dienst .procescontainer__fase__uitleg {
   position: relative;
