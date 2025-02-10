@@ -20,10 +20,12 @@
 }
 @keyframes spinDienst {
   from {
-    transform: rotate(0deg) translate(-50%, -50%);
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
   }
   to {
-    transform: rotate(-360deg) translate(-50%, -50%);
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
   }
 }
 .dienst {
@@ -87,24 +89,33 @@
   justify-content: center;
   align-items: center;
 }
-.dienst .dienst-circle__imagecontainer__illustration img {
+.dienst .dienst-circle__imagecontainer__illustration {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.dienst .dienst-circle__imagecontainer__illustration img {
   width: 245px;
   object-fit: contain;
   z-index: 10;
 }
-.dienst .dienst-circle__imagecontainer__circle {
+.dienst .dienst-circle__imagecontainer__circlecontainer {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform-origin: 0% 0%;
-  animation: spinDienst 20s infinite linear;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   z-index: -1;
 }
-.dienst .dienst-circle__imagecontainer__circle--secondary {
+.dienst .dienst-circle__imagecontainer__circlecontainer__circle {
+  animation: spinDienst 20s infinite linear;
+}
+.dienst .dienst-circle__imagecontainer__circlecontainer__circle--secondary {
   width: 50px;
 }
 .dienst .dienst-circle__imagecontainer__blob {
