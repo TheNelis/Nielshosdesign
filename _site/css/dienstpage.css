@@ -94,9 +94,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 250px;
 }
 .dienst .dienst-circle__imagecontainer__illustration img {
-  width: 245px;
+  width: 250px;
   object-fit: contain;
   z-index: 10;
 }
@@ -120,8 +121,8 @@
 }
 .dienst .dienst-circle__imagecontainer__blob {
   border-radius: 100%;
-  width: 190px;
-  height: 190px;
+  width: 200px;
+  height: 200px;
 }
 .dienst .dienst-circle__imagecontainer__blob--green {
   background-color: #00BF72;

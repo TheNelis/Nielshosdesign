@@ -2014,12 +2014,30 @@ body {
 .dienstenpage .dienstencontainer__dienst__imagecontainer__illustration {
   width: 180px;
   object-fit: contain;
+  z-index: 1;
 }
 .dienstenpage .dienstencontainer__dienst__imagecontainer__circle {
   position: absolute;
   top: 0;
   left: 0;
   animation: spin 20s infinite linear;
+  z-index: 1;
+}
+.dienstenpage .dienstencontainer__dienst__imagecontainer__blob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  width: 140px;
+  height: 140px;
+  z-index: 0;
+}
+.dienstenpage .dienstencontainer__dienst__imagecontainer__blob--green {
+  background-color: #00BF72;
+}
+.dienstenpage .dienstencontainer__dienst__imagecontainer__blob--red {
+  background-color: #FF445C;
 }
 .dienstenpage .dienstencontainer__dienst__textcontainer {
   font-size: 1rem;
@@ -2554,9 +2572,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 250px;
 }
 .dienst .dienst-circle__imagecontainer__illustration img {
-  width: 245px;
+  width: 250px;
   object-fit: contain;
   z-index: 10;
 }
@@ -2580,8 +2599,8 @@ body {
 }
 .dienst .dienst-circle__imagecontainer__blob {
   border-radius: 100%;
-  width: 190px;
-  height: 190px;
+  width: 200px;
+  height: 200px;
 }
 .dienst .dienst-circle__imagecontainer__blob--green {
   background-color: #00BF72;
