@@ -347,7 +347,7 @@ body {
     flex-direction: column;
   }
 }
-.navbar__langcontainer__button {
+.navbar__langcontainer * {
   font-family: "Lilita One";
   background: transparent;
   border: none;
@@ -358,11 +358,11 @@ body {
   text-decoration: none;
 }
 @media only screen and (min-width: 992px) {
-  .navbar__langcontainer__button {
+  .navbar__langcontainer * {
     font-size: 1.25rem;
   }
 }
-.navbar__langcontainer__button:hover {
+.navbar__langcontainer *:hover {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -370,7 +370,7 @@ body {
   transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
-.navbar__langcontainer__button:not(:hover) {
+.navbar__langcontainer *:not(:hover) {
   transform: scale(1);
   -webkit-transform: scale(1);
   -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);

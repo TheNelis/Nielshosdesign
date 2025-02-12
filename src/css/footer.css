@@ -109,7 +109,7 @@
   flex-direction: column;
 }
 .footer__email span {
-  font-size: 7vw;
+  font-size: 6.6vw;
 }
 @media only screen and (min-width: 992px) {
   .footer__email {
@@ -120,7 +120,7 @@
 }
 @media only screen and (min-width: 1200px) {
   .footer__email {
-    font-size: 9.2vw;
+    font-size: 8.8vw;
   }
 }
 .footer__bottomcontainer {
