@@ -108,20 +108,31 @@
                 font-size: 17vw;
                 margin-left: -15px;
             }
+
+            span {
+                display: none;
+                @media only screen and (min-width:v.$md){
+                    display: inline-block;
+                }
+            }
         }
 
         &__socials {
+            display: none;
             position: absolute;
             bottom: 20px;
             right: calc(v.$margin-mobile * 1.8);
     
-            display: flex;
             gap: 5px;
             font-family: 'Poppins-Semibold';
             font-size: 2rem;
             line-height: 10px;
             z-index: 10;
             transition: all .8s ease-in-out;
+
+            @media only screen and (min-width:v.$md){
+                display: flex;
+            }
     
             @media only screen and (min-width:v.$lg){
                 right: calc(v.$margin-desktop * 1.8);

@@ -643,17 +643,30 @@ body {
     margin-left: -15px;
   }
 }
+.herocontainer__titlecontainer__title span {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .herocontainer__titlecontainer__title span {
+    display: inline-block;
+  }
+}
 .herocontainer__titlecontainer__socials {
+  display: none;
   position: absolute;
   bottom: 20px;
   right: 27px;
-  display: flex;
   gap: 5px;
   font-family: "Poppins-Semibold";
   font-size: 2rem;
   line-height: 10px;
   z-index: 10;
   transition: all 0.8s ease-in-out;
+}
+@media only screen and (min-width: 768px) {
+  .herocontainer__titlecontainer__socials {
+    display: flex;
+  }
 }
 @media only screen and (min-width: 992px) {
   .herocontainer__titlecontainer__socials {
