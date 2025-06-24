@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Lilita One";
-  src: url(../assets/fonts/Lilita_One/LilitaOne-Regular.ttf) format("truetype");
+  font-family: "Barber Chop";
+  src: url(../assets/fonts/barber_chop/BarberChop.otf) format("opentype");
 }
 @font-face {
   font-family: "Poppins-Regular";
@@ -102,7 +102,7 @@
   margin-bottom: 3px;
 }
 .footer__email {
-  font-family: "Lilita One";
+  font-family: "Barber Chop";
   font-size: 13.5vw;
   line-height: 65%;
   display: flex;

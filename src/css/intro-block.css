@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Lilita One";
-  src: url(../assets/fonts/Lilita_One/LilitaOne-Regular.ttf) format("truetype");
+  font-family: "Barber Chop";
+  src: url(../assets/fonts/barber_chop/BarberChop.otf) format("opentype");
 }
 @font-face {
   font-family: "Poppins-Regular";
@@ -17,6 +17,34 @@
 @font-face {
   font-family: "Poppins-Black";
   src: url(../assets/fonts/Poppins/Poppins-Black.ttf) format("truetype");
+}
+@keyframes bounceOn {
+  0% {
+    transform: scale(1, 1);
+  }
+  33% {
+    transform: scale(0.75, 1.25);
+  }
+  66% {
+    transform: scale(0.85, 1.15);
+  }
+  100% {
+    transform: scale(0.8, 1.2);
+  }
+}
+@keyframes bounceOff {
+  0% {
+    transform: scale(0.8, 1.2);
+  }
+  33% {
+    transform: scale(1.05, 0.95);
+  }
+  66% {
+    transform: scale(0.95, 1.05);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 .intro-block {
   position: relative;
@@ -65,7 +93,7 @@
 }
 .intro-block__textcontainer__title {
   white-space: nowrap;
-  font-family: "Lilita One";
+  font-family: "Barber Chop";
   font-size: 5.25rem;
   margin: 0px;
   z-index: 10;

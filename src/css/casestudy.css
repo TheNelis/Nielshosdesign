@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Lilita One";
-  src: url(../assets/fonts/Lilita_One/LilitaOne-Regular.ttf) format("truetype");
+  font-family: "Barber Chop";
+  src: url(../assets/fonts/barber_chop/BarberChop.otf) format("opentype");
 }
 @font-face {
   font-family: "Poppins-Regular";
@@ -84,7 +84,7 @@
   }
 }
 .casestudypage .infocontainer__title {
-  font-family: "Lilita One";
+  font-family: "Barber Chop";
   font-size: 4rem;
   margin-bottom: 30px;
   line-height: 85%;
@@ -114,7 +114,7 @@
   flex: 1;
 }
 .casestudypage .infocontainer__detailcontainer__detail h3 {
-  font-family: "Lilita One";
+  font-family: "Barber Chop";
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
@@ -166,7 +166,7 @@
   }
 }
 .casestudypage .contentcontainer__text h3 {
-  font-family: "Lilita One";
+  font-family: "Barber Chop";
   font-size: 1.5rem;
   margin-bottom: 5px;
 }

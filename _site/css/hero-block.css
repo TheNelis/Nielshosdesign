@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Lilita One";
-  src: url(../assets/fonts/Lilita_One/LilitaOne-Regular.ttf) format("truetype");
+  font-family: "Barber Chop";
+  src: url(../assets/fonts/barber_chop/BarberChop.otf) format("opentype");
 }
 @font-face {
   font-family: "Poppins-Regular";
@@ -18,237 +18,146 @@
   font-family: "Poppins-Black";
   src: url(../assets/fonts/Poppins/Poppins-Black.ttf) format("truetype");
 }
-@keyframes bounceOn {
-  0% {
-    transform: scale(1, 1);
-  }
-  33% {
-    transform: scale(0.75, 1.25);
-  }
-  66% {
-    transform: scale(0.85, 1.15);
-  }
-  100% {
-    transform: scale(0.8, 1.2);
-  }
-}
-@keyframes bounceOff {
-  0% {
-    transform: scale(0.8, 1.2);
-  }
-  33% {
-    transform: scale(1.05, 0.95);
-  }
-  66% {
-    transform: scale(0.95, 1.05);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}
-@keyframes float {
-  0% {
-    transform: translateY(0) translateX(-50%);
-  }
-  50% {
-    transform: translateY(-20px) translateX(-50%);
-  }
-  100% {
-    transform: translateY(0) translateX(-50%);
-  }
-}
-@keyframes leaf {
-  0% {
-    transform: scaleX(-1) rotate(-8deg);
-    z-index: 0;
-  }
-  33% {
-    transform: scaleX(-1) rotate(-44deg);
-  }
-  66% {
-    transform: scaleX(-1) rotate(-37deg);
-  }
-  100% {
-    transform: scaleX(-1) rotate(-40deg);
-    z-index: -1;
-  }
-}
-@keyframes rotateStar {
+@keyframes titleEnter {
   from {
-    transform: rotate(0deg);
+    transform: translateY(105%);
+    opacity: 0;
   }
   to {
-    transform: rotate(180deg);
+    transform: translateY(0%);
+    opacity: 1;
   }
 }
 .herocontainer {
   position: relative;
   width: 100%;
-  margin-top: 115px;
-  height: 60vh;
+  margin-top: 90px;
+  height: calc(100vh - 90px);
   display: flex;
   align-items: flex-end;
   overflow: hidden;
 }
 @media only screen and (min-width: 992px) {
   .herocontainer {
-    margin-top: 150px;
-    height: 44vw;
+    margin-top: 90px;
+    height: calc(100vh - 90px);
   }
 }
-.herocontainer__text {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  white-space: nowrap;
-  font-family: "Poppins-Black";
-  margin: 0px;
-  z-index: 10;
-  font-size: 16vw;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
-}
-@media only screen and (min-width: 768px) {
-  .herocontainer__text {
-    top: 15%;
-    transform: translateX(-50%);
-    font-size: 16vw;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .herocontainer__text {
-    top: 0;
-    transform: translateX(-50%);
-    font-size: 16vw;
-  }
-}
-.herocontainer__text span:not(.star) {
-  display: inline-block;
-  margin: 0 -1.5vw;
-}
-.herocontainer__text span:not(.star):hover {
-  animation: bounceOn 0.5s forwards;
-}
-.herocontainer__text span:not(.star):not(:hover) {
-  animation: bounceOff 0.5s forwards;
-}
-.herocontainer__text .star {
-  display: inline-block;
-  transform-origin: 51% 31.5%;
-  animation: rotateStar 0.7s;
-  animation-delay: 2.2s;
-}
-@media only screen and (min-width: 768px) {
-  .herocontainer__text .star {
-    animation-delay: 2.2s;
-  }
-}
-.herocontainer__bottomcontainer {
+.herocontainer__titlecontainer {
   position: relative;
   width: 100%;
-  margin: 0 15px 30px 15px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  margin: 0 15px;
 }
 @media only screen and (min-width: 992px) {
-  .herocontainer__bottomcontainer {
-    margin: 0 40px 45px 40px;
+  .herocontainer__titlecontainer {
+    margin: 0 40px;
   }
 }
-.herocontainer__bottomcontainer__socials {
+.herocontainer__titlecontainer__subtitle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 250px;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 992px) {
+  .herocontainer__titlecontainer__subtitle {
+    width: 280px;
+    margin-bottom: 0;
+  }
+}
+.herocontainer__titlecontainer__subtitle h2 {
+  font-family: "Poppins-Semibold";
+  font-size: 1.75rem;
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+@media only screen and (min-width: 992px) {
+  .herocontainer__titlecontainer__subtitle h2 {
+    font-size: 2.25rem;
+  }
+}
+.herocontainer__titlecontainer__subtitle h2 span {
+  display: inline-block;
+  padding: 7px 20px;
+  border-radius: 100px;
+  opacity: 0;
+  transform: translateY(105%);
+  animation: titleEnter 0.5s ease-in-out forwards;
+  animation-delay: 0.55s;
+}
+.herocontainer__titlecontainer__subtitle h2:nth-child(1) span {
+  background-color: #FF445C;
+}
+.herocontainer__titlecontainer__subtitle h2:nth-child(2) span {
+  background-color: #0078D7;
+}
+.herocontainer__titlecontainer__subtitle h2:nth-child(3) span {
+  background-color: #00BF72;
+}
+.herocontainer__titlecontainer .titlewrapper {
+  animation: titleEnter 0.7s ease-in-out forwards;
+}
+.herocontainer__titlecontainer__title {
+  position: relative;
+  font-family: "Poppins-Black";
+  font-size: 33vw;
+  text-transform: uppercase;
+  line-height: 85%;
+  width: 100vw;
+  margin-left: -5px;
+}
+@media only screen and (min-width: 768px) {
+  .herocontainer__titlecontainer__title {
+    font-size: 33vw;
+    margin-left: -10px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .herocontainer__titlecontainer__title {
+    font-size: 17vw;
+    margin-left: -15px;
+  }
+}
+.herocontainer__titlecontainer__socials {
+  position: absolute;
+  bottom: 20px;
+  right: 27px;
   display: flex;
   gap: 5px;
   font-family: "Poppins-Semibold";
   font-size: 2rem;
   line-height: 10px;
   z-index: 10;
+  transition: all 0.8s ease-in-out;
 }
-.herocontainer__bottomcontainer__socials div {
+@media only screen and (min-width: 992px) {
+  .herocontainer__titlecontainer__socials {
+    right: 72px;
+  }
+}
+.herocontainer__titlecontainer__socials div {
   display: flex;
   gap: 15px;
 }
-.herocontainer__bottomcontainer__socials div a svg {
-  width: 34px;
-  height: 34px;
+.herocontainer__titlecontainer__socials div a svg {
+  width: 25px;
+  height: 25px;
   transition: all 0.15s ease-out;
 }
-.herocontainer__bottomcontainer__socials div a svg:hover {
+@media only screen and (min-width: 768px) {
+  .herocontainer__titlecontainer__socials div a svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .herocontainer__titlecontainer__socials div a svg {
+    width: 34px;
+    height: 34px;
+  }
+}
+.herocontainer__titlecontainer__socials div a svg:hover {
   margin-top: -3px;
   margin-bottom: 3px;
-}
-.herocontainer__bottomcontainer__scrolldown {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  flex-direction: column;
-  align-items: center;
-  animation: float 3s ease-in-out infinite;
-  display: none;
-}
-@media only screen and (min-width: 992px) {
-  .herocontainer__bottomcontainer__scrolldown {
-    display: flex;
-  }
-}
-.herocontainer__bottomcontainer__scrolldown__text {
-  font-family: "Poppins-Semibold";
-  font-size: 1rem;
-}
-.herocontainer__bottomcontainer__scrolldown svg {
-  margin-top: -10px;
-}
-.herocontainer__flower {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 90vw;
-  margin: 32vh 0 0 -43vw;
-  -webkit-transform: scaleX(-1) rotate(55deg);
-  transform: scaleX(-1) rotate(55deg);
-  z-index: 0;
-}
-@media only screen and (min-width: 768px) {
-  .herocontainer__flower {
-    width: 80vw;
-    margin: 34vw 0 0 -40vw;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .herocontainer__flower {
-    width: 45vw;
-    margin: 14vw 0 0 -16vw;
-  }
-}
-.herocontainer__blaadje {
-  display: none;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 55vw;
-  margin: 0 -51vw -7vw 0;
-  -webkit-transform: scaleX(-1) rotate(-8deg);
-  transform: scaleX(-1) rotate(-8deg);
-  transform-origin: 20% 20%;
-  z-index: 0;
-  animation: leaf 1s forwards;
-  animation-delay: 2.6s;
-}
-@media only screen and (min-width: 768px) {
-  .herocontainer__blaadje {
-    display: block;
-    width: 35vw;
-    margin: 0 -37vw -6.5vw 0;
-    animation-delay: 2.6s;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .herocontainer__blaadje {
-    width: 22vw;
-    margin: 0 -21vw -3vw 0;
-  }
 }

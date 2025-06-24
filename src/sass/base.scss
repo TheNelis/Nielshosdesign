@@ -105,6 +105,19 @@ html {
 
 body {
     overflow: hidden;
+    background-color: v.$yellow-light;
+}
+
+.noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(/assets/images/noise.gif);
+    opacity: calc(5 / 100);
+    width: 100%;
+    height: 100%;
+    z-index: 9999999999;
+    pointer-events: none;
 }
 
 .maincontainer {
@@ -172,38 +185,131 @@ body {
 }
 
 .navbar {
-    &__carousel {
+    &__container {
         position: fixed;
         top: 0;
         left: 0;
-        min-width: 100%;
-        height: 25px;
+
+        width: 100%;
         display: flex;
-        z-index: 100;
-        animation: 15s slide infinite linear;
-        font-size: 0.94rem;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 500;
+        padding: 8px v.$margin-mobile;
 
-        &__section {
-            min-width: 380px;
-            width: 33.3333vw;
+        @media only screen and (min-width: v.$lg) {
+            padding: 8px v.$margin-desktop;
+        }
+
+        &__logo {
+            width: 55px;
+            margin-bottom: 0px;
+
+            @media only screen and (min-width:v.$lg){
+                width: 65px;
+            }
+        }
+    }
+
+    &__buttoncontainer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 15px;
+        padding: 5px 0px;  
+
+        @media only screen and (min-width: v.$lg) {
+            gap: 45px;
+        }
+
+
+        &__button {
+            display: none;
+            font-size: 2.25rem;
+            text-decoration: none;
+            color: black;
+            font-family: 'Barber Chop';
+
+            @media only screen and (min-width: v.$md) {
+                font-size: 3rem;
+            }
+
+            @media only screen and (min-width: v.$lg) {
+                display: block;
+                font-size: 2rem;
+            }
+    
+            &--right:hover {
+                transform: rotate(-4deg) scale(1.15);
+                -webkit-transform: rotate(-4deg) scale(1.15);
+                -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55), -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+            }
             
-            margin: 0;
-            padding: 2px;
-            text-align: center;
-            font-family: 'Poppins-Semibold';
-            letter-spacing: 7.5px;
-            text-transform: uppercase;
+    
+            &--left:hover {
+                transform: rotate(4deg) scale(1.15);
+                -webkit-transform: rotate(4deg) scale(1.15);
+                -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55), -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+            }
+    
+            &--right, &--left {
+                &:not(:hover) {
+                    transform: rotate(0deg) scale(1);
+                    -webkit-transform: rotate(0deg) scale(1);
+                    -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                    transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                    transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                    transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55), -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                }
+            }
+            
+        }
+    }
 
-            &--blue {
-                background-color: v.$blue;
+    &__langcontainer {
+        display: flex;
+        gap: 10px;
+
+        @media only screen and (min-width: v.$lg) {
+            flex-direction: column;
+        }
+
+        * {
+            font-family: 'Barber Chop';
+            background: transparent;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: black;
+            padding: 0;
+            text-decoration: none;
+
+            @media only screen and (min-width: v.$lg) {
+                font-size: 1.25rem;
             }
 
-            &--red {
-                background-color: v.$red;
+            &:hover {
+                transform: scale(1.15);
+                -webkit-transform: scale(1.15);
+                -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55), -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
             }
-
-            &--green {
-                background-color: v.$green;
+    
+            &:not(:hover) {
+                transform: scale(1);
+                -webkit-transform: scale(1);
+                -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55), -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
             }
         }
     }
@@ -214,7 +320,7 @@ body {
         right: 0;
         width: 100vw;
         height: 100vh;
-        background-image: url('/assets/yellow_noise.jpg');
+        background-color: v.$yellow-light;
         z-index: 50;
         padding: 0px v.$margin-mobile 0px;
         display: flex;
@@ -252,147 +358,6 @@ body {
                     margin-top: -3px;
                     margin-bottom: 3px;
                 }
-            }
-        }
-    }
-
-    &__container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: v.$yellow;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 500;
-        margin-top: 25px;
-        padding: 8px v.$margin-mobile;
-        transition: all .2s ease-in-out;
-        box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 20%);
-
-        @media only screen and (min-width: v.$lg) {
-            margin-top: 25px;
-            padding: 8px v.$margin-desktop;
-        }
-
-        &__logo {
-            width: 75px;
-            margin-bottom: -30px;
-            transition: all .2s ease-in-out;
-
-            @media only screen and (min-width: v.$lg) {
-                width: 95px;
-                margin-bottom: -63.5px;
-            }
-
-            &--small {
-                width: 55px;
-                margin-bottom: 0px;
-                transition: all .2s ease-in-out;
-            }
-        }
-    }
-
-    &__buttoncontainer {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 15px;
-        padding: 5px 0px;  
-
-        @media only screen and (min-width: v.$lg) {
-            gap: 45px;
-        }
-
-
-        &__button {
-            display: none;
-            font-size: 2.25rem;
-            text-decoration: none;
-            color: black;
-            font-family: 'Lilita One';
-
-            @media only screen and (min-width: v.$md) {
-                font-size: 3rem;
-            }
-
-            @media only screen and (min-width: v.$lg) {
-                display: block;
-                font-size: 2rem;
-            }
-    
-            &--right:hover {
-                transform: rotate(-4deg) scale(1.1);
-                -webkit-transform: rotate(-4deg) scale(1.1);
-                -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
-                transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
-                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
-                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55), -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
-            }
-            
-    
-            &--left:hover {
-                transform: rotate(4deg) scale(1.1);
-                -webkit-transform: rotate(4deg) scale(1.1);
-                -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
-                transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
-                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
-                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55), -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
-            }
-    
-            &--right, &--left {
-                &:not(:hover) {
-                    transform: rotate(0deg) scale(1);
-                    -webkit-transform: rotate(0deg) scale(1);
-                    -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
-                    transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
-                    transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
-                    transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55), -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
-                }
-            }
-            
-        }
-    }
-
-    &__langcontainer {
-        display: flex;
-        gap: 10px;
-
-        @media only screen and (min-width: v.$lg) {
-            flex-direction: column;
-        }
-
-        * {
-            font-family: 'Lilita One';
-            background: transparent;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: black;
-            padding: 0;
-            text-decoration: none;
-
-            @media only screen and (min-width: v.$lg) {
-                font-size: 1.25rem;
-            }
-
-            &:hover {
-                transform: scale(1.1);
-                -webkit-transform: scale(1.1);
-                -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
-                transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
-                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
-                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55), -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
-            }
-    
-            &:not(:hover) {
-                transform: scale(1);
-                -webkit-transform: scale(1);
-                -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
-                transition: -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
-                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
-                transition: transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55), -webkit-transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55);
             }
         }
     }

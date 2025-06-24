@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Lilita One";
-  src: url(../assets/fonts/Lilita_One/LilitaOne-Regular.ttf) format("truetype");
+  font-family: "Barber Chop";
+  src: url(../assets/fonts/barber_chop/BarberChop.otf) format("opentype");
 }
 @font-face {
   font-family: "Poppins-Regular";
@@ -35,7 +35,7 @@
   background-image: url("/assets/yellow_noise.jpg");
 }
 .diensten-block__title {
-  font-family: "Lilita One";
+  font-family: "Barber Chop";
   font-size: 2.75rem;
   margin-bottom: 80px;
 }
@@ -106,7 +106,7 @@
   background-color: #FF445C;
 }
 .diensten-block__container__dienst__title {
-  font-family: "Lilita One";
+  font-family: "Barber Chop";
   font-size: 1.75rem;
   text-align: center;
   margin-top: 20px;

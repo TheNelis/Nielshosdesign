@@ -1,5 +1,5 @@
 html {
-  font-family: "Lilita One", Arial, Helvetica, sans-serif;
+  font-family: "Barber Chop", Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -78,7 +78,7 @@ html {
   font-size: 32px;
   text-decoration: none;
   color: black;
-  font-family: "Lilita One";
+  font-family: "Barber Chop";
 }
 .navbar__buttoncontainer__button--right:hover {
   transform: rotate(-4deg) scale(1.1);

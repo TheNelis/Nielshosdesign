@@ -44,33 +44,23 @@
     <!-- End Google Tag Manager (noscript) -->
 
 
-    <div id="loaderscreen" class="loaderscreen"></div>
+    <!-- <div id="loaderscreen" class="loaderscreen"></div>
     <div id="curtain" class="curtain__container">
         <img id="curtain-logo" class="curtain__container__logo" src="/assets/images/niels_signature_black.png" alt="NielsHosDesign logo">
-    </div>
+    </div> -->
 
-    <div class="navbar__carousel">
-        <p class="navbar__carousel__section navbar__carousel__section--blue">PROBLEEMOPLOSSER</p>
-        <p class="navbar__carousel__section navbar__carousel__section--red">UX/UI DESIGNER</p>
-        <p class="navbar__carousel__section navbar__carousel__section--green">FULLSTACK-DEVELOPER</p>
-        <p class="navbar__carousel__section navbar__carousel__section--blue">PROBLEEMOPLOSSER</p>
-        <p class="navbar__carousel__section navbar__carousel__section--red">UX/UI DESIGNER</p>
-        <p class="navbar__carousel__section navbar__carousel__section--green">FULLSTACK-DEVELOPER</p>
-    </div>
     <nav class="navbar__container" id="navbar-container">
         <a href="/"><img id="logo" class="navbar__container__logo" src="/assets/images/niels_signature_black.png" alt="NielsHosDesign logo"></a>
         <div class="navbar__buttoncontainer">
-            <a href="/casepage/cases" class="navbar__buttoncontainer__button navbar__buttoncontainer__button--right">Cases</a>
-            <a href="/overmij" class="navbar__buttoncontainer__button navbar__buttoncontainer__button--left">Over mij</a>
-            <a href="/diensten" class="navbar__buttoncontainer__button navbar__buttoncontainer__button--right">Diensten</a>
+            <a href="/diensten" class="navbar__buttoncontainer__button navbar__buttoncontainer__button--right">Wat ik doe</a>
+            <a href="/casepage/cases" class="navbar__buttoncontainer__button navbar__buttoncontainer__button--left">Projecten</a>
+            <a href="/overmij" class="navbar__buttoncontainer__button navbar__buttoncontainer__button--right">Over mij</a>
             <a href="/contact" class="navbar__buttoncontainer__button navbar__buttoncontainer__button--left">Contact</a>
-            <!-- <div class="navbar__langcontainer">
-                <a href="" class="navbar__langcontainer__button">NL</a>
-                <a href="" class="navbar__langcontainer__button">EN</a>
-            </div> -->
+
             <div class="gtranslate_wrapper navbar__langcontainer"></div>
             <script>window.gtranslateSettings = {"default_language":"nl","languages":["nl","en"],"wrapper_selector":".gtranslate_wrapper"}</script>
             <script src="https://cdn.gtranslate.net/widgets/latest/lc.js" defer></script>
+
             <div id="hamburger" class="hamburger">
                 <span></span>
                 <span></span>
@@ -192,6 +182,7 @@
 
 
 
+    <div class="noise"></div>
 </body>
 </html>
 
@@ -215,27 +206,6 @@
     });
 
 
-    // Change navbar on scroll
-    const logo = document.getElementById('logo');
-    const navbar = document.getElementById('navbar-container');
-    
-    window.addEventListener("scroll", (event) => {
-        let scroll = this.scrollY;
-
-        toggleNavbar(scroll);
-    });
-
-    function toggleNavbar(scroll) {
-        
-        if (scroll >= 20) {
-            logo.setAttribute('class', 'navbar__container__logo--small');
-            navbar.style.marginTop = '0px';
-        } else {
-            logo.setAttribute('class', 'navbar__container__logo');
-            navbar.style.marginTop = '25px';
-        }
-    }
-
     // Random curtain color
     const curtain = document.getElementById('curtain');
     const curtainLogo = document.getElementById('curtain-logo');
@@ -255,48 +225,45 @@
     }
 
 
+    // if (window.location.pathname == '/') {
+    //     if (viewportWidth >= 768 && viewportWidth < 992) {
+    //         curtain.style.animation = '2.1s curtainOpenLong-md linear forwards';
+    //         curtainLogo.style.animation = '2.1s rotateLong linear forwards'
 
-    if (window.location.pathname == '/') {
-        if (viewportWidth >= 768 && viewportWidth < 992) {
-            curtain.style.animation = '2.1s curtainOpenLong-md linear forwards';
-            curtainLogo.style.animation = '2.1s rotateLong linear forwards'
+    //     } else if (viewportWidth >= 992) {
+    //         curtain.style.animation = '2.2s curtainOpenLong-lg linear forwards';
+    //         curtainLogo.style.animation = '2.2s rotateLong linear forwards'
 
-        } else if (viewportWidth >= 992) {
-            curtain.style.animation = '2.2s curtainOpenLong-lg linear forwards';
-            curtainLogo.style.animation = '2.2s rotateLong linear forwards'
+    //     } else {
+    //         curtain.style.animation = '2s curtainOpenLong-sm linear forwards';
+    //         curtainLogo.style.animation = '2s rotateLong linear forwards'
+    //     }
 
-        } else {
-            curtain.style.animation = '2s curtainOpenLong-sm linear forwards';
-            curtainLogo.style.animation = '2s rotateLong linear forwards'
-        }
+    //     window.addEventListener('load', function() {
+    //         setTimeout(function() {
+    //             loaderscreen.style.display = 'none';
+    //         }, 1000);
+    //         curtain.style.display = 'flex';
+    //     })
+    // } else {
+    //     loaderscreen.style.display = 'none';
 
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                loaderscreen.style.display = 'none';
-            }, 1000);
-            curtain.style.display = 'flex';
-        })
-    } else {
-        loaderscreen.style.display = 'none';
+    //     if (viewportWidth >= 768 && viewportWidth < 992) {
+    //         curtainLogo.style.animation = '1.2s rotate linear forwards'
+    //         curtain.style.animation = '1.2s curtainOpen linear forwards';
 
-        if (viewportWidth >= 768 && viewportWidth < 992) {
-            curtainLogo.style.animation = '1.2s rotate linear forwards'
-            curtain.style.animation = '1.2s curtainOpen linear forwards';
+    //     } else if (viewportWidth >= 992) {
+    //         curtainLogo.style.animation = '1.2s rotate linear forwards'
+    //         curtain.style.animation = '1.2s curtainOpen linear forwards';
 
-        } else if (viewportWidth >= 992) {
-            curtainLogo.style.animation = '1.2s rotate linear forwards'
-            curtain.style.animation = '1.2s curtainOpen linear forwards';
-
-        } else {
-            curtainLogo.style.animation = '1s rotate linear forwards'
-            curtain.style.animation = '1s curtainOpen linear forwards';
-        }
+    //     } else {
+    //         curtainLogo.style.animation = '1s rotate linear forwards'
+    //         curtain.style.animation = '1s curtainOpen linear forwards';
+    //     }
 
         
-        curtain.style.display = 'flex';
-        curtainColor();
-    }
-
-    
+    //     curtain.style.display = 'flex';
+    //     curtainColor();
+    // }
 
 </script>

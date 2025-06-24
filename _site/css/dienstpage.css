@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Lilita One";
-  src: url(../assets/fonts/Lilita_One/LilitaOne-Regular.ttf) format("truetype");
+  font-family: "Barber Chop";
+  src: url(../assets/fonts/barber_chop/BarberChop.otf) format("opentype");
 }
 @font-face {
   font-family: "Poppins-Regular";
@@ -43,7 +43,7 @@
   }
 }
 .dienst__headercontainer__textcontainer h1 {
-  font-family: "Lilita One";
+  font-family: "Barber Chop";
   font-size: 4rem;
   margin-bottom: 30px;
   line-height: 85%;
@@ -160,7 +160,7 @@
   align-items: center;
 }
 .dienst .procescontainer__title {
-  font-family: "Lilita One";
+  font-family: "Barber Chop";
   font-size: 4rem;
   margin-bottom: 50px;
   line-height: 85%;
@@ -213,7 +213,7 @@
   margin-bottom: 50px;
 }
 .dienst .procescontainer__fase__uitleg h3 {
-  font-family: "Lilita One";
+  font-family: "Barber Chop";
   font-size: 2rem;
 }
 .dienst .procescontainer__fase__uitleg p {

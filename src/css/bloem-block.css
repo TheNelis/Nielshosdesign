@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Lilita One";
-  src: url(../assets/fonts/Lilita_One/LilitaOne-Regular.ttf) format("truetype");
+  font-family: "Barber Chop";
+  src: url(../assets/fonts/barber_chop/BarberChop.otf) format("opentype");
 }
 @font-face {
   font-family: "Poppins-Regular";
@@ -109,7 +109,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  font-family: "Lilita One";
+  font-family: "Barber Chop";
   font-size: 14vw;
   text-transform: uppercase;
   line-height: 100%;

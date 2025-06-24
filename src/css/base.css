@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Lilita One";
-  src: url(../assets/fonts/Lilita_One/LilitaOne-Regular.ttf) format("truetype");
+  font-family: "Barber Chop";
+  src: url(../assets/fonts/barber_chop/BarberChop.otf) format("opentype");
 }
 @font-face {
   font-family: "Poppins-Regular";
@@ -111,6 +111,19 @@ html {
 
 body {
   overflow: hidden;
+  background-color: #FFDC2D;
+}
+
+.noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url(/assets/images/noise.gif);
+  opacity: 0.05;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999999;
+  pointer-events: none;
 }
 
 .maincontainer {
@@ -170,35 +183,124 @@ body {
   height: 95vh;
   margin-left: 5vh;
 }
-.navbar__carousel {
+.navbar__container {
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 100%;
-  height: 25px;
+  width: 100%;
   display: flex;
-  z-index: 100;
-  animation: 15s slide infinite linear;
-  font-size: 0.94rem;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 500;
+  padding: 8px 15px;
 }
-.navbar__carousel__section {
-  min-width: 380px;
-  width: 33.3333vw;
-  margin: 0;
-  padding: 2px;
-  text-align: center;
-  font-family: "Poppins-Semibold";
-  letter-spacing: 7.5px;
-  text-transform: uppercase;
+@media only screen and (min-width: 992px) {
+  .navbar__container {
+    padding: 8px 40px;
+  }
 }
-.navbar__carousel__section--blue {
-  background-color: #0078D7;
+.navbar__container__logo {
+  width: 55px;
+  margin-bottom: 0px;
 }
-.navbar__carousel__section--red {
-  background-color: #FF445C;
+@media only screen and (min-width: 992px) {
+  .navbar__container__logo {
+    width: 65px;
+  }
 }
-.navbar__carousel__section--green {
-  background-color: #00BF72;
+.navbar__buttoncontainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  padding: 5px 0px;
+}
+@media only screen and (min-width: 992px) {
+  .navbar__buttoncontainer {
+    gap: 45px;
+  }
+}
+.navbar__buttoncontainer__button {
+  display: none;
+  font-size: 2.25rem;
+  text-decoration: none;
+  color: black;
+  font-family: "Barber Chop";
+}
+@media only screen and (min-width: 768px) {
+  .navbar__buttoncontainer__button {
+    font-size: 3rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .navbar__buttoncontainer__button {
+    display: block;
+    font-size: 2rem;
+  }
+}
+.navbar__buttoncontainer__button--right:hover {
+  transform: rotate(-4deg) scale(1.15);
+  -webkit-transform: rotate(-4deg) scale(1.15);
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.navbar__buttoncontainer__button--left:hover {
+  transform: rotate(4deg) scale(1.15);
+  -webkit-transform: rotate(4deg) scale(1.15);
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.navbar__buttoncontainer__button--right:not(:hover), .navbar__buttoncontainer__button--left:not(:hover) {
+  transform: rotate(0deg) scale(1);
+  -webkit-transform: rotate(0deg) scale(1);
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.navbar__langcontainer {
+  display: flex;
+  gap: 10px;
+}
+@media only screen and (min-width: 992px) {
+  .navbar__langcontainer {
+    flex-direction: column;
+  }
+}
+.navbar__langcontainer * {
+  font-family: "Barber Chop";
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: black;
+  padding: 0;
+  text-decoration: none;
+}
+@media only screen and (min-width: 992px) {
+  .navbar__langcontainer * {
+    font-size: 1.25rem;
+  }
+}
+.navbar__langcontainer *:hover {
+  transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.navbar__langcontainer *:not(:hover) {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 .navbar__mobilemenu {
   position: fixed;
@@ -206,7 +308,7 @@ body {
   right: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url("/assets/yellow_noise.jpg");
+  background-color: #FFDC2D;
   z-index: 50;
   padding: 0px 15px 0px;
   display: flex;
@@ -246,137 +348,6 @@ body {
 .navbar__mobilemenu div a svg:hover {
   margin-top: -3px;
   margin-bottom: 3px;
-}
-.navbar__container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #FFD12D;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 500;
-  margin-top: 25px;
-  padding: 8px 15px;
-  transition: all 0.2s ease-in-out;
-  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
-}
-@media only screen and (min-width: 992px) {
-  .navbar__container {
-    margin-top: 25px;
-    padding: 8px 40px;
-  }
-}
-.navbar__container__logo {
-  width: 75px;
-  margin-bottom: -30px;
-  transition: all 0.2s ease-in-out;
-}
-@media only screen and (min-width: 992px) {
-  .navbar__container__logo {
-    width: 95px;
-    margin-bottom: -63.5px;
-  }
-}
-.navbar__container__logo--small {
-  width: 55px;
-  margin-bottom: 0px;
-  transition: all 0.2s ease-in-out;
-}
-.navbar__buttoncontainer {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 15px;
-  padding: 5px 0px;
-}
-@media only screen and (min-width: 992px) {
-  .navbar__buttoncontainer {
-    gap: 45px;
-  }
-}
-.navbar__buttoncontainer__button {
-  display: none;
-  font-size: 2.25rem;
-  text-decoration: none;
-  color: black;
-  font-family: "Lilita One";
-}
-@media only screen and (min-width: 768px) {
-  .navbar__buttoncontainer__button {
-    font-size: 3rem;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .navbar__buttoncontainer__button {
-    display: block;
-    font-size: 2rem;
-  }
-}
-.navbar__buttoncontainer__button--right:hover {
-  transform: rotate(-4deg) scale(1.1);
-  -webkit-transform: rotate(-4deg) scale(1.1);
-  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-.navbar__buttoncontainer__button--left:hover {
-  transform: rotate(4deg) scale(1.1);
-  -webkit-transform: rotate(4deg) scale(1.1);
-  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-.navbar__buttoncontainer__button--right:not(:hover), .navbar__buttoncontainer__button--left:not(:hover) {
-  transform: rotate(0deg) scale(1);
-  -webkit-transform: rotate(0deg) scale(1);
-  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-.navbar__langcontainer {
-  display: flex;
-  gap: 10px;
-}
-@media only screen and (min-width: 992px) {
-  .navbar__langcontainer {
-    flex-direction: column;
-  }
-}
-.navbar__langcontainer * {
-  font-family: "Lilita One";
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: black;
-  padding: 0;
-  text-decoration: none;
-}
-@media only screen and (min-width: 992px) {
-  .navbar__langcontainer * {
-    font-size: 1.25rem;
-  }
-}
-.navbar__langcontainer *:hover {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-.navbar__langcontainer *:not(:hover) {
-  transform: scale(1);
-  -webkit-transform: scale(1);
-  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transition: -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 .hamburger {

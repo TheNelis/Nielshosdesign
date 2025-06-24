@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Lilita One";
+  font-family: "Barber Chop";
   src: url(/assets/fonts/Lilita_One/LilitaOne-Regular.ttf);
 }
 @font-face {
@@ -22,7 +22,7 @@
   background-image: url("/assets/yellow_noise.jpg");
 }
 .dienstenpage__title {
-  font-family: "Lilita One";
+  font-family: "Barber Chop";
   font-size: 4rem;
 }
 @media only screen and (min-width: 992px) {
