@@ -83,8 +83,8 @@
 
     
 
-<div class="herocontainer">
-    <div class="herocontainer__titlecontainer">
+<div class="herocontainer" id="herocontainer">
+    <div class="herocontainer__titlecontainer" id="titlecontainer">
         <div class="herocontainer__titlecontainer__subtitle">
             <h2><span>Scroll down</span></h2>
             <h2><span>to</span></h2>
@@ -101,7 +101,10 @@
             </div>
         </div>
     </div>
+
+    <div class="items" id="items"></div>
 </div>
+
 
 <div class="maincontainer--home">
     <div class="featured-cases">
@@ -240,7 +243,7 @@
 </footer>
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
 <script>
     const containerWidth = window.innerWidth;
 
@@ -249,6 +252,119 @@
             location.reload();
         }
     });
+
+
+
+    document.getElementById('titlecontainer').style.display = 'none';
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+        // Hero-block load animation
+        document.getElementById('titlecontainer').style.display = 'block';
+
+        // Hero-block mouse move animation
+        const heroContainer = document.getElementById('herocontainer');
+        const itemsContainer = document.getElementById('items');
+
+        const imageUrls = [
+            '/assets/images/artmici/artmici_sign_mockup.png',
+            '/assets/images/boomstamhuis_84/Boomstamhuis_homepage.png',
+            '/assets/images/davevleugel/davevleugel_mockup.png',
+            '/assets/images/ottiya/Ottiya_schermen3.png',
+            '/assets/images/triviashot/Triviashot_mockup.png',
+        ];
+
+        const MAX_ITEMS = 15;
+        let imageIndex = 1;
+        let lastX = null;
+        let lastY = null;
+        const minDistance = window.innerWidth >= 992 ? 120 : 0;
+
+        // Functie om afstand tussen twee punten te berekenen
+        function getDistance(x1, y1, x2, y2) {
+            return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+        }
+
+
+        function addNewItem(x, y) {
+            const currentImages = itemsContainer.querySelectorAll('img');
+            if (currentImages.length >= MAX_ITEMS) {
+                itemsContainer.removeChild(currentImages[0]);
+            }
+
+            const img = document.createElement('img');
+            img.src = imageUrls[imageIndex];
+            imageIndex = (imageIndex + 1) % imageUrls.length; // Aantal afbeeldingen
+
+            img.style.top = `calc(${y - 120}px)`;
+            img.style.left = `${x - 140}px`;
+
+            itemsContainer.appendChild(img);
+
+            animateItem(img);
+        }
+
+
+        function animateItem(img) {
+            const direction = Math.random() < 0.5 ? -1 : 1; // Links of rechts
+            const rotateDeg = Math.random() * 30 * direction; // -20° tot +20°
+
+            const tl = gsap.timeline({ 
+                onComplete: () => {
+                    if (img.parentNode) img.parentNode.removeChild(img);
+                }
+            });
+
+            tl.to(img, {
+                y: "-=30", // Pop omhoog
+                scale: 1.2,
+                rotate: rotateDeg / 12,
+                duration: 0.2,
+                ease: "power2.out",
+            }).to(img, {
+                y: "+=600", // Val naar beneden
+                scale: 0.5,
+                rotate: rotateDeg,
+                opacity: 0,
+                duration: 1,
+                ease: "power1.in",
+            });
+        }
+
+        document.addEventListener("mousemove", function(event) {
+            const navbar = document.getElementById('navbar-container');
+            const navbarRect = navbar.getBoundingClientRect();
+
+            if (event.clientY >= navbarRect.top && event.clientY <= navbarRect.bottom) {
+
+                return;
+            }
+
+            const rect = heroContainer.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            const pageX = event.pageX;
+            const pageY = event.pageY;
+
+            if (lastX === null || lastY === null) {
+                lastX = x;
+                lastY = y;
+                return;
+            }
+
+            const distance = getDistance(lastX, lastY, x, y);
+
+            if (distance >= minDistance) {
+                addNewItem(x, y);
+                lastX = x;
+                lastY = y;
+            }
+        });
+    });
+
+
+
 
 
 // Bloem-block letter fontsize aanpassen

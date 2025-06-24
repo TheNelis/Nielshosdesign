@@ -557,7 +557,6 @@ body {
 .herocontainer {
   position: relative;
   width: 100%;
-  margin-top: 90px;
   height: calc(100vh - 90px);
   display: flex;
   align-items: flex-end;
@@ -565,8 +564,7 @@ body {
 }
 @media only screen and (min-width: 992px) {
   .herocontainer {
-    margin-top: 90px;
-    height: calc(100vh - 90px);
+    height: 100vh;
   }
 }
 .herocontainer__titlecontainer {
@@ -686,6 +684,23 @@ body {
 .herocontainer__titlecontainer__socials div a svg:hover {
   margin-top: -3px;
   margin-bottom: 3px;
+}
+
+.items {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+}
+.items img {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+  pointer-events: none;
 }
 
 .featured-cases {

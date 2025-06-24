@@ -14,15 +14,15 @@
 .herocontainer {
     position: relative;
     width: 100%;
-    margin-top: 90px;
+    // margin-top: 90px;
     height: calc(100vh - 90px);
     display: flex;
     align-items: flex-end;
     overflow: hidden;
 
     @media only screen and (min-width: v.$lg) {
-        margin-top: 90px;
-        height: calc(100vh - 90px);
+        // margin-top: 90px;
+        height: calc(100vh);
     }
 
     &__titlecontainer {
@@ -153,5 +153,24 @@
                 }
             }
         }
+    }
+}
+
+
+.items {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+
+    img {
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 16px;
+        pointer-events: none;
     }
 }
