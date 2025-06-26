@@ -108,8 +108,11 @@
   display: flex;
   flex-direction: column;
 }
-.footer__email span {
+.footer__email__mail {
   font-size: 6.6vw;
+}
+.footer__email__mail span {
+  font-family: "Poppins-Black";
 }
 @media only screen and (min-width: 992px) {
   .footer__email {

@@ -1102,8 +1102,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 80px;
   padding: 80px 40px 160px 40px;
-  background-image: url("/assets/yellow_noise.jpg");
 }
 .diensten-block__title {
   font-family: "Barber Chop";
@@ -1444,8 +1444,11 @@ body {
   display: flex;
   flex-direction: column;
 }
-.footer__email span {
+.footer__email__mail {
   font-size: 6.6vw;
+}
+.footer__email__mail span {
+  font-family: "Poppins-Black";
 }
 @media only screen and (min-width: 992px) {
   .footer__email {

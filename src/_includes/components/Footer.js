@@ -18,7 +18,7 @@ function Footer({color}) {
                     </div>
                 </div>
             </div>
-            <h1 id="footer-email" class="footer__email">nielshosdesign<span>@gmail.com</span></h1>
+            <h1 id="footer-email" class="footer__email">nielshosdesign<span class="footer__email__mail"><span>@</span>gmail.com</span></h1>
             <div class="footer__bottomcontainer">
                 <p class="footer__bottomcontainer__text">© ${year} nielshosdesign. All Rights Reserved</p>
                 <p class="footer__bottomcontainer__text">BTW: NL005219171B75 &nbsp;&nbsp;&nbsp;&nbsp; KVK: 96591757</p>

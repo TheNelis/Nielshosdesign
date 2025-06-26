@@ -28,64 +28,6 @@ description: Heb je een website nodig, een volledige branding, of wil je opvalle
     <div class="items" id="items"></div>
 </div>
 
-
-<div class="maincontainer--home">
-    {% FeaturedCases %}
-</div>
-
-
-<div id="bloem-block" class="bloem-block">
-    <div class="bloem-block__container">
-        <div class="bloem-block__bloemcontainer">
-            <img class="bloem-block__bloemcontainer__bloem" id="bloem" src="/assets/Leafs_assets/bloem.png" alt="">
-            <div class="bloem-block__bloemcontainer__bloemkern" id="bloemkern"></div>
-        </div>
-        <div class="bloem-block__textcontainer">
-            <span class="bloem-block__textcontainer--span1">Ik maak</span>
-            <span class="bloem-block__textcontainer--span2"><span>B</span><span class="bloem-block__textcontainer--spanletter" id="spanletter">l</span><span>oeiende</span></span>
-            <span class="bloem-block__textcontainer--span3">Ontwerpen</span>
-            <span class="bloem-block__textcontainer--span4">Met een kern</span>
-        </div>
-    </div>
-</div>
-
-
-<div class="intro-block">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <defs>
-            <pattern id="img1" patternUnits="userSpaceOnUse" width="200" height="200">
-                <image href="/assets/yellow_noise.jpg" x="0" y="0" width="200" height="200" />
-            </pattern>
-        </defs>
-        <path fill="url(#img1)" fill-opacity="1" d="M0,280C160,267,320,277,480,240C640,203,800,117,960,112C1120,107,1280,181,1360,218.7L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-    </svg>
-    <div class="intro-block__container">
-        <div class="intro-block__imagecontainer">
-            <img src="/assets/portretfoto_niels.jpeg" alt="Portretfoto Niels Hos" class="intro-block__imagecontainer__image">
-        </div>
-        <div class="intro-block__textcontainer">
-            <h1 class="intro-block__textcontainer__title">
-                <span>H</span>
-                <span>a</span>
-                <span>l</span>
-                <span>l</span>
-                <span>o</span>
-                <span>!</span>
-            </h1>
-            <p class="intro-block__textcontainer__text">
-                Ik ben Niels Hos,
-                <br/>
-                Een student Communication & Multimedia Design uit de kop van Noord-Holland. 
-                Vooral hou ik me bezig met het volledig ontwerpen en programmeren van opvallende en interactieve websites.
-                <br/><br/>
-                Heb jij voor je bedrijf een website nodig, wil je een huisstijl laten ontwerpen of gewoon meer opvallen bij 
-                je doelgroep? Hiervoor kun je bij mij terecht om jouw bedrijf of product te laten bloeien!
-            </p>
-            <a href="/overmij" class="button--blue">Meer details</a>
-        </div>
-    </div>
-</div>
-
 <div class="diensten-block">
     <h2 class="diensten-block__title">Wat ik doe</h2>
     <div class="diensten-block__container">
@@ -114,7 +56,28 @@ description: Heb je een website nodig, een volledige branding, of wil je opvalle
     <img class="diensten-block__blaadje" src="/assets/Leafs_assets/blaadje_high.png" alt="">
 </div>
 
+<div class="maincontainer--home">
+    {% FeaturedCases %}
+</div>
+
+
+<div id="bloem-block" class="bloem-block">
+    <div class="bloem-block__container">
+        <div class="bloem-block__bloemcontainer">
+            <img class="bloem-block__bloemcontainer__bloem" id="bloem" src="/assets/Leafs_assets/bloem.png" alt="">
+            <div class="bloem-block__bloemcontainer__bloemkern" id="bloemkern"></div>
+        </div>
+        <div class="bloem-block__textcontainer">
+            <span class="bloem-block__textcontainer--span1">Ik maak</span>
+            <span class="bloem-block__textcontainer--span2"><span>B</span><span class="bloem-block__textcontainer--spanletter" id="spanletter">l</span><span>oeiende</span></span>
+            <span class="bloem-block__textcontainer--span3">Ontwerpen</span>
+            <span class="bloem-block__textcontainer--span4">Met een kern</span>
+        </div>
+    </div>
+</div>
+
 {% Footer color='white' %}
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
@@ -152,7 +115,7 @@ description: Heb je een website nodig, een volledige branding, of wil je opvalle
         let imageIndex = 1;
         let lastX = null;
         let lastY = null;
-        const minDistance = window.innerWidth >= 992 ? 120 : 0;
+        const minDistance = window.innerWidth >= 992 ? 160 : 0;
 
         // Functie om afstand tussen twee punten te berekenen
         function getDistance(x1, y1, x2, y2) {
@@ -242,53 +205,53 @@ description: Heb je een website nodig, een volledige branding, of wil je opvalle
 
 
 // Bloem-block letter fontsize aanpassen
-    const spanletter = document.getElementById('spanletter');
-    let bounceAnimationText = bloemLetter();  
+    // const spanletter = document.getElementById('spanletter');
+    // let bounceAnimationText = bloemLetter();  
     
-    function bloemLetter() {
-        if (containerWidth >= 992) {
-            return 'calc(2.5vw + 5vh)';
+    // function bloemLetter() {
+    //     if (containerWidth >= 992) {
+    //         return 'calc(2.5vw + 5vh)';
 
-        } else {
-            return '14vw';
-        }
-    }
+    //     } else {
+    //         return '14vw';
+    //     }
+    // }
 
-    let spanletterSize = bloemLetter();
+    // let spanletterSize = bloemLetter();
 
-    document.addEventListener("DOMContentLoaded", (event) => {
-        gsap.registerPlugin(ScrollTrigger)
+    // document.addEventListener("DOMContentLoaded", (event) => {
+    //     gsap.registerPlugin(ScrollTrigger)
 
-        let tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: '#bloem-block',
-                pin: true,
-                start: 'top top',
-                end: '+=1000',
-                scrub: 1,
-                toggleActions: "play none none reverse",
-            }
-        });
+    //     let tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: '#bloem-block',
+    //             pin: true,
+    //             start: 'top top',
+    //             end: '+=1000',
+    //             scrub: 1,
+    //             toggleActions: "play none none reverse",
+    //         }
+    //     });
         
-        tl.to('#spanletter', {
-            fontSize: spanletterSize,
-            duration: 2,
-        });
-        tl.to('#bloemkern', {
-            delay: 0.5,
-            scale: 0,
-            zIndex: -1,
-            duration: 2,
-        })
-        tl.fromTo('#bloem', {
-            rotate: 180
-        },{
-            scale: 1,
-            rotate: 360,
-            zIndex: 1,
-            duration: 2,
-        })
+    //     tl.to('#spanletter', {
+    //         fontSize: spanletterSize,
+    //         duration: 2,
+    //     });
+    //     tl.to('#bloemkern', {
+    //         delay: 0.5,
+    //         scale: 0,
+    //         zIndex: -1,
+    //         duration: 2,
+    //     })
+    //     tl.fromTo('#bloem', {
+    //         rotate: 180
+    //     },{
+    //         scale: 1,
+    //         rotate: 360,
+    //         zIndex: 1,
+    //         duration: 2,
+    //     })
         
-    });
+    // });
 
 </script>
