@@ -9,7 +9,15 @@
     
     <meta name="description" content="{{ description }}">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-04XLCCBHRM"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'G-04XLCCBHRM');
+    </script>
 
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/all-styles.css">
@@ -21,7 +29,9 @@
 
     <title>{{ title }}</title>
 </head>
+
 <body>
+
     <div id="loaderscreen" class="loaderscreen"></div>
     <div id="curtain" class="curtain__container">
         <img id="curtain-logo" class="curtain__container__logo" src="/assets/images/niels_signature_black.png" alt="NielsHosDesign logo">
